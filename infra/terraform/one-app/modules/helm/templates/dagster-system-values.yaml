@@ -1,0 +1,74 @@
+dagsterWebserver:
+  replicaCount: 1
+  pathPrefix: /dagster
+
+  # Defines a workspace for the webserver. This should only be set if user deployments are enabled, but
+  # the subchart is disabled to manage user deployments in a separate Helm release.
+  # In this case, the webserver will need the addresses of the code servers in order to load the user code,
+  # or the name of an existing configmap to mount as the workspace file.
+  workspace:
+    enabled: true
+    servers: []
+    externalConfigmap: "dagster-workspace"
+
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 750Mi
+
+  readinessProbe:
+    httpGet:
+      path: "/dagster/server_info"
+
+computeLogManager:
+  type: NoOpComputeLogManager
+  config: {}
+
+dagster-user-deployments:
+  enableSubchart: false
+
+runLauncher:
+  type: K8sRunLauncher
+
+  config:
+    k8sRunLauncher:
+      resources:
+        limits:
+          cpu: 1000m
+          memory: 1Gi
+        requests:
+          cpu: 500m
+          memory: 750Mi
+
+postgresql:
+  enabled: false
+  image:
+    repository: "library/postgres"
+    tag: "${POSTGRES_ENGINE_VERSION}"
+
+  postgresqlHost: ${POSTGRES_HOST}
+  postgresqlUsername: ${POSTGRES_USER}
+
+  # Note when changing this password (e.g. in test) that credentials will
+  # persist as long as the PVCs do -- see:
+  # https://github.com/helm/charts/issues/12836#issuecomment-524552358
+  postgresqlPassword: ${POSTGRES_PASSWORD}
+  postgresqlDatabase: ${POSTGRES_DB}
+  service:
+    port: ${POSTGRES_PORT}
+
+####################################################################################################
+# As an open source project, we collect usage statistics to better understand how users engage
+# with Dagster and to inform development priorities.
+#
+# Telemetry data will motivate projects such as adding functionality in frequently-used parts of
+# the product and will help us understand adoption of new features.
+#
+# For more details, see:
+# https://docs.dagster.io/getting-started/telemetry
+####################################################################################################
+telemetry:
+  enabled: false

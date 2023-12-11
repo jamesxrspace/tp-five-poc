@@ -1,0 +1,53 @@
+{
+    "name": "TPFive.Game.Assist.Entry",
+    "rootNamespace": "TPFive.Game.Assist.Entry",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Config",
+        "TPFive.Game.Resource",
+        "TPFive.Game.SceneFlow",
+        "TPFive.Game.Audio",
+        "TPFive.Game.Hud",
+        "TPFive.Game.Input",
+        "TPFive.Game.Localization",
+        "TPFive.Game.Camera",
+        "TPFive.Game.ObjectPool",
+        "TPFive.Game.Analytics",
+        "TPFive.Game.Diagnostics",
+        "TPFive.Game.Assist",
+        "TPFive.Game.ReferenceLocator",
+        "TPFive.Extended.QuantumConsole",
+        "com.xrspace.avatarsdk",
+        "com.xrspace.benchmarktool.attributes",
+        "Unity.VisualScripting.Core",
+        "Unity.VisualScripting.Flow",
+        "Unity.InputSystem",
+        "QFSW.QC",
+        "TPFive.Room",
+        "TPFive.Game.App.Entry",
+        "TPFive.Game.Home.Entry",
+        "TPFive.Game.FlutterUnityWidget"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "io.xrspace.tpfive.extended.quantum-console",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_QUANTUM_CONSOLE"
+        }
+    ],
+    "noEngineReferences": false
+}

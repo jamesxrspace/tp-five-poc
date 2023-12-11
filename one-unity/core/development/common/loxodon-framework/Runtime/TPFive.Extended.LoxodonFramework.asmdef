@@ -1,0 +1,21 @@
+{
+    "name": "TPFive.Extended.LoxodonFramework",
+    "rootNamespace": "TPFive.Extended.LoxodonFramework",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game.Logging",
+        "Loxodon.Framework"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../../one-unity/unity-project/development/complete-unity/exposed_flutter_unity_widget/ios/UnityLibrary/Unity-iPhone.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Runner.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

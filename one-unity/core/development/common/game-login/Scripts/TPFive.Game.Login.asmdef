@@ -1,0 +1,24 @@
+{
+    "name": "TPFive.Game.Login",
+    "rootNamespace": "TPFive.Game.Login",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Account",
+        "TPFive.Game",
+        "TPFive.OpenApi.GameServer",
+        "com.xrspace.openapi"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

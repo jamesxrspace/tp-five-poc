@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5504cd36f47ee2f40a69a309ae5011ca, type: 3}
+  m_Name: RecordMaleFactoryPreset
+  m_EditorClassIdentifier: 
+  presetName: Male
+  prefab: {fileID: 3621874724059698463, guid: 55aa095a5bd8ea7449b3527a150bbfb2, type: 3}
+  enableToGenerateLod: 0
+  enableToCombineMesh: 0
+  enableToLoadBinfile: 0
+  baseController:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Controller: {fileID: 9100000, guid: f2a124d968503954ebe727e0d224d7bd, type: 2}
+    _ActionsOnStop: 
+  anchorPointCategory: {fileID: 11400000, guid: 16afe9f1b5585354da7263bd95d8459c,
+    type: 2}
+  sitSettings: {fileID: 11400000, guid: dfb2e4505806c4972ac078db0dbd2215, type: 2}
+  talkSettings: {fileID: 11400000, guid: 3f708314726314235b19ed79c9ab32f9, type: 2}
+  motionCategory: {fileID: 11400000, guid: 9c6ca0cc95646ba4c8b53ae204cd6709, type: 2}
+  trackingSettings:
+    upperBodyMask: {fileID: 31900000, guid: 3b5be6a9d05c6054d84854c7c266a345, type: 2}
+    layerFadeDuration: 0.25

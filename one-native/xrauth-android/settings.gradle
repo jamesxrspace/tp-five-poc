@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            allowInsecureProtocol true
+            url "http://192.168.0.192:8082/artifactory/xrspace/"
+        }
+    }
+}
+rootProject.name = "porting"
+include ':app'
+include ':xrauth'

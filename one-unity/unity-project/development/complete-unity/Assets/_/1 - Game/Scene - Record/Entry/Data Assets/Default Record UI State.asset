@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016784e0ce3241749aea4f040a13bc2a, type: 3}
+  m_Name: Default Record UI State
+  m_EditorClassIdentifier: 
+  flutterUIStateList:
+  - id: 0
+    state:
+      isHighlight: 0
+      isVisible: 1
+      isInteractable: 1
+  - id: 1
+    state:
+      isHighlight: 1
+      isVisible: 1
+      isInteractable: 1
+  - id: 2
+    state:
+      isHighlight: 1
+      isVisible: 1
+      isInteractable: 1
+  - id: 3
+    state:
+      isHighlight: 0
+      isVisible: 1
+      isInteractable: 1
+  - id: 4
+    state:
+      isHighlight: 0
+      isVisible: 1
+      isInteractable: 1
+  - id: 5
+    state:
+      isHighlight: 0
+      isVisible: 0
+      isInteractable: 1
+  - id: 6
+    state:
+      isHighlight: 0
+      isVisible: 0
+      isInteractable: 1
+  - id: 7
+    state:
+      isHighlight: 0
+      isVisible: 0
+      isInteractable: 1
+  - id: 8
+    state:
+      isHighlight: 0
+      isVisible: 0
+      isInteractable: 1
+  - id: 9
+    state:
+      isHighlight: 0
+      isVisible: 0
+      isInteractable: 1
+  - id: 10
+    state:
+      isHighlight: 0
+      isVisible: 1
+      isInteractable: 1

@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  # ======== third-party services ========
+  mongodb:
+    volumes:
+      - ${PWD}/.test-data/db:/data/db
+      - ${PWD}/.test-data/configdb:/data/configdb
+  minio:
+    volumes:
+      - ${PWD}/.test-data/minio:/data
+networks:
+  default:
+    name: tp-five
+    driver: bridge

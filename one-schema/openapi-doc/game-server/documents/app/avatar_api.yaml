@@ -1,0 +1,244 @@
+openapi: 3.0.3
+info:
+  title: Server API - Avatar
+  description: The Restful APIs of Avatar.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/avatar/save:
+    post:
+      summary: Save avatar
+      description: Save edited avatar.
+      operationId: SaveAvatar
+      tags: [Avatar]
+      security: [BearerAuth: []]
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              required:
+                - type
+              properties:
+                type:
+                  $ref: '#/components/schemas/AvatarModelType'
+                  description: avatar model type
+                avatar_format:
+                  type: object
+                  description: avatar format
+                avatar_asset:
+                  type: string
+                  description: avatar asset
+                  format: binary
+                avatar_head:
+                  type: string
+                  description: avatar head
+                  format: binary
+                avatar_upper_body:
+                  type: string
+                  description: avatar upper body
+                  format: binary
+                avatar_full_body:
+                  type: string
+                  description: avatar full body
+                  format: binary
+                avatar_id:
+                  type: string
+                  description: avatar id
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AvatarMetadataResponse'
+  /api/v1/avatar/activate/{avatar_id}:
+    post:
+      summary: Activate avatar
+      description: Activate avatar by avatar id
+      operationId: ActivateAvatar
+      tags: [Avatar]
+      security: [BearerAuth: []]
+      parameters:
+        - name: avatar_id
+          in: path
+          description: avatar id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AvatarActivateResponse'
+  /api/v1/avatar/current:
+    get:
+      summary: Get myself current avatar detail
+      description: Get myself current avatar detail
+      operationId: GetMyselfCurrentAvatarMetadata
+      tags: [Avatar]
+      security: [BearerAuth: []]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AvatarMetadataResponse'
+  /api/v1/avatar/current/list:
+    get:
+      summary: Get current avatar detail list
+      description: Get current avatar detail list by xrids
+      operationId: GetCurrentAvatarMetadataList
+      tags: [Avatar]
+      security: [BearerAuth: []]
+      parameters:
+        - name: xrids
+          in: query
+          description: Get the xrids of which users avatar detail
+          required: true
+          style: form
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+        - name: offset
+          in: query
+          description: offset of items
+          schema:
+            minimum: 0
+            type: integer
+        - name: size
+          in: query
+          description: size of queries times
+          required: true
+          schema:
+            maximum: 50
+            minimum: 1
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AvatarMetadataListResponse'
+
+components:
+  schemas:
+    # Model
+    AvatarModelType:
+      type: string
+      description: >
+        Indicates the type of avatar model:
+          * `xr_v2` - XSpace Avatar V2
+      enum:
+        - xr_v2
+    AvatarThumbnail:
+      type: object
+      description: Indicates the thumbnail url of each lens of the avatar
+      properties:
+        full_body:
+          type: string
+          description: full bady thumbnail url
+        head:
+          type: string
+          description: head thumbnail url
+        upper_body:
+          type: string
+          description: upper body thumbnail url
+    AvatarMetadata:
+      type: object
+      description: Detailed information of the avatar
+      properties:
+        app_id:
+          type: string
+          description: create from which app
+        author:
+          type: string
+          description: author of the avatar
+        avatar_format:
+          type: object
+          description: xrspace avatar format. this is a json string should be parsed using AvatarFormat.Deserialize
+        avatar_id:
+          type: string
+          description: avatar id
+        avatar_url:
+          type: string
+          description: avatar url
+        created_at:
+          type: string
+          format: date-time
+          description: avatar created time
+        thumbnail:
+          $ref: '#/components/schemas/AvatarThumbnail'
+          description: avatar thumbnails
+        type:
+          $ref: '#/components/schemas/AvatarModelType'
+          description: avatar model type
+        updated_at:
+          type: string
+          format: date-time
+          description: avatar updated time
+        xrid:
+          type: string
+          description: xrspace user id
+    AvatarMetadataResponseData:
+      type: object
+      description: Common avatar response data
+      properties:
+        avatar:
+          $ref: '#/components/schemas/AvatarMetadata'
+          description: avatar detail
+    AvatarMetadataListResponseData:
+      type: object
+      properties:
+        items:
+          type: array
+          description: avatar detail list
+          items:
+            $ref: '#/components/schemas/AvatarMetadata'
+    AvatarActivateResponseData:
+      type: object
+      properties:
+        message:
+          type: string
+    # Resonse
+    AvatarMetadataResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/AvatarMetadataResponseData'
+    AvatarActivateResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/AvatarActivateResponseData'
+    AvatarMetadataListResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/AvatarMetadataListResponseData'
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

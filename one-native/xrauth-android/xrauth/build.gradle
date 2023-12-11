@@ -1,0 +1,113 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.jfrog.artifactory'
+    id 'maven-publish'
+}
+def whichGit = 'which git'.execute().text.trim()
+def projectRoot = "$whichGit rev-parse --show-toplevel".execute().text.trim().replace("\\", "/")
+def m2Repo = new File("$projectRoot/one-unity/unity-project/development/complete-unity/Library/XRAuth/m2repository")
+
+def libraryGroupId = 'com.xrspace.xrauth'
+def libraryArtifactId = 'porting'
+def libraryVersion = '0.1.2'
+
+android {
+    namespace 'com.xrspace.xrauth'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 33
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    libraryVariants.configureEach { variant ->
+        variant.generateBuildConfigProvider?.configure {
+            it.enabled = false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    lint {
+        baseline file("lint-baseline.xml")
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // AppAuth
+    implementation "net.openid:appauth:0.11.1"
+    // EventBus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+}
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId libraryGroupId
+            version libraryVersion
+            artifactId libraryArtifactId
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.implementation.allDependencies.each { dependency ->
+                    if (dependency.group != null) {
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', dependency.group)
+                        dependencyNode.appendNode('artifactId', dependency.name)
+                        dependencyNode.appendNode('version', dependency.version)
+                    }
+                }
+            }
+            artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+        }
+    }
+
+    // Publish to local repo
+    repositories {
+        maven {
+            // Generate the aar and pom files to local repo
+            url "$m2Repo"
+        }
+    }
+}
+
+tasks.register('cleanLocalRepo', Delete) {
+    doLast{
+        if (m2Repo.exists()) {
+            m2Repo.deleteDir()
+        }
+    }
+
+    finalizedBy {
+        if (cleanLocalRepo.state.failure != null) {
+            println "Clean local m2Repo failed! Reason: ${cleanLocalRepo.state.failure.message}"
+        }
+    }
+}
+
+task cleanBuildPublish(dependsOn: ['clean', 'build', 'cleanLocalRepo', 'publish']) {
+    tasks.findByName('cleanLocalRepo').mustRunAfter 'clean'
+    tasks.findByName('build').mustRunAfter 'cleanLocalRepo'
+    tasks.findByName('publish').mustRunAfter 'build'
+}

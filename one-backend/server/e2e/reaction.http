@@ -1,0 +1,38 @@
+@host=http://localhost:8090
+
+### get xr local provider token
+# @name token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&email=xrspacetest1000@xrspace.io&password=1qazXSW@
+
+### Login
+@access_token = {{token.response.body.$.access_token}}
+
+# @name login
+POST {{host}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+
+### like feed
+# @name like
+@feed_id = 8e3eaa48-e42b-47b1-bc79-96d31f91d1ab
+POST {{host}}/api/v1/reaction/like/feed/{{feed_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{}
+
+
+### get feed like count and user's isLike
+# @name like
+GET {{host}}/api/v1/reaction/like/feed/{{feed_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{}

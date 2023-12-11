@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Extended.ResourceLoader.Tests",
+    "rootNamespace": "TPFive.Extended.ResourceLoader",
+    "references": [
+        "GUID:5da85524357a3b440ad815c27f6b4c0a",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:a6f67e72b66e1a84b874fd2ef3565ae8",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Microsoft.Extensions.Logging.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

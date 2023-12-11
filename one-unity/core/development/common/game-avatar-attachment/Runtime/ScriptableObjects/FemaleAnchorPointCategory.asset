@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bbac3454a60374e899c256767f3a40, type: 3}
+  m_Name: FemaleAnchorPointCategory
+  m_EditorClassIdentifier: 
+  categoryName: Female
+  definitions:
+  - type: 1
+    parentBone: 10
+    offset: {x: -0.06428314, y: 0.0970704, z: 0}
+    rotation: {x: -177.094, y: 0, z: 0}
+  - type: 2
+    parentBone: 10
+    offset: {x: 0, y: 0.047, z: 0.097}
+    rotation: {x: -87.144, y: 0, z: 0}
+  - type: 3
+    parentBone: 10
+    offset: {x: -3.93, y: 0.0148, z: 0.0154}
+    rotation: {x: 3.93, y: 102.489, z: 56.28}
+  - type: 4
+    parentBone: 10
+    offset: {x: 0.06458009, y: 0.0148, z: 0.0154}
+    rotation: {x: -76.902, y: 107.831, z: -51.126}
+  - type: 5
+    parentBone: 15
+    offset: {x: -0.235, y: 0.001, z: 0.006}
+    rotation: {x: -3.402, y: -1.735, z: 90.424}
+  - type: 6
+    parentBone: 16
+    offset: {x: 0.235, y: 0.001, z: 0.006}
+    rotation: {x: -3.417, y: -1.396, z: 89.825}
+  - type: 7
+    parentBone: 17
+    offset: {x: -0.049, y: -0.054, z: -0.034}
+    rotation: {x: 0, y: -90, z: -90}
+  - type: 8
+    parentBone: 18
+    offset: {x: 0.049, y: -0.054, z: -0.034}
+    rotation: {x: -180, y: -90, z: -90}
+  - type: 9
+    parentBone: 7
+    offset: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}

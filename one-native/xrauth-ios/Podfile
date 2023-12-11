@@ -1,0 +1,8 @@
+platform :ios, '13.0'
+
+target 'XrAuthIOS' do
+    use_frameworks!
+
+    pod 'SimpleKeychain', '1.0.1'
+    # pod 'JWTDecode', '3.0.0'
+end

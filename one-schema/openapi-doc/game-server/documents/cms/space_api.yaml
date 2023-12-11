@@ -1,0 +1,392 @@
+openapi: 3.0.3
+info:
+  title: Server API - Space
+  description: The Restful APIs of Space.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8090
+    description: Local server
+  - url: https://backend.dev.xrspace.io
+    description: Development server
+  - url: https://backend.qa.xrspace.io
+    description: QA server
+  - url: https://backend.xrspace.io
+    description: Production server
+
+paths:
+  /_cms/v1/space/group:
+    post:
+      summary: Create space group
+      operationId: CreateSpaceGroup
+      security: [BearerAuth: []]
+      tags: [space-group]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+                - "name"
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                thumbnail:
+                  type: string
+                start_at:
+                  type: string
+                  format: date-time
+                end_at:
+                  type: string
+                  format: date-time
+                space_ids:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateSpaceGroupResponse"
+
+  /_cms/v1/space/group/list:
+    get:
+      summary: Get the list of available space groups
+      operationId: GetSpaceGroupList
+      security: [BearerAuth: []]
+      tags: [space-group]
+      parameters:
+        - in: query
+          name: offset
+          description: current page
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: size
+          description: number of items per page
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetSpaceGroupListResponse"
+  
+  /_cms/v1/space/group/{space_group_id}:
+    put:
+      summary: Update space group info
+      operationId: UpdateSpaceGroup
+      security: [BearerAuth: []]
+      tags: [space-group]
+      parameters:
+        - in: path
+          name: space_group_id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                thumbnail:
+                  type: string
+                status:
+                  type: string
+                  enum: [enabled, disabled]
+                start_at:
+                  type: string
+                  format: date-time
+                end_at:
+                  type: string
+                  format: date-time
+                space_ids:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UpdateSpaceGroupResponse"
+    delete:
+      summary: Delete space group
+      operationId: DeleteSpaceGroup
+      security: [BearerAuth: []]
+      tags: [space-group]
+      parameters:
+        - in: path
+          name: space_group_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+  /_cms/v1/space:
+    post:
+      summary: Create space
+      operationId: CreateSpace
+      security: [BearerAuth: []]
+      tags: [space]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateSpaceBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateSpaceResponse"
+
+  /_cms/v1/space/list:
+    get:
+      summary: Get the list of available space
+      operationId: GetSpaceList
+      security: [BearerAuth: []]
+      tags: [space]
+      parameters:
+        - in: query
+          name: offset
+          description: current page (start from 0)
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: size
+          description: number of items per page
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: space_group_id
+          description: related space group id
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetSpaceListResponse"
+  /_cms/v1/space/{space_id}:
+    put:
+      summary: Update space
+      operationId: UpdateSpace
+      security: [BearerAuth: []]
+      tags: [space]
+      parameters:
+        - in: path
+          name: space_id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateSpaceBody"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UpdateSpaceResponse"
+    delete:
+      summary: Delete space
+      operationId: DeleteSpace
+      security: [BearerAuth: []]
+      tags: [space]
+      parameters:
+        - in: path
+          name: space_id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+
+components:
+  schemas:
+    CreateSpaceGroupResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/SpaceGroup"
+          required:
+            - data
+    GetSpaceGroupListResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                total:
+                  type: integer
+                items:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/SpaceGroup"
+    UpdateSpaceGroupResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/SpaceGroup"
+    SpaceGroup:
+      type: object
+      properties:
+        space_group_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        thumbnail:
+          type: string
+        status:
+          type: string
+          enum: [enabled, disabled]
+        start_at:
+          type: string
+          format: date-time
+        end_at:
+          type: string
+          format: date-time
+        spaces:
+          type: array
+          items:
+            type: object
+            properties:
+              space_id:
+                type: string
+              name:
+                type: string
+    CreateSpaceBody:
+      type: object
+      required:
+        - "addressable"
+      properties:
+        space_group_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        thumbnail:
+          type: string
+        addressable:
+          type: string
+        start_at:
+          type: string
+          format: date-time
+        end_at:
+          type: string
+          format: date-time
+    UpdateSpaceBody:
+      type: object
+      required:
+        - "addressable"
+      properties:
+        space_group_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        thumbnail:
+          type: string
+        addressable:
+          type: string
+        start_at:
+          type: string
+          format: date-time
+        end_at:
+          type: string
+          format: date-time
+    CreateSpaceResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/Space"
+      required:
+        - data
+    GetSpaceListResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                total:
+                  type: integer
+                items:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Space"
+    UpdateSpaceResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/Space"
+    Space:
+      type: object
+      properties:
+        space_id:
+          type: string
+        space_group_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        thumbnail:
+          type: string
+        addressable:
+          type: string
+        start_at:
+          type: string
+          format: date-time
+        end_at:
+          type: string
+          format: date-time
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

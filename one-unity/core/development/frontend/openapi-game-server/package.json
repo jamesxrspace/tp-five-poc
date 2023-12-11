@@ -1,0 +1,26 @@
+{
+  "name": "io.xrspace.tpfive.openapi.game-server",
+  "displayName": "TPFive 52 OpenAPI Game Server",
+  "description": "TPFive OpenAPI Game Server",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "keywords": [
+    "Unity",
+    "TPFive",
+    "OneApp",
+    "OpenAPI",
+    "GameServer"
+  ],
+  "category": "",
+  "contributors": [
+    {
+      "email": "james.chang@xrspace.io",
+      "name": "James Chang"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+  },
+  "samples": []
+}

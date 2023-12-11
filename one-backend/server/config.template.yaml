@@ -1,0 +1,75 @@
+env: ${env}
+app:
+  port: :8090
+  app_ids:
+    - azp: ${AZP}
+      app_id: ${APP_ID}
+doc_db:
+  connection_uri: ${MONGODB_URL}
+  connect_timeout_ms: 10000
+  socket_timeout_ms: 0
+  max_pool_size: 10
+  default_db: xrspace
+  username: ${MONGODB_USERNAME}
+  password: ${MONGODB_PASSWORD}
+oidc:
+  domain_url: ${AUTH_SERVICE_URL}
+  redirect_url: xrspace://xrspace.auth.com/authing/%s/%s/callback?%s
+  auth_code_redirect_url: "%s://xrspace.auth.com/authing/oidc/callback/?%s"
+  endpoints:
+    userinfo: /oidc/me
+    jwks: /oidc/.well-known/jwks.json
+    management: /api/v3/get-management-token
+    create_user: /api/v3/create-user
+  guest:
+    email_prefix: XRGUEST
+    email_suffix: xrspace.test.io
+    company: xrguest
+  pool_id: ${POOL_ID}
+  secret: ${SECRET}
+  http_timeout: 30
+aws:
+  access_key: ${AWS_KEY}
+  secret_key: ${AWS_SECRET}
+  endpoint: ${AWS_URL}
+  region: ap-southeast-1
+  s3:
+    buckets:
+      default:
+        name: ${DEFAULT_BUCKET}
+        cloudfront_domain: ${CLOUDFRONT_URL}
+      avatar:
+        name: ${DEFAULT_BUCKET}
+        cloudfront_domain: ${CLOUDFRONT_URL}
+      intermediate:
+        name: ${INTERMEDIATE_BUCKET}
+        cloudfront_domain:
+      apk_build:
+        name: ${APK_BUILD_BUCKET}
+        cloudfront_domain:
+redis:
+  address: ${REDIS_URL}
+  password: ${REDIS_PASSWORD}
+  db: ${REDIS_DB}
+avatar:
+  default_avatar:
+    avatar_url: https://d17uoivgkoqky5.cloudfront.net/partyon/vrm/P_M_L_C01_02_ktx.vrm
+    thumbnail:
+      head: https://d19va2o9iaz0tp.cloudfront.net/characterPreview/fbe1b6e678ba9befd78175c36e854fef/FaceSnapshot.png
+      upper_body: https://d19va2o9iaz0tp.cloudfront.net/characterPreview/fbe1b6e678ba9befd78175c36e854fef/FaceSnapshot_Detail.png
+      full_body: https://d19va2o9iaz0tp.cloudfront.net/characterPreview/fbe1b6e678ba9befd78175c36e854fef/Fullbody.png
+logger:
+  debug: true
+  level: info
+agora:
+  app_id: ${AGORA_APP_ID}
+  app_certificate: ${AGORA_APP_CERTIFICATE}
+otel:
+  appname: ${OTEL_APP_NAME}
+  address: ${OTEL_URL}
+ai_server:
+  aigc_motion:
+    endpoint: ${MOTION_ENDPOINT}
+  open_ai:
+    api_key: ${OPEN_AI_API_KEY}
+    organization_id: ${OPEN_AI_ORGANIZATION_ID}

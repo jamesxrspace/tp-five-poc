@@ -1,0 +1,26 @@
+[
+  {
+    "sceneName":"CarPool - Beach",
+    "bundleId":"63624b92-6432-4546-ada5-0e0d79396e8b",
+    "thumbNail":"assets/image/asset_scene_carpool_beach.png",
+    "participantLimit": "1-2人",
+    "description": "Describe the WOW feature about this space template."
+  },
+  {
+    "sceneName":"CarPool - NightCity",
+    "bundleId":"7517f3af-161e-46fe-a856-ca6d8815fc77",
+    "thumbNail":"assets/image/asset_scene_carpool_night.png",
+    "participantLimit": "1-2人",
+    "description": "Describe the WOW feature about this space template."
+  },
+  {
+    "sceneName":"Default",
+    "bundleId":"296ff3f9-bf93-4ed2-8c1b-293ffaf8c1fe",
+    "thumbNail":"assets/image/live_KTVBorealisBar.jpg",
+    "participantLimit": "1-2人",
+    "description": "Describe the WOW feature about this space template."
+  }
+]
+
+
+

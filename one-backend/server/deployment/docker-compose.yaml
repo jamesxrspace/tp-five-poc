@@ -1,0 +1,87 @@
+version: '3.9'
+services:
+  gameserver:
+    container_name: xrspace-game-server
+    image: ${IMAGE_PREFIX}/gameserver:${IMAGE_VERSION}
+    build:
+      context: ${PWD}/server
+      dockerfile: './deployment/Dockerfile'
+    environment:
+      - env
+      - IMAGE_PREFIX
+      - AUTH_SERVICE_URL
+      - MONGODB_URL
+      - MONGODB_USERNAME
+      - MONGODB_PASSWORD
+      - AWS_KEY
+      - AWS_SECRET
+      - AWS_URL
+      - CLOUDFRONT_URL
+      - AZP
+      - APP_ID
+      - POOL_ID
+      - SECRET
+      - REDIS_URL
+      - REDIS_PASSWORD
+      - REDIS_DB
+      - DEFAULT_BUCKET
+      - INTERMEDIATE_BUCKET
+      - APK_BUILD_BUCKET
+      - AGORA_APP_ID
+      - AGORA_APP_CERTIFICATE
+      - MOTION_ENDPOINT
+      - OTEL_APP_NAME
+      - OTEL_URL
+      - OPEN_AI_API_KEY
+      - OPEN_AI_ORGANIZATION_ID
+    ports:
+      - "${GAME_SERVICE_PORT:-8090}:8090"
+      - 10001:10001 # gameserver-envoy admin
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      mockauthservice:
+        condition: service_healthy
+
+  gameserver-init:
+    image: ${IMAGE_PREFIX}/gameserver:${IMAGE_VERSION}
+    build:
+      context: ${PWD}/server
+      dockerfile: './deployment/Dockerfile'
+    environment:
+      - env
+      - IMAGE_PREFIX
+      - AUTH_SERVICE_URL
+      - MONGODB_URL
+      - MONGODB_USERNAME
+      - MONGODB_PASSWORD
+      - AWS_URL
+      - CLOUDFRONT_URL
+      - AZP
+      - APP_ID
+      - POOL_ID
+      - SECRET
+      - ACTION=create-index
+      - REDIS_URL
+      - REDIS_PASSWORD
+      - REDIS_DB
+      - DEFAULT_BUCKET
+      - INTERMEDIATE_BUCKET
+      - APK_BUILD_BUCKET
+      - AGORA_APP_ID
+      - AGORA_APP_CERTIFICATE
+      - MOTION_ENDPOINT
+      - OTEL_APP_NAME
+      - OTEL_URL
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+  gameserver-envoy:
+    image: envoyproxy/envoy:dev
+    volumes:
+      - type: bind
+        source: ${PWD}/server/deployment/envoy.yaml
+        target: /etc/envoy.yaml
+    entrypoint: ["/usr/local/bin/envoy", "-c", "/etc/envoy.yaml"]        
+    network_mode: "service:gameserver"

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - Level - NaturePark
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - Level - NaturePark
+  m_Data:
+    m_SerializedData: []
+  m_GUID: fef6aabf34e101e448c8fcd5013845f4
+  m_SerializeEntries:
+  - m_GUID: 5e7af4bd95ac53a4cb784a9eedf8f6f9
+    m_Address: NaturePark
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bfb7ed2cfc112e44fae40a01afbf71ef, type: 2}
+    - {fileID: 11400000, guid: f146260e705ced34e96b2d2801546d5c, type: 2}

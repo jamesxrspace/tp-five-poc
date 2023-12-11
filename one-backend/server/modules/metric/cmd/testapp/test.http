@@ -1,0 +1,7 @@
+###
+
+# curl localhost:8090/metrics
+GET localhost:8090/metrics
+
+###
+

@@ -1,0 +1,233 @@
+{{>partial_header}}
+#pragma warning disable
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using BestHTTP;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using XRSpace.OpenAPI;
+using XRSpace.OpenAPI.Utilities;
+using VContainer;
+{{#hasImport}}using {{packageName}}.{{modelPackage}};{{/hasImport}}
+
+namespace {{packageName}}
+{
+    {{#operations}}
+    /// <summary>
+    /// Represents a collection of functions to interact with the API endpoints
+    /// </summary>
+    public interface I{{classname}}
+    {
+        {{#operation}}
+        /// <summary>
+        /// {{{summary}}} {{{notes}}}
+        /// </summary>
+        {{#allParams}}/// <param name="{{paramName}}">{{description}}</param>
+        {{/allParams}}{{#returnType}}/// <returns>Task &lt; {{.}} &gt;</returns>{{/returnType}}
+        {{#vendorExtensions}}
+        {{^x-is-sse}}
+        {{#returnType}}Task<{{.}}>{{/returnType}}{{^returnType}}void{{/returnType}} {{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}} = default{{/required}}, {{/allParams}}RequestConfig requestConfig = default, CancellationToken cancellationToken = default);
+        {{/x-is-sse}}
+        {{#x-is-sse}}
+        ISSESource {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}} = default{{/required}}, {{/allParams}}RequestConfig requestConfig = default);        
+        {{/x-is-sse}}
+        {{/vendorExtensions}}
+        {{^-last}}
+
+        {{/-last}}
+        {{/operation}}
+    }
+
+    /// <summary>
+    /// Represents a collection of functions to interact with the {{classname}} endpoints.
+    /// </summary>
+    public class {{classname}} : I{{classname}}
+    {
+        private readonly ILogger logger;
+        private readonly IServerBaseUriProvider serverBaseUriProvider;
+        private readonly IAuthTokenProvider authTokenProvider;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="{{classname}}"/> class.
+        /// </summary>
+        /// <param name="loggerFactory"> an instance of ILoggerFactory</param>        
+        /// <param name="serverBaseUriProvider"> an instance of IServerBaseUriProvider</param>
+        /// <param name="authTokenProvider"> an instance of IAuthTokenProvider</param>
+        [Inject]
+        public {{classname}}(
+            ILoggerFactory loggerFactory,
+            IServerBaseUriProvider serverBaseUriProvider,
+            IAuthTokenProvider authTokenProvider)
+        {
+            this.logger = loggerFactory.CreateLogger<{{classname}}>();
+            this.serverBaseUriProvider = serverBaseUriProvider;
+            this.authTokenProvider = authTokenProvider;
+        }
+
+        {{#operation}}
+        {{#vendorExtensions}}
+        {{^x-is-sse}}
+        public async {{#returnType}}Task<{{.}}>{{/returnType}} {{^returnType}}Task{{/returnType}}{{operationId}}Async({{#allParams}}{{{dataType}}} {{paramName}}{{^required}} = default{{/required}}, {{/allParams}}RequestConfig requestConfig = null, CancellationToken cancellationToken = default)
+        {{/x-is-sse}}
+        {{#x-is-sse}}
+        public ISSESource {{operationId}}({{#allParams}}{{{dataType}}} {{paramName}}{{^required}} = default{{/required}}, {{/allParams}}RequestConfig requestConfig = null)        
+        {{/x-is-sse}}
+        {{/vendorExtensions}}
+        {
+            string path = "{{path}}";
+            {{!path parameters}}
+            {{#pathParams}}
+            {{#-first}}
+
+            // Replace the path parameters with their values.
+            {{/-first}}
+            path = HttpUtil.SetPathParameter(path, {{=<% %>=}}"{<%baseName%>}"<%={{ }}=%>, {{paramName}});
+            {{/pathParams}}
+            {{!query parameters}}
+            {{#queryParams}}
+            {{#-first}}
+
+            // Build the query string into the path
+            var paramMap = new Multimap<string, string>();
+            {{/-first}}
+            HttpUtil.ParameterToMultiMap("multi", "{{baseName}}", {{paramName}}, paramMap);
+            {{#-last}}
+            path = HttpUtil.SetQueryParameter(path, paramMap);
+            {{/-last}}
+            {{/queryParams}}
+
+            {{#vendorExtensions}}
+            {{^x-is-sse}}
+            try
+            {
+                return await OpenApiUtil.RequestAsync<{{#returnType}}{{.}}{{/returnType}}>(CreateRequest, authTokenProvider, requestConfig, cancellationToken);
+            }
+            catch (TaskCanceledException)
+            {
+                logger.LogInformation("{Method}(): Be canceled.", nameof({{operationId}}Async));
+                throw;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("{Method}(): Failed. Exception: {Exception}", nameof({{operationId}}Async), ex.Message);
+                throw;
+            }
+            {{/x-is-sse}}
+            {{#x-is-sse}}
+            var sseSrc = new SSESource(CreateRequest, authTokenProvider, requestConfig);
+            {{#responses}}
+            {{#vendorExtensions}}
+            {{#x-event}}
+            sseSrc.RegisterEvent<{{dataType}}>("{{.}}");
+            {{/x-event}}
+            {{/vendorExtensions}}
+            {{/responses}}
+            sseSrc.Activate();
+            return sseSrc;
+            {{/x-is-sse}}
+            {{/vendorExtensions}}
+
+            HTTPRequest CreateRequest()
+            {
+                var uri = new Uri(serverBaseUriProvider.BaseUri, path);
+                var httpRequest = new HTTPRequest(uri, HTTPMethods.{{#lambda.titlecase}}{{#lambda.lowercase}}{{httpMethod}}{{/lambda.lowercase}}){{/lambda.titlecase}};
+                {{#vendorExtensions}}
+                {{#x-enable-cache}}
+                httpRequest.DisableCache = !{{x-enable-cache}};
+                {{/x-enable-cache}}
+                {{^x-enable-cache}}
+                httpRequest.DisableCache = true;
+                {{/x-enable-cache}}
+                {{/vendorExtensions}}
+                {{!header auth}}
+                {{#authMethods}}
+                {{#isBasic}}
+                {{#isBasicBearer}}
+
+                // Bearer authentication required
+                httpRequest.AddHeader("Authorization", $"Bearer {authTokenProvider.GetAuthToken()}");
+                {{/isBasicBearer}}
+                {{/isBasic}}
+                {{/authMethods}}
+                {{!header content type}}
+                {{#consumes}}
+                {{#-first}}
+
+                // Content Type
+                httpRequest.AddHeader("Content-Type", "{{{mediaType}}}");
+                {{/-first}}
+                {{/consumes}}
+                {{!header accept type}}
+                {{#produces}}
+                {{#-first}}
+
+                // Accept Type
+                httpRequest.AddHeader("Accept", "{{{mediaType}}}");
+                {{/-first}}
+                {{/produces}}
+                {{!body parameters}}
+                {{#bodyParam}}
+
+                // Body
+                if ({{paramName}} != null)
+                {
+                    httpRequest.RawData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject({{paramName}}));
+                }
+                {{/bodyParam}}
+                {{#formParams}}
+                {{#-first}}
+
+                // multipart form-data
+                var multipartStream = new MultipartFormDataStream(httpRequest);
+                {{/-first}}
+
+                // multipart form-data: {{baseName}}
+                if ({{paramName}} != null)
+                {
+                    {{#isFile}}
+                    {{#isArray}}
+                    foreach (var stream in {{paramName}})
+                    {
+                        if (stream is null) continue;
+                        if (stream is FileStream fileStream && !string.IsNullOrEmpty(fileStream.Name) && fileStream.Name.IndexOfAny(Path.GetInvalidPathChars()) == -1)
+                        {
+                            multipartStream.AddStreamField(fileStream, "{{baseName}}", Path.GetFileName(fileStream.Name));
+                        }
+                        else
+                        {
+                            multipartStream.AddStreamField(stream, "{{baseName}}");
+                        }
+                    }
+                    {{/isArray}}
+                    {{^isArray}}
+                    if ({{paramName}} is FileStream fileStream && !string.IsNullOrEmpty(fileStream.Name) && fileStream.Name.IndexOfAny(Path.GetInvalidPathChars()) == -1)
+                    {
+                        multipartStream.AddStreamField(fileStream, "{{baseName}}", Path.GetFileName(fileStream.Name));
+                    }
+                    else
+                    {
+                        multipartStream.AddStreamField({{paramName}}, "{{baseName}}");
+                    }
+                    {{/isArray}}
+                    {{/isFile}}
+                    {{^isFile}}
+                    multipartStream.AddField("{{baseName}}", HttpUtil.ParameterToString({{paramName}}));
+                    {{/isFile}}
+                }
+                {{/formParams}}
+
+                return httpRequest;
+            }
+        }
+        {{^-last}}
+
+        {{/-last}}
+        {{/operation}}
+    }
+    {{/operations}}
+}
+#pragma warning restore

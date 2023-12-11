@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: Server API - AIGC
+  description: The Restful APIs of AIGC.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/aigc/motion/generate:
+    post:
+      summary: Generate motion from uploaded music file.
+      operationId: GenerateMotion
+      tags: [Aigc]
+      security: [BearerAuth: []]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateMotionRequest'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerateMotionResponse'
+
+components:
+  schemas:
+    # Model
+    GenerateMotionRequest:
+      type: object
+      description: Generate motion request
+      properties:
+        input_url:
+          type: string
+          description: music input url
+
+    # Resonse
+    GenerateMotionResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              type: string
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

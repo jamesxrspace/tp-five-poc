@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - Scene - Login
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - Scene - Login
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0843820fa051a634e94eaf11608754df
+  m_SerializeEntries:
+  - m_GUID: 2a33cd00d8ecf7445948b59dc77846bf
+    m_Address: Entry/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce7197d85b9bca74399337874d3f5ce8
+    m_Address: Data Assets/LoginEntrySettings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4ccc3aaf71c99944aa2869d86871969
+    m_Address: Entry/Scenes/Login - Entry.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f7d8149e64f3c5478ef56b6814c6b61
+    m_Address: Prefabs/UI3D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38c16974a1b953e4389a88c72e0f9393
+    m_Address: Prefabs/UI2D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f3604e421e1fe24b9f8ce1339ea40bc
+    m_Address: Prefabs/UI2D/LoginWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59cde547aac17ba418c41271b82ffbe5
+    m_Address: Prefabs/UI3D/LoginWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cb4f273f222e4f34bb4b6eaf0656ac5c, type: 2}
+    - {fileID: 11400000, guid: 0c3ebbb3cc7035146994ff60ba688ad3, type: 2}

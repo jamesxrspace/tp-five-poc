@@ -1,0 +1,18 @@
+{
+    "name": "io.xrspace.tpfive.game.space",
+    "displayName": "TPFive 33 Game Space",
+    "description": "TPFive Game Space",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

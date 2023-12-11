@@ -1,0 +1,24 @@
+{
+    "prefs": {
+        "Profiler": {
+            "description": "I am Profiler.",
+            "name": "Profiler",
+            "value": false
+        },
+        "TestText": {
+            "description": "I am TestText.",
+            "name": "TestText",
+            "value": "dev"
+        },
+        "ShowErrorMsgOnToast": {
+            "description": "I am ShowToast.",
+            "name": "ShowToast",
+            "value": true
+        },
+        "SetUnityGeneralMsg": {
+            "description": "I am SetUnityGeneralMsg.",
+            "name": "SetUnityGeneralMsg",
+            "value": false
+        }
+    }
+}

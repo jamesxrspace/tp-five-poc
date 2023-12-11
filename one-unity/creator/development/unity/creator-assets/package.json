@@ -1,0 +1,12 @@
+{
+  "name": "io.xrspace.tpfive.creator.asset",
+  "version": "0.1.0",
+  "displayName": "TPFive 74 Creator Asset",
+  "description": "Assets for benchmark Avatar & Scenes",
+  "unity": "2022.3",
+  "author": {
+    "name": "xrspace",
+    "email": "jay.chou@xrspace.io",
+    "url": "https://www.xrspace.io"
+  }
+}

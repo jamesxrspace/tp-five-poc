@@ -1,0 +1,277 @@
+name: The Game-CI Setup Action
+description: The tp-five all-in-ome Game-CI action setup
+
+inputs:
+  aws_s3_cache_bucket:
+    description: "The AWS S3 cache bucket"
+    default: ""
+  aws_access_key:
+    description: "The AWS access key"
+    default: ""
+  aws_secret_key:
+    description: "The AWS secret key"
+    default: ""
+
+  github_ssh_key:
+    description: "The GitHub accessable SSH private key"
+    required: true
+
+  unity_platform:
+    description: "The specified Unity platform"
+    required: true
+  unity_root:
+    description: "The root path of the Unity project"
+    required: true
+    default: .
+  unity_ven_path:
+    description: "The path of ProjectVersion.txt"
+    default: "ProjectSettings/ProjectVersion.txt"
+  unity_image_ver:
+    # ref: https://gitlab.com/game-ci/unity3d-gitlab-ci-example/-/blob/main/.gitlab-ci.yml?ref_type=heads#L12
+    description: "The Unity image version"
+    default: "2"
+
+  android_ndk_version:
+    description: "The Android NDK version"
+    default: r23b
+
+  target_env:
+    description: "The target running environment"
+    default: dev
+
+outputs:
+  uid:
+    description: "The current UID"
+    value: ${{ steps.get_uid_and_gid.outputs.uid }}
+  gid:
+    description: "The current GID"
+    value: ${{ steps.get_uid_and_gid.outputs.gid }}
+  android_ndk_path:
+    description: "The exposed Android NDK path"
+    value: ${{ steps.setup-ndk.outputs.ndk-path }}
+  unity_build_method:
+    description: "The exactly Unity build method"
+    value: ${{ steps.unity_image_rev.outputs.unity_build_method }}
+  allowDirtyBuild:
+    description: "Allow game-ci builder dirty build"
+    value: ${{ steps.allow_dirty_build.outputs.allow_dirty_build || '' }}
+  image:
+    description: "The target docker image"
+    value: ${{ steps.unity_image_rev.outputs.image }}
+
+runs:
+  using: "composite"
+
+  steps:
+    - uses: tespkg/actions-cache@v1
+      name: Cache LFS on S3
+      if: inputs.aws_s3_cache_bucket != ''
+      with:
+        accessKey: ${{ inputs.aws_access_key }}
+        secretKey: ${{ inputs.aws_secret_key }}
+        bucket: ${{ inputs.aws_s3_cache_bucket }}
+
+        key: ${{ github.repository }}/lfs/cache-${{ github.ref_name }}
+        restore-keys: |
+          ${{ github.repository }}/lfs/cache-${{ github.ref_name }}
+          ${{ github.repository }}/lfs/cache-
+
+        path: .git/lfs
+    - uses: tespkg/actions-cache@v1
+      name: Cache Flutter cache on S3
+      if: inputs.aws_s3_cache_bucket != ''
+      with:
+        accessKey: ${{ inputs.aws_access_key }}
+        secretKey: ${{ inputs.aws_secret_key }}
+        bucket: ${{ inputs.aws_s3_cache_bucket }}
+
+        key: ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/flutter/cache-${{ github.ref_name }}
+        restore-keys: |
+          ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/flutter/cache-${{ github.ref_name }}
+          ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/flutter/cache-
+
+        path: ~/.pub-cache
+    - uses: tespkg/actions-cache@v1
+      name: Cache Unity Library
+      if: inputs.aws_s3_cache_bucket != ''
+      with:
+        accessKey: ${{ inputs.aws_access_key }}
+        secretKey: ${{ inputs.aws_secret_key }}
+        bucket: ${{ inputs.aws_s3_cache_bucket }}
+
+        key: ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/library/cache-${{ github.ref_name }}
+        restore-keys: |
+          ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/library/cache-${{ github.ref_name }}
+
+        path: one-unity/unity-project/development/complete-unity/Library/
+    - name: Pull LFS data
+      shell: bash
+      run: git lfs pull
+
+    # Setup the necessary environment
+    # ======================================
+    - uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-access-key-id: ${{ inputs.aws_access_key }}
+        aws-secret-access-key: ${{ inputs.aws_secret_key }}
+        aws-region: ap-southeast-1
+    - name: decrypt_env.sh
+      shell: bash
+      run: |
+        one-utility/decrypt_env.sh ${{ inputs.target_env }}
+    - name: Enable Sentry
+      shell: bash
+      run: |
+        one-utility/enable_unity_sentry.sh
+
+    # Setup the SSH agent for Unity
+    # ======================================
+    - name: Add GitHub to the SSH known hosts file
+      shell: bash
+      run: |
+        cat << __EOF__ > boostrap.sh
+          #! /usr/bin/env sh
+          set -e
+
+          mkdir -p -m 700 /home/runner/.ssh
+          ssh-keyscan github.com > "/home/runner/.ssh/known_hosts.$$"
+          mv "/home/runner/.ssh/known_hosts.$$" /home/runner/.ssh/known_hosts
+        __EOF__
+        sh boostrap.sh
+        rm boostrap.sh
+    - uses: webfactory/ssh-agent@v0.8.0
+      with:
+        ssh-private-key: ${{ inputs.github_ssh_key }}
+
+    # Prepare the necessary Unity parameters
+    # ======================================
+    - name: Get UID and GID
+      id: get_uid_and_gid
+      shell: bash
+      run: |
+        cat <<__EOF__ >> "$GITHUB_OUTPUT"
+        uid=$(id -u)
+        gid=$(id -g)
+        __EOF__
+    - name: Calculate the docker image rev
+      id: unity_image_rev
+      shell: bash
+      run: |
+        # IMAGE: unityci/editor:$UNITY_VERSION-$UNITY_PLATFORM-$UNITY_IMAGE_VERSION
+        UNITY_VERSION=$(awk -F ': '  '$1 == "m_EditorVersion" { print $2 }' ${{ inputs.unity_root }}/${{ inputs.unity_ven_path }})
+        UNITY_IMAGE_VERSION="${{ inputs.unity_image_ver }}"
+
+        case "${{ inputs.unity_platform }}" in
+          StandaloneLinux64)
+            UNITY_PLATFORM="linux-il2cpp"
+            ;;
+          StandaloneWindows64)
+            UNITY_PLATFORM="windows-mono"
+            UNITY_EXPOSED_METHOD="DoBuildWindowsOS"
+            ;;
+          Android)
+            UNITY_PLATFORM="android"
+            UNITY_EXPOSED_METHOD="DoBuildAndroidLibraryRelease"
+            ;;
+          iOS)
+            UNITY_PLATFORM="ios"
+            UNITY_EXPOSED_METHOD="DoBuildIOSRelease"
+            ;;
+          *)
+            echo "Not support platform: ${{ inputs.targetPlatform }}"
+            exit 1
+            ;;
+        esac
+
+        cat <<__EOF__ >> "$GITHUB_OUTPUT"
+        rev=ubuntu-${UNITY_VERSION}-${UNITY_PLATFORM}-${UNITY_IMAGE_VERSION}
+        image=unityci/editor:ubuntu-${UNITY_VERSION}-${UNITY_PLATFORM}-${UNITY_IMAGE_VERSION}
+        unity_build_method=FlutterUnityIntegration.Editor.Build.${UNITY_EXPOSED_METHOD}
+        __EOF__
+    - uses: tespkg/actions-cache@v1
+      name: Cache docker image on S3
+      if: inputs.aws_s3_cache_bucket != ''
+      id: cache_docker_image
+      env:
+        CACHE_ROOT: ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/docker
+        CACHE_HASH: unity-editor-${{ steps.unity_image_rev.outputs.rev }}
+      with:
+        accessKey: ${{ inputs.aws_access_key }}
+        secretKey: ${{ inputs.aws_secret_key }}
+        bucket: ${{ inputs.aws_s3_cache_bucket }}
+
+        key: ${{ env.CACHE_ROOT }}/cache-${{ env.CACHE_HASH }}
+        restore-keys: |
+          ${{ env.CACHE_ROOT }}/cache-${{ env.CACHE_HASH }}
+          ${{ env.CACHE_ROOT }}/cache-
+
+        path: .cache/docker/unity.tar
+    - name: Load docker image
+      if: inputs.aws_s3_cache_bucket != '' && steps.cache_docker_image.outputs.cache-hit == 'true'
+      shell: bash
+      run: |
+        docker image load --input .cache/docker/unity.tar
+    - name: Pull docker image
+      if: inputs.aws_s3_cache_bucket != '' && steps.cache_docker_image.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        echo "cache-hit = ${{ steps.cache_docker_image.outputs.cache-hit }}"
+        docker pull unityci/editor:${{ steps.unity_image_rev.outputs.rev }}
+
+        mkdir -p ".cache/docker/"
+        docker save unityci/editor --output .cache/docker/unity.tar
+    - uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.13.9'
+    - name: Copy GoogleService-Info.plist
+      shell: bash
+      env:
+        SRC: one-utility/GoogleService-Info.plist
+        DST: one-unity/unity-project/development/complete-unity/Assets/GoogleService-Info.plist
+      run: |
+        cp "${{ env.SRC }}"  "${{ env.DST }}"
+
+    # Setup the Android-related packages
+    # ======================================
+    - uses: tespkg/actions-cache@v1
+      name: Cache ~/.gradle on S3
+      if: inputs.aws_s3_cache_bucket != '' && inputs.unity_platform == 'Android'
+      with:
+        accessKey: ${{ inputs.aws_access_key }}
+        secretKey: ${{ inputs.aws_secret_key }}
+        bucket: ${{ inputs.aws_s3_cache_bucket }}
+
+        key: ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/gradle/cache-${{ github.ref_name }}
+        restore-keys: |
+          ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/gradle/cache-${{ github.ref_name }}
+          ${{ github.repository }}/${{ runner.os }}/${{ inputs.unity_platform }}/gradle/cache-
+
+        path: ~/.gradle
+    - uses: actions/setup-java@v3
+      if: inputs.unity_platform == 'Android'
+      with:
+        distribution: temurin
+        java-version: 11
+    - uses: gradle/gradle-build-action@v2
+      if: inputs.unity_platform == 'Android'
+    - uses: android-actions/setup-android@v2
+      if: inputs.unity_platform == 'Android'
+    - uses: nttld/setup-ndk@v1.3
+      if: inputs.unity_platform == 'Android'
+      id: setup-ndk
+      with:
+        ndk-version: ${{ inputs.android_ndk_version }}
+
+    # Setup the iOS-related packages
+    # ======================================
+    - name: Remove MixedReality on iOS
+      if: inputs.unity_platform == 'iOS'
+      shell: bash
+      run: |
+        ./one-utility/patch-build-ios-app.sh
+
+    - name: Setup dirty build
+      id: allow_dirty_build
+      shell: bash
+      run: |
+        echo "allow_dirty_build=true" >> "$GITHUB_OUTPUT"

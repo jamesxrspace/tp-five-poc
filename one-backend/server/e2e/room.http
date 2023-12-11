@@ -1,0 +1,77 @@
+@host=http://localhost:8090
+### get xr local provider token
+# @name token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&email=xrspacetest1000@xrspace.io&password=1qazXSW@
+
+### Login
+POST {{host}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+### login 
+@access_token = {{token.response.body.$.access_token}}
+
+### join room
+POST {{host}}/api/v1/room/join
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "space_id": "space_xx",
+    "room_id" : "fk_room_id",
+    "user_id" : "fake_user_id"
+}
+
+### leave room 
+POST {{host}}/api/v1/room/leave
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "space_id": "space_xx",
+    "room_id" : "fk_room_id",
+    "user_id" : "fake_user_id"
+}
+
+### fusion custom auth success
+POST {{host}}/api/v1/photon/fusion_custom_auth
+accept: application/json
+Content-Type: application/json
+
+{
+    "authorization": "{{access_token}}"
+}
+
+### fusion custom auth fail
+POST {{host}}/api/v1/photon/fusion_custom_auth
+accept: application/json
+Content-Type: application/json
+
+{
+    "authorization": "authorization"
+}
+
+### get room by id
+@room_id=1ne8el
+GET {{host}}/api/v1/room/{{room_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+### get all room 
+GET {{host}}/api/v1/room/all
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+### get room by space_id
+GET {{host}}/_cms/v1/room?space_id=space_xx&offset=0&size=10
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}

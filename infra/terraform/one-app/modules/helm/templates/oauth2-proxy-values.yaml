@@ -1,0 +1,18 @@
+config:
+  clientID: ${CLIENT_ID}
+  clientSecret: ${CLIENT_SECRET}
+  cookieSecret: ${COOKIE_SECRET}
+  cookieName: ${COOKIE_NAME}
+
+extraArgs:
+  provider: github
+  upstream: "static://200"
+  github-org: XRSPACE-Inc
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 300Mi

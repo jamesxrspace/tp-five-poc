@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "TrackingState",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "$ref": "TrackingFlag.schema#/"
+    },
+    "state": {
+      "$ref": "TrackingStateType.schema#/"
+    }
+  }
+}

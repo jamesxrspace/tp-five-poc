@@ -1,0 +1,70 @@
+{
+  "logo": "One CMS",
+  "pagination": {
+    "currentAndTotal": "Page <bold>{{current}}</bold> of <bold>{{total}}</bold>",
+    "rowsPerPage": "Rows per page"
+  },
+  "table": {
+    "loading": "Loading",
+    "noData": "No data"
+  },
+  "navigation": {
+    "space": {
+      "space": "Space",
+      "list": "Space List",
+      "groupList": "Space Group List",
+      "recommendedTag": "Recommended Tag"
+    },
+    "account": {
+      "account": "Account",
+      "userManagement": "User Management",
+      "role": "Role",
+      "roleSettings": "Settings",
+      "banIp": "Ban IP",
+      "batchUserSearch": "Batch User Search"
+    },
+    "event": {
+      "event": "Event",
+      "promotion": "Promotion"
+    },
+    "develop": {
+      "develop": "Develop",
+      "dailyBuild": "Daily Build",
+      "dailyDatabase": "Daily Database"
+    },
+    "common": {
+      "home": "Home",
+      "notFound": "Not Found",
+      "unauthorized": "Unauthorized"
+    }
+  },
+  "userMenu": {
+    "account": "Account",
+    "logout": "Log out"
+  },
+  "form": {
+    "error": {
+      "required": "This field is required"
+    }
+  },
+  "upload": {
+    "dropzone": {
+      "description": "Click or drop files here to upload"
+    },
+    "errorMessage": "There was an error uploading your files"
+  },
+  "toast": {
+    "sessionExpired": {
+      "title": "Session Expired",
+      "description": "Session expired, please login again"
+    }
+  },
+  "alert": {
+    "delete": {
+      "title": "Delete",
+      "description": "Are you sure? You can't undo this action afterwards.",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    }
+  }
+}

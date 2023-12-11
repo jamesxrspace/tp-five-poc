@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "RoomConfig",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "SpaceId": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "SceneKey": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

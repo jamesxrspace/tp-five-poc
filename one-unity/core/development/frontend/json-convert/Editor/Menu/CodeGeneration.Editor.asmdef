@@ -1,0 +1,18 @@
+{
+    "name": "CodeGeneration.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:32dd042b79f217e4284c8bca99a5a558"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,23 @@
+@game_host=http://localhost:8090
+@mock_auth_host=http://localhost:9453
+
+### get xr local provider token
+# @name token
+POST {{mock_auth_host}}/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&email=xrspacetest1000@xrspace.io&password=1qazXSW@
+
+### Login
+@access_token = {{token.response.body.$.access_token}}
+
+# @name login
+POST {{game_host}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+### list feed
+# @name listFeed
+GET {{game_host}}/api/v1/feed/lobby?size=10&categories=music&categories=culture
+Authorization: Bearer {{access_token}}

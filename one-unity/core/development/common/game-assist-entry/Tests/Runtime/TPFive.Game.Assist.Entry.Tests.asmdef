@@ -1,0 +1,20 @@
+{
+    "name": "TPFive.Game.Assist.Entry.Tests",
+    "rootNamespace": "TPFive.Game.Assist.Entry",
+    "references": [
+        "GUID:28f960c75304d0e4693534a2a4c32aca"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

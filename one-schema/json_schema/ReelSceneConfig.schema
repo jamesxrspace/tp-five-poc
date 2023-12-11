@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReelSceneConfig",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "initState": {
+      "$ref": "RecordStateType.schema#/"
+    },
+    "motionButtonActive": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "decorationActive": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    "decorations": {
+      "type": "array",
+      "items" : {
+        "$ref": "ReelDecoration.schema#/"
+      }
+    }
+  }
+}

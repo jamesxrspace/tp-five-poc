@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Env
+/env
+
+# Visual Studio
+/font-tool.sln
+/.vs
+/font-tool.pyproj

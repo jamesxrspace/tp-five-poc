@@ -1,0 +1,16 @@
+{
+    "name": "io.xrspace.tpfive.game.reel.camera",
+    "version": "0.1.0",
+    "displayName": "TPFive 33 Game Reel Camera",
+    "description": "TPFive Game Reel Camera",
+    "unity": "2022.3",
+    "keywords": [
+        "record",
+        "reel",
+        "camera"
+    ],
+    "author": {
+        "name": "Albert Chen",
+        "email": "albert.chen@xrspace.io"
+    }
+}

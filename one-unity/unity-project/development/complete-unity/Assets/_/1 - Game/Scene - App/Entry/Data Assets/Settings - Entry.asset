@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2483151a745852943b0b71b5d394ca8e, type: 3}
+  m_Name: Settings - Entry
+  m_EditorClassIdentifier: 
+  title: App - Entry
+  category: App
+  loadByScenePropertyList: 1
+  overviewSettings:
+    config: {fileID: 11400000, guid: 2f48b169daa41884babad16809dd25dc, type: 2}
+    hud: {fileID: 11400000, guid: 7c96dda07fbb5474da6774e178c73aa9, type: 2}
+  sceneLists:
+  - platformGroup: 1
+    sceneList: {fileID: 11400000, guid: 5a92685647aad114eab51071afe56515, type: 2}
+  - platformGroup: 2
+    sceneList: {fileID: 11400000, guid: f8c9da55561895042af928aae9956cd5, type: 2}
+  - platformGroup: 3
+    sceneList: {fileID: 11400000, guid: f8c9da55561895042af928aae9956cd5, type: 2}
+  - platformGroup: 4
+    sceneList: {fileID: 11400000, guid: f8c9da55561895042af928aae9956cd5, type: 2}
+  - platformGroup: 0
+    sceneList: {fileID: 11400000, guid: f8c9da55561895042af928aae9956cd5, type: 2}
+  profileSystemSetting: {fileID: 11400000, guid: 7fe44fbbadf4f46d89d687b6b7d4dfe0,
+    type: 2}

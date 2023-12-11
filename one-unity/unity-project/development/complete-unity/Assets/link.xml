@@ -1,0 +1,20 @@
+<linker>
+  <!-- 3rd party packages would be injected by VContainer.
+       Error msg should be: "Type does not found injectable constructor, type: {type.Name}" -->
+  <assembly fullname="Loxodon.Framework.Addressable" preserve="all"/>
+  <!-- fix MissingMethodException: Default constructor not found for type MixedReality.Toolkit.SpatialManipulation.DefaultTransformSmoothingLogic-->
+  <assembly fullname="MixedReality.Toolkit.SpatialManipulation" preserve="all"/>
+  <!-- fix ArgumentNullException at MixedReality.Toolkit.SpatialManipulation.ObjectManipulator.InstantiateManipulationLogic ()-->
+  <assembly fullname="TPFive.Game.Home.Entry" preserve="all"/>
+  <!-- NetSceneLoader cannot avoid stripping by adding [Inject].
+       So add entire assembly instead -->
+  <assembly fullname="TPFive.Room" preserve="all"/>
+  <!-- [Deserialization] Type definition for 'TPFive.Creator.VisualScripting.LoadSceneNode' is missing. -->
+  <assembly fullname="TPFive.Creator.VisualScripting" preserve="all"/>
+  <!-- Packages include JsonProperty -->
+  <assembly fullname="TPFive.Game.Account" preserve="all"/>
+  <assembly fullname="TPFive.Game.FlutterUnityWidget" preserve="all"/>
+  <assembly fullname="TPFive.Game.Record.Entry" preserve="all"/>
+  <assembly fullname="TPFive.Game.Resource" preserve="all"/>
+  <assembly fullname="TPFive.OpenApi.GameServer" preserve="all"/>
+</linker>

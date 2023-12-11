@@ -1,0 +1,76 @@
+@baseUrl=http://localhost:8090
+
+### get xr local provider token
+# @name token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=test_1234&email=xrspacetest1000@xrspace.io&password=1qazXSW@&scope=openid%20offline_access%20username%20profile%20email%20
+
+### login 
+@access_token = {{token.response.body.$.access_token}}
+
+# @name login
+POST {{baseUrl}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+### Create upload request
+# @name uploadRequst
+POST {{baseUrl}}/api/v1/asset/upload
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+	"tags": ["tag1", "tag2"],
+	"type": "3d_reel",
+	"categories": ["music", "dance"],
+	"files": [
+        {
+            "file_id": "a head.png",
+            "content_type": "image/png",
+            "content_length": 273630,
+            "checksum": "h/bi8ZoCPiOpDX7yAtKEwgsV3pTRaQk74L9l6Gdw5kY="
+        },
+        {
+            "file_id": "mov+test.MOV",
+            "content_type": "video/quicktime",
+            "content_length": 3002169,
+            "checksum": "mL3pJis3L2Pu2eSGdgScUDcWrgl1Mfs2SNzLyK51iJw="
+        }
+    ]
+}
+
+### Upload files
+@requestId = {{uploadRequst.response.body.$.data.request_id}}
+
+# it's not working for now, so we need to copy the presigned_urls from the response of the upload request
+# @aHeadUrl = {{uploadRequst.response.body.$.data.presigned_urls['a head.png']}}
+# @aMovUrl = {{uploadRequst.response.body.$.data.presigned_urls['mov+test.MOV']}}
+
+# copy the response of the upload request and paste it here
+@aHeadUrl=http://localhost:9000/tmp/4332abb7-b4cd-40d3-8950-65486ab8b0e5/a%20head.png?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Checksum-Sha256=h%2Fbi8ZoCPiOpDX7yAtKEwgsV3pTRaQk74L9l6Gdw5kY%3D\u0026X-Amz-Credential=MCZKKFiQJDB6y948ZQfv%2F20231006%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231006T091021Z\u0026X-Amz-Expires=900\u0026X-Amz-SignedHeaders=content-length%3Bcontent-type%3Bhost\u0026X-Amz-Signature=27ca191a311022aefc8aa65bbde7da022a855600d73e09015bf47adddafb7b65
+@aMovUrl=http://localhost:9000/tmp/4332abb7-b4cd-40d3-8950-65486ab8b0e5/mov%2Btest.MOV?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Checksum-Sha256=mL3pJis3L2Pu2eSGdgScUDcWrgl1Mfs2SNzLyK51iJw%3D\u0026X-Amz-Credential=MCZKKFiQJDB6y948ZQfv%2F20231006%2Fap-southeast-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20231006T091021Z\u0026X-Amz-Expires=900\u0026X-Amz-SignedHeaders=content-length%3Bcontent-type%3Bhost\u0026X-Amz-Signature=9cee57c5203637fdd1632938d2562d303d974df650a098edecb60b472efcadcd
+
+### upload png
+# @name uploadHead
+curl -X PUT -H 'Content-Type: multipart/form-data' \
+     --data-binary '@assets/a head.png' \
+    '{{aHeadUrl}}' 
+
+
+### uploadMov
+# @name uploadMov
+curl -X PUT -H 'Content-Type: multipart/form-data' \
+     --data-binary '@assets/mov+test.MOV' \
+    '{{aMovUrl}}' 
+
+
+### Confirm uploaded request
+
+POST {{baseUrl}}/api/v1/asset/uploaded/{{requestId}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}

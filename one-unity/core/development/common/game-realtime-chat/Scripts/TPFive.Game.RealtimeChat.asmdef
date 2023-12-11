@@ -1,0 +1,26 @@
+{
+    "name": "TPFive.Game.RealtimeChat",
+    "rootNamespace": "TPFive.Game.RealtimeChat",
+    "references": [
+        "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
+        "GUID:4f682e06dbb3e624faedad9cc27106cc",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:92971db799d184644a45bb2328cb20be",
+        "GUID:8356b4894c5f6d444bf562506cf93bdf",
+        "GUID:8fe0628811dfae646bc42a1a63ab5768",
+        "GUID:201916abf62d15d4a87cd34a777ce1f7",
+        "GUID:3a0eec3c3cbf1854bb4d47e978263576",
+        "GUID:4f3a232e95fa47240959d61d39d94132",
+        "GUID:b73b95263c55bf6439c815f1d82ca9f8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

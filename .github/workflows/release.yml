@@ -1,0 +1,15 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  releaseiOS:
+    uses: ./.github/workflows/build_unity_ios.yml
+    # pass all the calling workflow's secrets to the called workflow
+    # ref: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit
+    with:
+      BUNDLE_ID: "com.xrspace.tpfive"

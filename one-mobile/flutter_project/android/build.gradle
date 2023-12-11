@@ -1,0 +1,49 @@
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        flatDir
+                {
+                    dirs "${project(':unityLibrary').projectDir}/libs"
+                }
+        google()
+        mavenCentral()
+
+        maven { url "${project(':unityLibrary').projectDir}/android-sdk-repository" }
+// Android Resolver Repos Start
+
+        maven {
+            url "${project(':unityLibrary').projectDir}/../../../Library/XRAuth/m2repository"
+            // Packages/io.xrspace.tpfive.game.account/Editor/AuthDependencies.xml:5
+        }
+        maven {
+            url "${project(':unityLibrary').projectDir}/../../../Assets/GeneratedLocalRepo/Firebase/m2repository"
+            // Packages/com.google.firebase.app/Firebase/Editor/AppDependencies.xml:22, Packages/com.google.firebase.analytics/Firebase/Editor/AnalyticsDependencies.xml:18
+        }
+        mavenLocal()
+// Android Resolver Repos End
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

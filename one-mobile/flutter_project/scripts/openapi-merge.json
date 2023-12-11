@@ -1,0 +1,35 @@
+{
+    "inputs": [
+      {
+        "inputFile": "./doc/documents/app/agora_api.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/aigc_api.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/asset_api.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/asset_decoration.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/avatar_api.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/feed.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/login_api.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/reel_api.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/room_api.yaml"
+      },
+      {
+        "inputFile": "./doc/documents/app/space_api.yaml"
+      }
+    ],
+    "output": "./doc/documents/app/_merge_api.yaml"
+  }

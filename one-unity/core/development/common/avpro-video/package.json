@@ -1,0 +1,16 @@
+{
+  "name": "com.renderheads.avpro-video",
+  "displayName": "AVPro Video",
+  "description": "AVPro Video is a plugin for Unity that gives developers an easy-to-use yet powerful video playback solution on multiple platforms.",
+  "version": "2.9.0",
+  "unity": "2019.4",
+  "documentationUrl": "https://www.renderheads.com/content/docs/AVProVideo/articles/intro.html",
+  "changelogUrl": "https://assetstore.unity.com/packages/tools/video/avpro-video-ultra-edition-184294#releases",
+  "licensesUrl": "https://unity.com/cn/legal/as-terms",
+  "keywords": [
+    "Unity",
+    "Video",
+    "Tool"
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,27 @@
+{
+    "name": "TPFive.Extended.Space",
+    "rootNamespace": "TPFive.Extended.Space",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Space",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "com.xrspace.openapi",
+        "TPFive.OpenApi.GameServer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

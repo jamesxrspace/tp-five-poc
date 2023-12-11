@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Game.Audio",
+    "rootNamespace": "TPFive.Game.Audio",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

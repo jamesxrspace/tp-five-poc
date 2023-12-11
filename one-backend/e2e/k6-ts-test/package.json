@@ -1,0 +1,26 @@
+{
+  "name": "k6-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "prettier": "^3.0.3"
+  },
+  "scripts": {
+    "k6": "echo https://k6.io/docs/get-started/installation/",
+    "test": "for FILE in ./src/**/*test.js; do k6 run $FILE; done",
+    "prettier": "prettier --write .",
+    "eslint": "eslint \"./**/*.{ts,tsx,js,jsx,d.ts}\" --fix",
+    "lint": "pnpm run eslint && pnpm run prettier"
+  },
+  "dependencies": {
+    "@types/k6": "^0.46.2"
+  }
+}

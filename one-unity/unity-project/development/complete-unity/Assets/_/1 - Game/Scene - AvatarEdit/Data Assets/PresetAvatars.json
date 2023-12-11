@@ -1,0 +1,1134 @@
+{
+	"Male2": {
+		"m_presetavatar_xspo_01": {
+			"avatarid": "m_presetavatar_xspo_01",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_015_bs_004",
+					"None",
+					"hum_m01_pants_013_bs_002",
+					"hum_m01_shoe_016_bs_003",
+					"hum_m01_hair_014_bs_001",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					null
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"hum_f01_eye_000_bs_008",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"FFAC31FF",
+					null,
+					null,
+					"FFAC31FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FEFFF6FF",
+				"HairColor": "FFAC31FF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"m_presetavatar_xspo_02": {
+			"avatarid": "m_presetavatar_xspo_02",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_007_bs_001",
+					"None",
+					"hum_m01_pants_006_bs_001",
+					"hum_m01_shoe_007_bs_001",
+					"hum_m01_hat_004_bs_001",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					null
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"hum_f01_eye_000_bs_001",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"3A3A3AFF",
+					"3A3A3AFF",
+					null,
+					"3A3A3AFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FEFFF6FF",
+				"HairColor": "FFAC31FF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"m_presetavatar_xspo_03": {
+			"avatarid": "m_presetavatar_xspo_03",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_017_bs_005",
+					"None",
+					"hum_m01_pants_003_bs_004",
+					"hum_m01_shoe_008_bs_001",
+					"hum_m01_hat_001_bs_007",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"hum_m01_facedeck_005_bs_001"
+				]
+			},
+			"morpher": {
+				"mor_face_rectangleprotrude": 100,
+				"mor_brow_upward": 100,
+				"mor_eyes_arabic": 100,
+				"mor_nose_roman": 100,
+				"mor_lip_thin": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					"hum_f01_head_000_br_003",
+					null,
+					null,
+					null,
+					"None",
+					"None",
+					"None",
+					"hum_f01_eye_000_bs_007",
+					"None",
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"9F7043FF",
+					"9F7043FF",
+					null,
+					"64606EFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "E9E9DFFF",
+				"HairColor": "9F7043FF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"m_presetavatar_xspo_04": {
+			"avatarid": "m_presetavatar_xspo_04",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_026_bs_009",
+					"None",
+					"hum_m01_pants_007_bs_006",
+					"hum_m01_shoe_015_bs_004",
+					"hum_m01_hat_008_bs_008",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"hum_m01_facedeck_004_bs_001"
+				]
+			},
+			"morpher": {
+				"mor_face_rectangleprotrude": 100,
+				"mor_brow_upward": 100,
+				"mor_eyes_arabic": 100,
+				"mor_nose_roman": 100,
+				"mor_lip_thin": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					"hum_f01_head_000_br_003",
+					null,
+					null,
+					null,
+					"None",
+					"None",
+					"None",
+					"hum_f01_eye_000_bs_007",
+					"None",
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"9F7043FF",
+					"9F7043FF",
+					null,
+					"64606EFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "E8CCADFF",
+				"HairColor": "9F7043FF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"m_presetavatar_xspo_05": {
+			"avatarid": "m_presetavatar_xspo_05",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_011_bs_002",
+					"None",
+					"hum_m01_pants_003_bs_001",
+					"hum_m01_shoe_015_bs_009",
+					"hum_m01_hair_005_bs_001",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"hum_f01_facedeck_007_bs_001"
+				]
+			},
+			"morpher": {
+				"mor_face_ovallong": 100,
+				"mor_eyes_phoenix": 100,
+				"mor_nose_flat": 100,
+				"mor_lip_thin": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"64606EFF",
+					null,
+					null,
+					"64606EFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "E9E9DFFF",
+				"HairColor": "64606EFF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"m_presetavatar_xspo_06": {
+			"avatarid": "m_presetavatar_xspo_06",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_001_bs_003",
+					"None",
+					"hum_m01_pants_004_bs_001",
+					"hum_m01_shoe_002_bs_002",
+					"hum_m01_hat_003_bs_002",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"None"
+				]
+			},
+			"morpher": {
+				"mor_face_rectangleprotrude": 100,
+				"mor_eyes_arabic": 100,
+				"mor_nose_roman": 100,
+				"mor_lip_thin": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					"None",
+					null,
+					null,
+					null,
+					"None",
+					"None",
+					"None",
+					"hum_f01_eye_000_bs_007",
+					"None",
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"9F7043FF",
+					"9F7043FF",
+					null,
+					"64606EFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "E8CCADFF",
+				"HairColor": "9F7043FF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"m_presetavatar_xspo_07": {
+			"avatarid": "m_presetavatar_xspo_07",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_002_bs_001",
+					"None",
+					"hum_m01_pants_002_bs_001",
+					"hum_m01_shoe_002_bs_004",
+					"hum_m01_hat_008_bs_003",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					null
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					"hum_f01_eye_000_bs_001",
+					null,
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"3A3A3AFF",
+					"3A3A3AFF",
+					null,
+					"3A3A3AFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FEFFF6FF",
+				"HairColor": "FFAC31FF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"m_presetavatar_xspo_08": {
+			"avatarid": "m_presetavatar_xspo_08",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_male",
+			"gender": 11,
+			"skin_parts": {
+				"parts": [
+					"hum_m01_head_000_bs_001",
+					"hum_m01_coat_013_bs_001",
+					"None",
+					"hum_m01_pants_005_bs_003",
+					"hum_m01_shoe_006_bs_002",
+					"hum_m01_hair_016_bs_001",
+					"hum_m01_nail_001_bs_012",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"hum_m01_facedeck_002_bs_002"
+				]
+			},
+			"morpher": {
+				"mor_face_roundlong": 100,
+				"mor_brow_thicc": 100,
+				"mor_eyes_close": 100,
+				"mor_nose_roman": 100,
+				"mor_lip_sharp": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					"hum_f01_head_000_br_002",
+					"None",
+					null,
+					null,
+					"None",
+					"None",
+					null,
+					"hum_f01_eye_000_bs_001",
+					"None",
+					null,
+					null,
+					null,
+					null
+				],
+				"partColors": [
+					"9F7043FF",
+					"9F7043FF",
+					null,
+					"9F7043FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "E9E9DFFF",
+				"HairColor": "9F7043FF"
+			},
+			"body": {
+				"Height": 1,
+				"Shape": 0
+			},
+			"extra_info": null
+		}
+	},
+	"Female2": {
+		"f_presetavatar_xspo_01": {
+			"avatarid": "f_presetavatar_xspo_01",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"hum_f01_coat_020_bs_005",
+					"None",
+					"hum_f01_pants_013_bs_004",
+					"hum_f01_shoe_001_bs_002",
+					"hum_f01_hair_020_bs_001",
+					"hum_f01_nail_001_bs_003",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"hum_f01_facedeck_003_bs_001"
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					null,
+					null,
+					"hum_f01_head_000_bl_002",
+					"None",
+					null,
+					null,
+					"hum_f01_eye_000_bs_001",
+					null,
+					null,
+					null,
+					null,
+					"hum_f01_body_000_sk_005"
+				],
+				"partColors": [
+					"FFCFB1FF",
+					null,
+					null,
+					"FFCFB1FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FFFFFFFF",
+				"HairColor": "FEFFF6FF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"f_presetavatar_xspo_02": {
+			"avatarid": "f_presetavatar_xspo_02",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"hum_f01_coat_001_bs_001",
+					"None",
+					"hum_f01_pants_001_bs_001",
+					"hum_f01_shoe_001_bs_001",
+					"hum_f01_hat_001_bs_001",
+					"hum_f01_nail_001_bs_008",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					null
+				]
+			},
+			"morpher": {
+				"mor_face_roundlong": 100,
+				"mor_eyes_round": 100,
+				"mor_nose_roman": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					"None",
+					null,
+					"None",
+					"None",
+					"None",
+					null,
+					"hum_f01_eye_000_bs_005",
+					"None",
+					"None",
+					"None",
+					null,
+					null
+				],
+				"partColors": [
+					"4379CEFF",
+					"4379CEFF",
+					null,
+					"4379CEFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FEFFF6FF",
+				"HairColor": "4379CEFF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"f_presetavatar_xspo_03": {
+			"avatarid": "f_presetavatar_xspo_03",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"hum_f01_coat_017_bs_001",
+					"None",
+					"hum_f01_pants_004_bs_001",
+					"hum_f01_shoe_008_bs_001",
+					"hum_f01_hat_004_bs_001",
+					"hum_f01_nail_001_bs_008",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					null
+				]
+			},
+			"morpher": {
+				"mor_face_roundlong": 100,
+				"mor_nose_roman": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					"None",
+					null,
+					"None",
+					"None",
+					"None",
+					null,
+					"hum_f01_eye_000_bs_010",
+					"None",
+					"hum_f01_body_000_to2_002",
+					"None",
+					null,
+					null
+				],
+				"partColors": [
+					"FF8C9EFF",
+					"4379CEFF",
+					null,
+					"FF8C9EFF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "DAD7BBFF",
+				"HairColor": "FF8C9EFF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"f_presetavatar_xspo_04": {
+			"avatarid": "f_presetavatar_xspo_04",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"None",
+					"None",
+					"None",
+					"hum_f01_shoe_015_bs_003",
+					"hum_f01_hair_021_bs_001",
+					"hum_f01_nail_001_bs_008",
+					"None",
+					"hum_f01_suit_001_bs_006"
+				]
+			},
+			"attachments": {
+				"parts": [
+					null
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					"None",
+					null,
+					"None",
+					"None",
+					"None",
+					null,
+					"hum_f01_eye_000_bs_001",
+					"hum_f01_body_000_to1_006",
+					"None",
+					"None",
+					null,
+					null
+				],
+				"partColors": [
+					"FFAC31FF",
+					"4379CEFF",
+					null,
+					"FFAC31FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "E9E9DFFF",
+				"HairColor": "FFAC31FF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"f_presetavatar_xspo_05": {
+			"avatarid": "f_presetavatar_xspo_05",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"hum_f01_coat_024_bs_004",
+					"None",
+					"hum_f01_pants_012_bs_002",
+					"hum_f01_shoe_013_bs_001",
+					"hum_f01_hat_005_bs_004",
+					"hum_f01_nail_001_bs_008",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					null
+				]
+			},
+			"morpher": {
+				"mor_face_heartmedium": 100,
+				"mor_eyes_hooded": 100,
+				"mor_nose_forceful": 100,
+				"mor_lip_oval": 100
+			},
+			"face_textures": {
+				"parts": [
+					null,
+					null,
+					"None",
+					null,
+					null,
+					"hum_f01_head_000_li_004",
+					"hum_f01_head_000_to_003",
+					null,
+					"hum_f01_eye_000_bs_005",
+					"hum_f01_body_000_to1_006",
+					"None",
+					"None",
+					null,
+					null
+				],
+				"partColors": [
+					"FFA7E3FF",
+					"4379CEFF",
+					null,
+					"FF4FD2FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "E8F2DAFF",
+				"HairColor": "FFA7E3FF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"f_presetavatar_xspo_06": {
+			"avatarid": "f_presetavatar_xspo_06",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"hum_f01_coat_003_bs_002",
+					"None",
+					"hum_f01_pants_003_bs_001",
+					"hum_f01_shoe_009_bs_001",
+					"hum_f01_hair_011_bs_001",
+					"hum_f01_nail_001_bs_001",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"None"
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					"hum_f01_head_000_eb_001",
+					null,
+					null,
+					null,
+					null,
+					"hum_f01_head_000_li_010",
+					"None",
+					null,
+					null,
+					"hum_f01_body_000_to1_003",
+					"hum_f01_body_000_to2_006",
+					"hum_f01_body_000_to3_001",
+					null,
+					"None"
+				],
+				"partColors": [
+					"FFCFB1FF",
+					null,
+					null,
+					"FFCFB1FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FEFFF6FF",
+				"HairColor": "FFFFFFFF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"f_presetavatar_xspo_07": {
+			"avatarid": "f_presetavatar_xspo_07",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"hum_f01_coat_025_bs_003",
+					"None",
+					"hum_f01_pants_009_bs_004",
+					"hum_f01_shoe_013_bs_006",
+					"hum_f01_hat_001_bs_005",
+					"hum_f01_nail_001_bs_006",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"None"
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					"hum_f01_head_000_eb_001",
+					null,
+					null,
+					null,
+					"hum_f01_head_000_bl_002",
+					"hum_f01_head_000_li_005",
+					"None",
+					null,
+					null,
+					"None",
+					"None",
+					"None",
+					"None",
+					"None"
+				],
+				"partColors": [
+					"FFCFB1FF",
+					null,
+					null,
+					"FFCFB1FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FEFFF6FF",
+				"HairColor": "FFCFB1FF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		},
+		"f_presetavatar_xspo_08": {
+			"avatarid": "f_presetavatar_xspo_08",
+			"accountid": null,
+			"skeleton": "avatar2_skeleton_female",
+			"gender": 12,
+			"skin_parts": {
+				"parts": [
+					"hum_f01_head_000_bs_001",
+					"hum_f01_coat_022_bs_005",
+					"None",
+					"hum_f01_pants_014_bs_002",
+					"hum_f01_shoe_004_bs_007",
+					"hum_f01_hair_018_bs_001",
+					"hum_f01_nail_001_bs_006",
+					"None",
+					"None"
+				]
+			},
+			"attachments": {
+				"parts": [
+					"hum_f01_facedeck_003_bs_001"
+				]
+			},
+			"morpher": {},
+			"face_textures": {
+				"parts": [
+					"hum_f01_head_000_eb_001",
+					null,
+					null,
+					null,
+					"None",
+					"hum_f01_head_000_li_012",
+					"None",
+					null,
+					"hum_f01_eye_000_bs_001",
+					"None",
+					"None",
+					"None",
+					"None",
+					"None"
+				],
+				"partColors": [
+					"FFCFB1FF",
+					null,
+					null,
+					"FFCFB1FF",
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null,
+					null
+				]
+			},
+			"colors": {
+				"SkinColor": "FEFFF6FF",
+				"HairColor": "FFFFFFFF"
+			},
+			"body": {
+				"Height": 1.05,
+				"Shape": 0
+			},
+			"extra_info": null
+		}
+	}
+}

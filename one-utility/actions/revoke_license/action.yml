@@ -1,0 +1,24 @@
+name: Acquire License
+
+inputs:
+  LAMBDA_FUNCNAME:
+    description: The AWS lambda function name
+    required: true
+    default: license-server
+  LICENSE_UUID:
+    description: The target license UUID
+    required: true
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: revoke license
+      shell: bash
+      run: |
+        aws lambda invoke \
+          --function-name ${{ inputs.LAMBDA_FUNCNAME }} \
+          --cli-binary-format raw-in-base64-out \
+          --payload '{"action":"revoke","id":"${{ inputs.LICENSE_UUID }}"}' output.txt
+
+        echo "revoke license ${{ inputs.LICENSE_UUID }}"

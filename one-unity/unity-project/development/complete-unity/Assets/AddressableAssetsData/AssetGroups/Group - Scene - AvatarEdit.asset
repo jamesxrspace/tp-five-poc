@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - Scene - AvatarEdit
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - Scene - AvatarEdit
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0cc859b8ba476174abcd2313c0d0d85e
+  m_SerializeEntries:
+  - m_GUID: ce81896b30d094646a23af6e4acada31
+    m_Address: Data Assets/PresetImages
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5fb5f4cefa05d84b86b6656d321ddac
+    m_Address: Data Assets/PresetImages/Idle
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b0ce45d41a299e48952a50cd715663a
+    m_Address: Data Assets/PresetImages/Selected
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28660a30fd8b20b48be85f3031e0a259
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30de7b609c209504ca79c7e33e3bf3e4
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57d2f39054b053a438f4cf4e77052a06
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d0a490168683d4469e09da0132cbdaf
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5ab369199d99d940993d6a17be9eea4
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f034b91234172bb4c82e51795755ceed
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42e582236a511594a948e3231d5d45a3
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eeb9f92363c1a134087e7e3fa70f4f59
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7de316a358dfd6740915f761ee2af917
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 437dc7e3c2a652b4c80883516ed02550
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e30ca504ccd62ce43a27af1bfeabc1b8
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 21d5f0a4683c5b340baab5239085321c
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c57f64a430007e04b840bfc281fb8b01
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41bedbe41811c9244981dc5770531bf6
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4178515281911848bc8b7d2b9af3d53
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee571266e6ed35f45962733241a15290
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c6285072673442478334d11e70086d1
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cdcd14372d5c86b40b1f307064c7494a
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a58c224795b097046811489bf230a954
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 04064438c67eece4689f96960e6fa124
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 514ebe78c1cf8de488d5a64ed5d565c1
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62f7fcc8ba6d37647afd63f4ed03907c
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b793e8d97b3a72948811632bbdb47f28
+    m_Address: Data Assets/PresetImages/Idle/f_presetavatar_xspo_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bafe020a4a0ea074596e9ddc42c3fd24
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cd903ea09dc229489da0b0f149f6965
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 242383eb89efa4e4fa3d1e7d639e6b78
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca19d91ddc6f92e4a8234784a3b95c39
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d160aedd31d3a474cae223e79a3d1a8a
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96fb88def24207a4ca067da14ec0f580
+    m_Address: Data Assets/PresetImages/Idle/m_presetavatar_xspo_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b6c294f40becb34bb4e0eb3577183e6
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31902a9f1a84232449e71bc0bc38eb31
+    m_Address: Data Assets/PresetImages/Selected/m_presetavatar_xspo_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f4f83bfe8bf0804a9dc024be035dcc8
+    m_Address: Data Assets/PresetImages/Selected/f_presetavatar_xspo_08.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fc8d4203703aa84daf351f29a88e1da
+    m_Address: Entry/Scenes/AvatarEdit - Entry.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95c1bcf4b87291b4f93faf5f46bb3294
+    m_Address: Data Assets/AvatarRenderTexture.renderTexture
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc7f710b468cc1041bcfb16bb8119b2c
+    m_Address: Data Assets/AvatarEditSettings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e7c68220da3f1642aa07f042de7d145
+    m_Address: Prefabs/UI3D/SelectPresetAvatarWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a23fd2e1b3569cd47a2555e685a79769
+    m_Address: Prefabs/UI2D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1eb2a50e31aa01340b990d6cfd3e54f2
+    m_Address: Prefabs/UI3D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d3704b2ac354114f962fe0d4d6d3add
+    m_Address: Prefabs/UI2D/AvatarEditMainWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9aa75c168986f494b8c73a98d45f6205
+    m_Address: Prefabs/UI2D/SelectPresetAvatarWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8760687da43d53e47be56f2a46413d56
+    m_Address: Data Assets/EditorAvatarController.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9272e005da14eb646a2b4903de136c0a
+    m_Address: Data Assets/FemaleOverrideController.overrideController
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c90e9c0817b37f34fb1c0d0748f7d96c
+    m_Address: Data Assets/f_v2_base_stand_Breathe.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02d104a22988c5042afe79460977aa3c
+    m_Address: Data Assets/MaleOverrideController.overrideController
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c69875d312a2ca94eab8fafa75773cd9
+    m_Address: Data Assets/m_v2_base_stand_Breathe.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aaf3d8aa86ecb2046b62541177bfce22
+    m_Address: Data Assets/PresetAvatars.json
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 837a29e9148b6d94688fde916682812d
+    m_Address: Prefabs/UI3D/AvatarEditMainWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ce997c225c2477449c1e0850ca43e66
+    m_Address: Prefabs/UI2D/EditAvatarDetailWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 8a52f8b41514f4348912342edfe3fb13, type: 2}
+    - {fileID: 11400000, guid: bc57ab2f6776e8044a5b69a5d2126119, type: 2}

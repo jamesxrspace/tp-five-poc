@@ -1,0 +1,9 @@
+{
+    "prefs": {
+        "TestText": {
+            "description": "I am TestText.",
+            "name": "TestText",
+            "value": "prod"
+        }
+    }
+}

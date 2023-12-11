@@ -1,0 +1,42 @@
+{
+    "name": "TPFive.Creator.Editor.Tests",
+    "rootNamespace": "TPFive.Creator.Editor.Tests",
+    "references": [
+        "Unity.Addressables",
+        "Unity.Addressables.Editor",
+        "Unity.AddressableImporter.Editor",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "TPFive.Cross",
+        "TPFive.Cross.Editor",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "TPFive.Creator.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Microsoft.Bcl.AsyncInterfaces.dll",
+        "Microsoft.Extensions.Logging.Abstractions.dll",
+        "Microsoft.Extensions.Logging.dll",
+        "Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "Microsoft.Extensions.DependencyInjection.dll",
+        "Microsoft.Extensions.Options.dll",
+        "Microsoft.Extensions.Primitives.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [
+    ],
+    "noEngineReferences": false
+}

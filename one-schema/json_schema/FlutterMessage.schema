@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "FlutterMessage",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sessionId": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "type": {
+      "$ref": "FlutterMessageType.schema#/"
+    },
+    "data": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "errorCode": {
+      "$ref": "ErrorCode.schema#/"
+    },
+    "errorMsg": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

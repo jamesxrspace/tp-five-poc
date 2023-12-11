@@ -1,0 +1,16 @@
+{
+    "name": "io.xrspace.tpfive.room",
+    "displayName": "TPFive 60 Room",
+    "description": "TPFive Room",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [],
+    "repository": {}
+}

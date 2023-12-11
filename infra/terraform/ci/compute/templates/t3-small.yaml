@@ -1,0 +1,44 @@
+matcherConfig : 
+  labelMatchers: 
+    - [ self-hosted, t3-small ]
+  exactMatch: false
+fifo: true
+delay_webhook_event: 0
+runner_config:
+  runner_os: linux
+  ami_filter: 
+    name: 
+      - github-runner-al2023-x86_64-*
+    state: 
+      - available
+  ami_owners:
+    - "${AMI_OWNERS}"
+  ami_id_ssm_parameter_name: /github-action-runners/ci-runner/linux-x64/runners/config/ami
+  runner_architecture: x64
+  runner_name_prefix: amazon-x64_
+  create_service_linked_role_spot: true
+  enable_ssm_on_runners: true
+  enable_userdata: false
+  enable_runner_binaries_syncer: false
+  runner_run_as: runner
+  runner_iam_role_managed_policy_arns:
+    - ${RUNNER_IAM_ROLE_MANAGED_POLICY_ARNS}
+  disable_runner_autoupdate: true
+  instance_types: 
+    - t3.small
+    - t3a.small
+    - t2.small
+  runner_extra_labels: "amazon,t3-small"
+  runners_maximum_count: 50
+  enable_ephemeral_runners: false
+  enable_organization_runners: true
+  block_device_mappings:
+    - delete_on_termination: true
+      device_name: /dev/xvda
+      encrypted: true
+      iops: null
+      kms_key_id: null
+      snapshot_id: null
+      throughput: null
+      volume_size: 125
+      volume_type: gp3

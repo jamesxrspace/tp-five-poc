@@ -1,0 +1,108 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Setup before everything"
+  before_all do |lane, options|
+    puts "Setup before everything ..."
+    ENV["BUNDLE_NAME"] = "TPFive"
+    ENV["BUNDLE_DISPLAY_NAME"] = "TPFive"
+  end
+
+  desc "Teardown after everything"
+  after_all do |lane, options|
+    FileUtils.remove_entry("../match", true)
+    puts "Finished teardown everything ..."
+  end
+
+  desc "Build and Publish the iOS APP to TestFlight"
+  lane :release do
+    # set the CI environment variable to true if running on CI
+    # ref: https://docs.fastlane.tools/actions/setup_ci/
+    setup_ci if ENV['IS_CI']
+    bundle_id = ENV["BUNDLE_ID"] || "com.xrspace.tpfive.dev"
+
+    # setup the certificates and provisioning profiles
+    # download to the match folder and reuse it for `update_project_provisioning`
+    match(type: "appstore", app_identifier: bundle_id, readonly: true, output_path: "match")
+    provisioning_profile = "match/AppStore_#{bundle_id}.mobileprovision"
+
+    # update the project settings
+    update_app_identifier(xcodeproj: "Runner.xcodeproj", plist_path: "Runner/Info.plist", app_identifier: bundle_id)
+    update_project_provisioning(xcodeproj: "Runner.xcodeproj", profile: provisioning_profile, target_filter: "Runner")
+    update_project_team(teamid: "P9S7GYJ89L", path: "Runner.xcodeproj")
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: "Runner.xcodeproj",
+      bundle_identifier: bundle_id,
+      code_sign_identity: "iPhone Distribution",
+      profile_name: "match AppStore #{bundle_id}"
+    )
+
+    # build the iOS app
+    build_app(workspace: "Runner.xcworkspace", scheme: "Runner")
+
+    # upload the iOS to TestFlight
+    api_key = app_store_connect_api_key(
+      key_id: "T76UFLW8P7",
+      issuer_id: "af53da23-79f6-48c2-8f49-b82cd12b5e69",
+      # The .p8 file from Apple and used to authenticate with the API
+      # uncomment to use a file on your local filesystem
+      # key_filepath: "AuthKey_T76UFLW8P7.p8",
+      duration: 1200, # optional (maximum 1200)
+      in_house: false # optional but may be required if using match/sigh
+    )
+    upload_to_testflight(skip_waiting_for_build_processing: true, api_key: api_key)
+  end
+
+  desc "Build and Install in the local device"
+  lane :install do
+    # ensure_env_vars(env_vars: ["DEVICE_ID"])
+    bundle_id = "com.xrspace.tpfive.dev"
+
+    # setup the certificates and provisioning profiles
+    # download to the match folder and reuse it for `update_project_provisioning`
+    match(type: "development", app_identifier: bundle_id, readonly: true, output_path: "match")
+    provisioning_profile = "match/Development_#{bundle_id}.mobileprovision"
+
+    # update the project settings
+    update_app_identifier(xcodeproj: "Runner.xcodeproj", plist_path: "Runner/Info.plist", app_identifier: bundle_id)
+    update_project_provisioning(xcodeproj: "Runner.xcodeproj", profile: provisioning_profile, target_filter: "Runner")
+    update_project_team(teamid: "P9S7GYJ89L", path: "Runner.xcodeproj")
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: "Runner.xcodeproj",
+      bundle_identifier: bundle_id,
+      code_sign_identity: "iPhone Developer",
+      profile_name: "match Development #{bundle_id}"
+    )
+
+    # build the iOS app
+    build_app(workspace: "Runner.xcworkspace", scheme: "Runner", export_method: "development")
+    install_on_device(device_id: ENV["DEVICE_ID"], ipa: "./Runner.ipa")
+  end
+
+  desc "Bump the build version"
+  lane :bump do
+    flutter_versioncode_bump(pubspec_location: "../pubspec.yaml", version_code_increment: 1)
+    git_commit(path: "../pubspec.yaml", message: "[AUTO] automatically add the bump version", skip_git_hooks: true)
+
+    push_to_git_remote
+  end
+end
+
+# vim: ts=2 sw=2 et :

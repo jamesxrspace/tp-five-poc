@@ -1,0 +1,30 @@
+{
+    "name": "TPFive.Creator.Editor",
+    "rootNamespace": "TPFive.Creator.Editor",
+    "references": [
+        "Unity.Addressables",
+        "Unity.Addressables.Editor",
+        "Unity.AddressableImporter.Editor",
+        "Unity.RemoteConfig.Editor.Core",
+        "Unity.RemoteConfig.Editor",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "TPFive.Cross",
+        "TPFive.Cross.Editor",
+        "TPFive.Creator"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

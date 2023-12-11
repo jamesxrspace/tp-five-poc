@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: .*
+    kms: "arn:aws:kms:ap-southeast-1:047401700492:key/9ccbe92b-cbb6-4830-84b1-b65cf8e01485"

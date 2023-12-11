@@ -1,0 +1,35 @@
+{
+  "name": "io.xrspace.tpfive.creator",
+  "displayName": "TPFive 61 Creator",
+  "description": "TPFive Creator",
+  "version": "0.1.0",
+  "unity": "2022.3",
+  "keywords": [
+    "Unity",
+    "TPFive",
+    "OneApp"
+  ],
+  "category": "",
+  "dependencies": {
+    "com.cysharp.messagepipe": "1.7.4",
+    "org.mixedrealitytoolkit.core": "3.0.0-pre.18",
+    "org.mixedrealitytoolkit.input": "3.0.0-pre.18",
+    "org.mixedrealitytoolkit.spatialmanipulation": "3.0.0-pre.18",
+    "io.xrspace.tpfive.cross": "0.1.0",
+    "io.xrspace.tpfive.game": "0.1.0",
+    "io.xrspace.tpfive.game.interactable.toolkit": "0.1.0",
+    "com.unity.xr.interaction.toolkit": "0.1.0",
+    "com.neuecc.unirx": "7.1.0",
+    "com.unity.timeline": "1.7.5"
+  },
+  "contributors": [
+    {
+      "email": "ray.wang@xrspace.io",
+      "name": "Ray Wang"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+  }
+}

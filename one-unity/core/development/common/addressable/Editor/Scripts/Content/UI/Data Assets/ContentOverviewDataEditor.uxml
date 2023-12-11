@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+    <ui:Button text="Update Overview" display-tooltip-when-elided="true" name="updateOverview" />
+    <ui:Button text="Clear Selected" display-tooltip-when-elided="true" name="clearSelected" />
+    <ui:Button text="Import Selected" display-tooltip-when-elided="true" name="importSelected" />
+    <ui:VisualElement name="progressBar" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="progressBarOverlay" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="progressLabel" />
+    </ui:VisualElement>
+    <ui:Button text="Place Into Addressables" display-tooltip-when-elided="true" name="placeIntoAddressables" />
+    <ui:VisualElement name="listContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:ListView name="listView" virtualization-method="DynamicHeight" reorder-mode="Animated" binding-path="unitypackageList" show-border="true" show-foldout-header="true" header-title="Unitypackages" />
+    </ui:VisualElement>
+</ui:UXML>

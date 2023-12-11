@@ -1,0 +1,158 @@
+openapi: 3.0.3
+info:
+  title: Server API - Space
+  description: The Restful APIs of Space.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8090
+    description: Local server
+  - url: https://backend.dev.xrspace.io
+    description: Development server
+  - url: https://backend.qa.xrspace.io
+    description: QA server
+  - url: https://backend.xrspace.io
+    description: Production server
+
+paths:
+  /api/v1/space/group/list:
+    get:
+      summary: Get the list of available space groups
+      operationId: GetSpaceGroupList
+      security: [BearerAuth: []]
+      tags: [space]
+      parameters:
+        - in: query
+          name: offset
+          description: current page
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: size
+          description: number of items per page
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetSpaceGroupListResponse"
+  /api/v1/space/list:
+    get:
+      summary: Get the list of available space
+      operationId: GetSpaceList
+      security: [BearerAuth: []]
+      tags: [space]
+      parameters:
+        - in: query
+          name: offset
+          description: current page (start from 0)
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: size
+          description: number of items per page
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: space_group_id
+          description: related space group id
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetSpaceListResponse"
+
+components:
+  schemas:
+    GetSpaceGroupListResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                total:
+                  type: integer
+                items:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/SpaceGroup"
+    SpaceGroup:
+      type: object
+      properties:
+        space_group_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        thumbnail:
+          type: string
+        status:
+          type: string
+          enum: [enabled, disabled]
+        start_at:
+          type: string
+          format: date-time
+        end_at:
+          type: string
+          format: date-time
+        spaces:
+          type: array
+          items:
+            type: object
+            properties:
+              space_id:
+                type: string
+              name:
+                type: string
+    GetSpaceListResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                total:
+                  type: integer
+                items:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Space"
+    Space:
+      type: object
+      properties:
+        space_id:
+          type: string
+        space_group_id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        thumbnail:
+          type: string
+        addressable:
+          type: string
+        start_at:
+          type: string
+          format: date-time
+        end_at:
+          type: string
+          format: date-time
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

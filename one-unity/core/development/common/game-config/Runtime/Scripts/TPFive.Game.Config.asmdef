@@ -1,0 +1,23 @@
+{
+    "name": "TPFive.Game.Config",
+    "rootNamespace": "TPFive.Game.Config",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game",
+        "TPFive.Game.Logging"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

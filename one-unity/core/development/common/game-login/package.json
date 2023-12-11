@@ -1,0 +1,26 @@
+{
+	"name": "io.xrspace.tpfive.game.login",
+	"displayName": "TPFive 32 Game Login",
+	"description": "TPFive Game Login",
+	"version": "0.1.0",
+	"unity": "2022.3",
+	"keywords": [
+		"Unity",
+		"TPFive",
+		"OneApp"
+	],
+	"category": "",
+	"dependencies": {},
+	"contributors": [
+		{
+			"email": "bala.huang@xrspace.io",
+			"name": "Bala Huang"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+	},
+	"dependencies": {
+	}
+}

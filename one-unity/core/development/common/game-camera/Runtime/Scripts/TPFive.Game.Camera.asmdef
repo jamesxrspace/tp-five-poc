@@ -1,0 +1,21 @@
+{
+    "name": "TPFive.Game.Camera",
+    "rootNamespace": "TPFive.Game.Camera",
+    "references": [
+        "MessagePipe.VContainer",
+        "MessagePipe",
+        "TPFive.Game",
+        "UniRx",
+        "UniTask",
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

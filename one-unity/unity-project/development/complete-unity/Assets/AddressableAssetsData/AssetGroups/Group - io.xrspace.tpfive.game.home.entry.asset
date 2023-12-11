@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - io.xrspace.tpfive.game.home.entry
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - io.xrspace.tpfive.game.home.entry
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 268b37acfe1f80d44abb2914dad8490d
+  m_SerializeEntries:
+  - m_GUID: 770628ecfa242724388af5076c2c987a
+    m_Address: Prefabs/UI2D/OfficialSpaceWindow/OfficialSpaceWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3194b1e60b242c24f9f5962fa3871482
+    m_Address: Prefabs/UI2D/MainMenuWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d0bdd36a1560dd44b839b42558af97d
+    m_Address: Prefabs/UI2D/OfficialSpaceWindow/SpaceGroupCellView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 00dce66611b278840bb10a4737760857
+    m_Address: Prefabs/UI2D/OfficialSpaceWindow/SpaceView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f62de8d6a1ff46a4a842e7b5390fd1e1
+    m_Address: Prefabs/UI3D/MainMenuWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a8f5086de5571440819c21c300ec872
+    m_Address: Prefabs/UI3D/OfficialSpaceWindow/OfficialSpaceWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b608b7aeef0a80a4abd295b104fe30ef
+    m_Address: Prefabs/UI3D/OfficialSpaceWindow/SpaceGroupCellView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1666839c4f7bc9145ad0e231a067937e
+    m_Address: Prefabs/UI3D/OfficialSpaceWindow/SpaceView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7dff7f1cda7c114198f2397acad576b
+    m_Address: Prefabs/UI3D/ReelEntryWindow/ReelEntryWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3666a7d935803a54d811eed501ba588e
+    m_Address: Prefabs/UI2D/ReelEntryWindow/ReelEntryWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5cd8fcd3e1c05043b087fffdd07e874
+    m_Address: Prefabs/SocialLobbyVR/PlayerEntityView_VR.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28bd413b06132fd41a22e062de029822
+    m_Address: Prefabs/SocialLobbyVR/SocialLobby_VR.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e98574ed92efca4b82347f2d87c1d96
+    m_Address: Prefabs/SocialLobbyMobile/SocialLobby_Mobile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10709a371a96a554194590e28a7bff56
+    m_Address: Prefabs/SocialLobbyMobile/PlayerEntityView_Mobile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 164c75df6ce2f3d43a803e0bbe500f80
+    m_Address: Prefabs/UI2D/ProfileWindow/ProfileWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 32b282a6faa1ea34eaa1ef473f253664
+    m_Address: Prefabs/UI3D/ProfileWindow/ProfileWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f18acc60bf753ae4b83df921930b9f35
+    m_Address: Prefabs/SocialLobbyMobile/SpawnPointGroup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6dcac693aa20ce44cbd24ee22107c990
+    m_Address: Prefabs/SocialLobbyMobile/SpawnPointPattern.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9bff91f938e4e3649870184d6c54885e
+    m_Address: Prefabs/UI3D/DecorationWindow/DecorationWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39fc370d7d1d50642b50380a3d779ca3
+    m_Address: Prefabs/UI3D/DecorationWindow/DecorationCategoryView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe8ad8a119c62354fb2e6692611e576e
+    m_Address: Prefabs/UI3D/DecorationWindow/DecorationItemView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 237e42ea570447541b9b46c39a10e9e6
+    m_Address: Prefabs/UI3D/DecorationWindow/DecorationItemGroupView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f24283ebc3945f40b1ac1c34e9aee9a
+    m_Address: Prefabs/UI3D/DecorationWindow/DecoItemImage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c987511fbb4204479f26fac48bd5391
+    m_Address: Prefabs/UI2D/ReelEntryWindow/CreateReelButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f223ae52b6e13f4db8d2f20390dc4cb
+    m_Address: Prefabs/Avatar/CharacterShadow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd9e50f4288b5f242bf0fb2dadee606e
+    m_Address: Prefabs/UI3D/OneBtnDialog/OneBtnDialog.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8a2c48f200523a4bba230bd89a4157b
+    m_Address: Prefabs/Avatar/MyCharacterVFX.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e6e4bf7af15b1db41866d81962c74671, type: 2}
+    - {fileID: 11400000, guid: b7f7ad56662532d4888b8a677ce25552, type: 2}

@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Extended.GoogleAnalytics",
+    "rootNamespace": "TPFive.Extended.GoogleAnalytics",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game",
+        "TPFive.Game.Analytics",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Config"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

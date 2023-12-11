@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "MusicData",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "songName": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "singerName": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "thumbnailPath": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "songPath": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "tag": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "aigcPath": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "UnityMessage",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sessionId": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "type": {
+      "$ref": "UnityMessageType.schema#/"
+    },
+    "data": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "errorCode": {
+      "$ref": "ErrorCode.schema#/"
+    },
+    "errorMsg": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@game_host=http://localhost:8090
+@mock_auth_host=http://localhost:9453
+
+### get xr local provider token
+# @name token
+POST {{mock_auth_host}}/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&email=xrspacetest1000@xrspace.io&password=1qazXSW@
+
+### Login
+@access_token = {{token.response.body.$.access_token}}
+
+# @name login
+POST {{game_host}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+
+### create reel
+# @name createReel
+POST {{game_host}}/api/v1/reel/create
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "description": "test_description",
+    "thumbnail": "http://test_thumbnail",
+    "video": "http://test_video_url",
+    "xrs": "http://test_xrs_url",
+    "parent_reel_id": "",
+    "categories": ["music", "culture"],
+    "join_mode": "me",
+    "music_to_motion_url": "http://test_music_to_motion_url"
+}
+
+
+### publish reel
+@reel_id = {{createReel.response.body.$.data.Reel.id}}
+# @name publishReel
+POST {{game_host}}/api/v1/reel/publish/{{reel_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{}
+
+
+@xrid = {{createReel.response.body.$.data.Reel.xrid}}
+### list reel
+# @name listReel
+GET {{game_host}}/api/v1/reel/list?size=10&xrid={{xrid}}&reel_id={{reel_id}}
+Authorization: Bearer {{access_token}}
+
+
+### delete reel
+# @name deleteReel
+DELETE  {{game_host}}/api/v1/reel/{{reel_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{}

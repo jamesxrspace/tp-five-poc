@@ -1,0 +1,8 @@
+{
+    "HelloWorld": "歡迎",
+    "SignIn": "登入",
+    "SignOut": "登出",
+    "SingOutFailed": "登出失敗",
+    "General_Confirm_TOU_Privacy": "同意 {AppName} <b><link='https://www.xrspace.io/legal/terms_of_use'>使用條款</link></b> 和 <b><link='https://www.xrspace.io/legal/privacy_policy'>隱私權政策</link></b> 以繼續使用。",
+    "AppName_TPFive": "TPFive"
+}

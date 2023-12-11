@@ -1,0 +1,19 @@
+{
+    "name": "TPFive.OpenApi.GameServer",
+    "rootNamespace": "TPFive.OpenApi.GameServer",
+    "references": [
+        "BestHTTP",
+        "com.xrspace.openapi",
+        "TPFive.Game",
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

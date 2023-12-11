@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce0e60b7ff841c8a0bb84b2b6600b92, type: 3}
+  m_Name: ScenePropertyList_VR
+  m_EditorClassIdentifier: 
+  sceneProperties:
+  - load: 1
+    isRemote: 0
+    title: AppInput
+    addressableKey: Input/Scenes/App - Input - VR.unity
+    category: App
+    categoryOrder: 0
+    subOrder: 1
+  - load: 0
+    isRemote: 0
+    title: AppInput
+    addressableKey: Input/Scenes/App - Input - Mobile.unity
+    category: App
+    categoryOrder: 0
+    subOrder: 1
+  - load: 1
+    isRemote: 0
+    title: AssistEntry
+    addressableKey: Entry/Scenes/Assist - Entry.unity
+    category: Assist
+    categoryOrder: 9
+    subOrder: 0
+  - load: 0
+    isRemote: 0
+    title: NetworkEntry
+    addressableKey: Entry/Scenes/Network - Entry.unity
+    category: Network
+    categoryOrder: 1
+    subOrder: 0
+  - load: 1
+    isRemote: 0
+    title: LoginEntry
+    addressableKey: Entry/Scenes/Login - Entry.unity
+    category: Login
+    categoryOrder: 2
+    subOrder: 0
+  - load: 0
+    isRemote: 0
+    title: UserEntry
+    addressableKey: Entry/Scenes/User - Entry.unity
+    category: User
+    categoryOrder: 2
+    subOrder: 0
+  - load: 0
+    isRemote: 0
+    title: HomeEntry
+    addressableKey: Entry/Scenes/Home - Entry - VR.unity
+    category: Home
+    categoryOrder: 5
+    subOrder: 0
+  - load: 0
+    isRemote: 0
+    title: RoomEntry
+    addressableKey: Entry/Scenes/Room - Entry.unity
+    category: Room
+    categoryOrder: 5
+    subOrder: 0
+  - load: 0
+    isRemote: 0
+    title: RecordEntry
+    addressableKey: Entry/Scenes/Record - Entry.unity
+    category: Record
+    categoryOrder: 5
+    subOrder: 0
+  - load: 0
+    isRemote: 0
+    title: AvatarEditEntry
+    addressableKey: Entry/Scenes/AvatarEdit - Entry.unity
+    category: AvatarEdit
+    categoryOrder: 5
+    subOrder: 0
+  - load: 0
+    isRemote: 0
+    title: ContentEntry
+    addressableKey: 
+    category: Content
+    categoryOrder: 6
+    subOrder: 0
+  - load: 0
+    isRemote: 1
+    title: Home
+    addressableKey: 9ade59a1-b149-4d99-aef1-2a44a01b3707
+    category: Content
+    categoryOrder: 6
+    subOrder: 0

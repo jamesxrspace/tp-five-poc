@@ -1,0 +1,20 @@
+{
+    "name": "TPFive.Game.UI.Editor",
+    "rootNamespace": "TPFive.Game.UI.Editor",
+    "references": [
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:7c04f0dfa9243c04681a55d90d3ff3fc",
+        "GUID:f984afdd5566d404280324f93a7acbd3"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,31 @@
+{
+    "name": "io.xrspace.tpfive.extended.inputsystem",
+    "displayName": "TPFive 52 Extended Input System",
+    "description": "TPFive Extended Input System",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "james.chang@xrspace.io",
+            "name": "James Chang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    },
+    "samples": [
+        {
+            "displayName": "",
+            "description": "",
+            "path": "Samples~/"
+        }
+    ]
+}

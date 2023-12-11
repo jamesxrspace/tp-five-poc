@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="Initial setup" display-tooltip-when-elided="true" />
+    <ui:Button text="Setup Profile" display-tooltip-when-elided="true" name="setupProfile" />
+    <ui:DropdownField label="Type to add" index="0" choices="Level, SceneObject, Particle" name="addKind" style="flex-direction: column;" />
+    <ui:Button text="Add Type" display-tooltip-when-elided="true" name="addType" />
+    <ui:Button text="Refresh" display-tooltip-when-elided="true" name="refresh" />
+    <ui:VisualElement name="listContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+</ui:UXML>

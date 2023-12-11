@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - Scene - App
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - Scene - App
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 813bcb3e5b281254ca46a5c07e6924e8
+  m_SerializeEntries:
+  - m_GUID: 2aa8f73a1fa5f524692a91eb294481e2
+    m_Address: Input/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01530d22aab2bd8498f7a701ee77053a
+    m_Address: Input/Scenes/App - Input - Mobile.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0c030561d95de04b8d29151a7dff038
+    m_Address: Hud/Data Assets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f119b8e9b32fb34fa8c07297d46884f
+    m_Address: Hud/Data Assets/Default.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9190861a5c278b479615835b5e4d2f5
+    m_Address: Hud/Data Assets/Editor.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a26017858dcc3f459419cc1bf5b6702
+    m_Address: Hud/Data Assets/Flow Graph.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1345983f37b024848a5b8a0319ad2c5b
+    m_Address: Hud/Data Assets/Overall.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecdb7dfcd014f2247ab2ce9ff9db1358
+    m_Address: Hud/Data Assets/ScM - Manager.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c96dda07fbb5474da6774e178c73aa9
+    m_Address: Hud/Data Assets/Settings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2984c1ff248261d46b6abaf76f814439
+    m_Address: Hud/Data Assets/StM - Manager.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6a419269cbfa5f42a804591a3a5c5b8
+    m_Address: Hud/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05429962234e70e44ab07bca67100065
+    m_Address: Hud/Prefabs/VisionUIRoot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54334be521f190f42bfa4b0b4ae25844
+    m_Address: Hud/Prefabs/HandUIRoot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14539919c0d87674985b27854a0baf79
+    m_Address: Hud/Prefabs/UIFrontRoot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 15352579a8fb5d341a0f13deec7188e0
+    m_Address: Hud/Prefabs/UIHandRoot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 295dea8f71183c54eb0aec6569d585e0
+    m_Address: Input/Data Assets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48c8460850c9e6d4e9b65d151313beeb
+    m_Address: Input/Data Assets/Sprites
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0416dca129172f4449cf9185dbf0a18b
+    m_Address: Input/Data Assets/Sprites/Joystick/Joystick_BG_Weak@3x.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a488800e3fda17640be9477fba3e9805
+    m_Address: Input/Data Assets/Sprites/Joystick/Joystick_BG_Strong@3x.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 574f96d619456a34dad8e329f4de117a
+    m_Address: Input/Data Assets/Sprites/Joystick/Joystick_Knob@3x.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eea9b41ac83460d49bcd2c03040b8411
+    m_Address: Input/Data Assets/Sprites/Joystick
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 648c5099efaf6884c9022fcea870e77d
+    m_Address: Input/Data Assets/Sprites/AppInputAtlas.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e201c8042a7882a48ac6100722c4a8ea
+    m_Address: Input/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc48045715719df4b8a6348d67e0584f
+    m_Address: Input/Prefabs/UI2D/OnScreenFloatingStickController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d440bfa24c1a2c140b8cbe4669e48524
+    m_Address: Input/Prefabs/UI2D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a10f48a899879de4aaa4076ed0a1c335
+    m_Address: Input/Scenes/App - Input - VR.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1c9dfec34651642d5ac124c079bd95fe
+    m_Address: Hud/Data Assets/Android.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1e462b89ae1c41df98b19c62065fae1
+    m_Address: Hud/Data Assets/IOS.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02fd34428a45fc14f9f1bffc3c962c6e
+    m_Address: Hud/Prefabs/UIHomeRoot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5ef4fb8337415b4db55f4d26b2ac56b
+    m_Address: Hud/Prefabs/UIAvatarEditRoot.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3964b4a1908547e48301c5e6b2ac5a7
+    m_Address: Input/Prefabs/UI2D/MoveStickController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a3544bdb47034ef680f27a0401146a0
+    m_Address: Input/Prefabs/UI2D/RotateStickController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a1399e75b051632448709f3a40a1b2f4, type: 2}
+    - {fileID: 11400000, guid: c9b167564293424409c0c8dfa4ca27a7, type: 2}

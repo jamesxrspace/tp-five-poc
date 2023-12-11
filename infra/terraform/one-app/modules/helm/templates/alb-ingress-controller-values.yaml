@@ -1,0 +1,33 @@
+replicaCount: 2
+
+clusterName: ${CLUSTER_NAME}
+
+serviceAccount:
+  create: false
+  name: ${SERVICEACCOUNT_NAME}
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+nodeSelector:
+  Service: core-component
+
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: app.kubernetes.io/instance
+              operator: In
+              values:
+                - aws-load-balancer-controller
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+                - aws-load-balancer-controller
+        topologyKey: "kubernetes.io/hostname"

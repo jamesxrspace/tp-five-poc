@@ -1,0 +1,30 @@
+{
+    "name": "TPFive.Game.Avatar",
+    "rootNamespace": "TPFive.Game.Avatar",
+    "references": [
+        "Animancer",
+        "EasyCharacterMovement.CharacterMovement",
+        "EasyCharacterMovement.Characters",
+        "MessagePipe",
+        "TPFive.Extended.Animancer",
+        "TPFive.Extended.InputSystem",
+        "TPFive.Game",
+        "TPFive.Game.Input",
+        "TPFive.Game.Mocap",
+        "UniRx",
+        "UniTask",
+        "Unity.InputSystem",
+        "Unity.Timeline",
+        "VContainer",
+        "com.xrspace.avatarsdk"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

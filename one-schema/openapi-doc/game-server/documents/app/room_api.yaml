@@ -1,0 +1,118 @@
+openapi: 3.0.3
+info:
+  title: Server API - Room
+  description: The Restful APIs of Room.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/room/join:
+    post:
+      summary: Register one user of a specified room with GameServer.
+      description: Register one user of a specified room with GameServer.
+      operationId: RegisterRoomUser
+      tags: [Room]
+      security: [BearerAuth: []]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RoomUserRegistry"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegisterRoomUserResponse'
+  /api/v1/room/leave:
+    post:
+      summary: Unregister one user of a specified room with GameServer.
+      description: Unregister one user of a specified room with GameServer.
+      operationId: UnregisterRoomUser
+      tags: [Room]
+      security: [BearerAuth: []]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RoomUserRegistry"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnregisterRoomUserResponse'
+
+components:
+  schemas:
+    # Models
+    RoomUserRegistry:
+      type: object
+      required:
+        - space_id
+        - room_id
+        - user_id
+      properties:
+        space_id:
+          type: string
+          description: id of the space by which the room is defined.
+        room_id:
+          type: string
+          description: id of the Fusion session to which the room belongs
+        user_id:
+          type: string
+          description: id of the user
+
+    RoomUser:
+      type: object
+      required:
+        - xrid
+      properties:
+        xrid:
+          type: string
+    Room:
+      type: object
+      required:
+        - room_id
+        - space_id
+      properties:
+        room_id:
+          type: string
+        space_id:
+          type: string
+        users:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/RoomUser"
+    # Responses
+    RegisterRoomUserResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/Room"
+    UnregisterRoomUserResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/Room"              
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

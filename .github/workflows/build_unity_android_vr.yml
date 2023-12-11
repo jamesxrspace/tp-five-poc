@@ -1,0 +1,120 @@
+name: Build Unity Artifact (Android VR)
+
+on:
+  workflow_dispatch:
+    inputs:
+      BUILD_ENV:
+        description: 'The target build environment'
+        required: true
+        type: choice
+        default: dev
+        options:
+          - dev
+          - qa
+          - prod
+  workflow_call:
+    inputs:
+      TARGET_BRANCH:
+        description: "The target branch"
+        default: ""
+        type: string
+
+
+env:
+  BUILD_ENV: ${{ inputs.BUILD_ENV || 'dev' }}
+  UNITY_ROOT: one-unity/unity-project/development/complete-unity
+  S3_CACHE_BUCKET: xrspace-ci-runner-cache
+  S3_ARTIFACT_BUCKET: one-app-develop-s3-cms
+  LICENSE_LAMBDA_FUNCNAME: license-server
+  EXPOSED_FLUTTER_UNITY_WIDGET: exposed_flutter_unity_widget
+
+jobs:
+  UnityBuildAndroidVR:
+    name: Build for Android VR
+
+    timeout-minutes: 120  # timeout: 2 hour
+    runs-on: ["self-hosted", "t3-xlarge"]
+
+    env:
+      ARTIFACT_FOLDER: one-unity/unity-project/development/complete-unity/Oculus-Builds
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.TARGET_BRANCH || '' }}
+
+      - name: Setup the global environment
+        run: |
+          echo "TZ=Asia/Taipei" >> "$GITHUB_ENV"
+      - name: invoke lambda (acquire license)
+        id: acquire_license
+        uses: ./one-utility/actions/acquire_license
+        with:
+          LAMBDA_FUNCNAME: ${{ env.LICENSE_LAMBDA_FUNCNAME }}
+      - uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-1
+      - uses: ./one-utility/actions/game_ci_setup
+        id: game_ci_setup_action
+        with:
+          aws_s3_cache_bucket: ${{ env.S3_CACHE_BUCKET }}
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          github_ssh_key: ${{ secrets.INTERNAL_GITHUB_SSH_PRIVATE_KEY }}
+          unity_platform: Android
+          unity_root: ${{ env.UNITY_ROOT }}
+          target_env: ${{ env.BUILD_ENV }}
+
+      - name: Execute Gradle build
+        run: one-utility/publish_auth_aar.sh
+      - name: Change the bundle ID
+        run: |
+          if [[ "${GITHUB_REF##*/}" == "pre-release" || "${GITHUB_REF##*/}" == "main" ]]; then
+            one-utility/change_unity_bundle_id.sh dev
+          else
+            one-utility/change_unity_bundle_id.sh unknown
+          fi
+
+          # change the build version
+          one-utility/change_unity_bundle_ver.sh
+      - uses: game-ci/unity-builder@v2
+        env:
+          UNITY_EMAIL: ${{ steps.acquire_license.outputs.email }}
+          UNITY_PASSWORD: ${{ steps.acquire_license.outputs.password }}
+          UNITY_SERIAL: ${{ steps.acquire_license.outputs.serial }}
+        with:
+          sshAgent: ${{ env.SSH_AUTH_SOCK }}
+          targetPlatform: Android
+          projectPath: ${{ env.UNITY_ROOT }}
+          chownFilesTo: "${{ steps.game_ci_setup_action.outputs.uid }}:${{ steps.game_ci_setup_action.outputs.gid }}"
+          buildMethod: TPFive.Build.Editor.Builder.BuildOculus
+          customImage: ${{ steps.game_ci_setup_action.outputs.image }}
+          allowDirtyBuild: true
+      - name: invoke lambda (revoke license)
+        if: ${{ always() }}
+        uses: ./one-utility/actions/revoke_license
+        with:
+          LAMBDA_FUNCNAME: license-server
+          LICENSE_UUID: ${{ steps.acquire_license.outputs.uuid }}
+
+      # Build the Android artifact and upload the artifact
+      # ==================================================
+      - name: Get S3 artifact dest folder
+        id: current_today
+        run: |
+          {
+            echo "year=$(date +'%Y')"
+            echo "today=$(date +'%m-%d')"
+            echo "today_path=$(date +'%Y')/$(date +'%m')/$(date +'%d')"
+            echo "today_name=$(date +'%Y')_$(date +'%m')_$(date +'%d')"
+          } >> "$GITHUB_OUTPUT"
+      - name: Upload APK to S3
+        env:
+          SRC_APK_NAME: tpfive.apk
+          DST_APK_NAME: app-${{ env.BUILD_ENV }}-release-${{ steps.current_today.outputs.today_name }}-${GITHUB_SHA::7}.apk
+          SOURCE_DIR: ${{ env.ARTIFACT_FOLDER }}
+          DEST_DIR: artifact/${{ steps.current_today.outputs.today_path }}/${{ github.sha }}/vr-apk/${{ env.BUILD_ENV }}
+        run: |
+          aws s3 cp "${{ env.SOURCE_DIR }}/${{ env.SRC_APK_NAME }}" "s3://${{ env.S3_ARTIFACT_BUCKET }}/${{ env.DEST_DIR }}/${{ env.DST_APK_NAME }}"

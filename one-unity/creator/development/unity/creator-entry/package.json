@@ -1,0 +1,30 @@
+{
+    "name": "io.xrspace.tpfive.creator.entry",
+    "displayName": "TPFive 73 Creator Entry",
+    "description": "TPFive Creator Entry",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "contributors": [
+        {
+            "email": "ray.wang@xrspace.io",
+            "name": "Ray Wang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    },
+    "samples": [
+        {
+            "displayName": "",
+            "description": "",
+            "path": "Samples~/"
+        }
+    ]
+}

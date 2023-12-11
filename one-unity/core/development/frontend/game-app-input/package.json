@@ -1,0 +1,27 @@
+{
+    "name": "io.xrspace.tpfive.game.app.input",
+    "displayName": "TPFive 70 Game App Input",
+    "description": "TPFive Game App Input",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {
+      "com.unity.addressables": "1.21.12"
+    },
+    "contributors": [
+        {
+            "email": "james.chang@xrspace.io",
+            "name": "James Chang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    },
+    "samples": []
+}

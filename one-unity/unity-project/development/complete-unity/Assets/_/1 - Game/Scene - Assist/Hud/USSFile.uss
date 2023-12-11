@@ -1,0 +1,5 @@
+VisualElement {
+    -unity-font: url('project://database/Assets/Doozy/_Extras/Fonts/Ubuntu-Regular.ttf?fileID=12800000&guid=c4e068516a1aad94dad9f741bb2ab2f8&type=3#Ubuntu-Regular');
+    font-size: 24px;
+    background-color: rgb(255, 255, 255);
+}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469b2025fa5a5a54a985ec7c97710709, type: 3}
+  m_Name: Mocap Service Settings
+  m_EditorClassIdentifier: 
+  avatarAIMotionServicePrefab: {fileID: 4525391340621720398, guid: d36a58c5f0bde9b4f9785ce060ca2604,
+    type: 3}
+  dummyAvatarPrefab: {fileID: 4153557011681487043, guid: e538ab5754c56e747ad4e6ac160b21ec,
+    type: 3}
+  trackingSourceType: 1
+  filterOneEuro: 1
+  faceBlendShapesScale: 100
+  zMoveScale: 2
+  moveRange:
+    serializedVersion: 2
+    x: 1.5
+    y: 1.5
+    width: 3
+    height: 2
+  humanPoseCorrection: 0
+  poseCorrectionThreshold: 25
+  handTrackingType: 1
+  fullBodyTrackingType: 1
+  bodyPartSettings:
+  - bodyPart: 0
+    lostTrackingThreshold: 1
+  - bodyPart: 1
+    lostTrackingThreshold: 1
+  - bodyPart: 2
+    lostTrackingThreshold: 1
+  - bodyPart: 3
+    lostTrackingThreshold: 1

@@ -1,0 +1,19 @@
+name: Test flutter package
+
+on:
+  pull_request:
+    paths:
+      - 'one-mobile/**'
+
+jobs:
+  test_one_mobile:
+    defaults:
+      run:
+        working-directory: one-mobile/flutter_project
+    name: Test one-mobile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v1
+      - run: touch .env
+      - run: flutter test

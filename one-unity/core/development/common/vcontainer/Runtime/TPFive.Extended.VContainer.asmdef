@@ -1,0 +1,16 @@
+{
+    "name": "TPFive.Extended.VContainer",
+    "rootNamespace": "TPFive.Extended.VContainer",
+    "references": [
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

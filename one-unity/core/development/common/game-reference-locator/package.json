@@ -1,0 +1,26 @@
+{
+    "name": "io.xrspace.tpfive.game.reference-locator",
+    "displayName": "TPFive 49 Game Reference Locator",
+    "description": "TPFive Game Reference Locator",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {
+        "com.vovgou.loxodon-framework": "2.5.6"
+    },
+    "contributors": [
+        {
+            "email": "ray.wang@xrspace.io",
+            "name": "Ray Wang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "TPFive.Game.Profile",
+    "rootNamespace": "TPFive.Game.Profile",
+    "references": [
+        "Tayx.Graphy",
+        "Unity.TextMeshPro",
+        "DOTween.Modules",
+        "TPFive.Game.App.Entry",
+        "TPFive.Game",
+        "VContainer",
+        "TPFive.Game.PlayerPrefs",
+        "TPFive.Game.FlutterUnityWidget",
+        "MessagePipe",
+        "UniTask",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,25 @@
+{
+  "name": "io.xrspace.tpfive.game.avatar-edit.entry",
+  "displayName": "TPFive 76 Game Avatar Edit Entry",
+  "description": "TPFive Game Avatar Edit Entry",
+  "version": "0.1.0",
+  "unity": "2022.3",
+  "keywords": [
+    "Unity",
+    "TPFive",
+    "OneApp",
+    "Avatar"
+  ],
+  "category": "",
+  "contributors": [
+    {
+      "email": "fengheng.hsu@xrspace.io",
+      "name": "fengheng hsu"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+  },
+  "samples": []
+}

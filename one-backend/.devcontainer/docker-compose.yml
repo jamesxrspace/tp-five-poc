@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  gameserver:
+    container_name: xrspace-game-server-dev
+    build:
+      context: .devcontainer/
+      dockerfile: ./Dockerfile
+    volumes:
+      - ..:/workspaces:cached
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    entrypoint: /bin/sh -c "while sleep 1000; do :; done"

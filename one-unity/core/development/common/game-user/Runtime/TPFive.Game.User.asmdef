@@ -1,0 +1,26 @@
+{
+    "name": "TPFive.Game.User",
+    "rootNamespace": "TPFive.Game.User",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game.Logging",
+        "com.xrspace.spacecore",
+        "com.xrspace.spacesdk",
+        "TPFive.Game",
+        "TPFive.OpenApi.GameServer",
+        "com.xrspace.openapi",
+        "com.xrspace.avatarsdk"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

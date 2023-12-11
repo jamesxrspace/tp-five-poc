@@ -1,0 +1,75 @@
+{
+  "spaceList": {
+    "title": "Space List",
+    "field": {
+      "name": "Space Name",
+      "spaceGroupId": "Space Group",
+      "description": "Description",
+      "addressable": "Space Addressable",
+      "thumbnail": "Thumbnail",
+      "startAt": "Start At",
+      "endAt": "End At"
+    },
+    "searchPlaceholder": "Search",
+    "action": {
+      "edit": "Edit Space",
+      "delete": "Delete Space"
+    },
+    "addSpace": {
+      "title": "Add Space",
+      "add": "Add",
+      "cancel": "Cancel",
+      "successMessage": "Space added successfully",
+      "errorMessage": "Space addition failed"
+    },
+    "editSpace": {
+      "title": "Edit Space",
+      "save": "Save",
+      "cancel": "Cancel",
+      "successMessage": "Space updated successfully",
+      "errorMessage": "Space updation failed"
+    },
+    "deleteSpace": {
+      "successMessage": "Space deleted successfully",
+      "errorMessage": "Space deletion failed"
+    }
+  },
+  "spaceGroupList": {
+    "title": "Space Group List",
+    "field": {
+      "name": "Group Name",
+      "description": "Description",
+      "thumbnail": "Thumbnail",
+      "status": "Status",
+      "statusEnabled": "Enabled",
+      "statusDisabled": "Disabled",
+      "startAt": "Start At",
+      "endAt": "End At",
+      "thumbnail": "Thumbnail",
+      "spaceIds": "Spaces"
+    },
+    "searchPlaceholder": "Search Space Group",
+    "action": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "addGroup": {
+      "title": "Add Group",
+      "add": "Add",
+      "cancel": "Cancel",
+      "successMessage": "Space group added successfully",
+      "errorMessage": "Space group addition failed"
+    },
+    "editGroup": {
+      "title": "Edit Space Group",
+      "update": "Update",
+      "cancel": "Cancel",
+      "successMessage": "Space group updated successfully",
+      "errorMessage": "Space group updation failed"
+    },
+    "deleteGroup": {
+      "successMessage": "Space group deleted successfully",
+      "errorMessage": "Space group deletion failed"
+    }
+  }
+}

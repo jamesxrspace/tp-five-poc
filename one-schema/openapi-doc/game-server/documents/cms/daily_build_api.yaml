@@ -1,0 +1,115 @@
+openapi: 3.0.3
+info:
+  title: Server API - Daily Build
+  description: The Restful APIs of Daily Build.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8090
+    description: Local server
+  - url: https://backend.dev.xrspace.io
+    description: Development server
+  - url: https://backend.qa.xrspace.io
+    description: QA server
+  - url: https://backend.xrspace.io
+    description: Production server
+
+paths:
+  /_cms/v1/daily_build/list:
+    get:
+      summary: Get the list of available daily build
+      operationId: DailyBuildList
+      security: [BearerAuth: []]
+      tags: [daily-build]
+      parameters:
+        - in: query
+          name: offset
+          description: current page (start from 0)
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: size
+          description: number of items per page
+          required: true
+          schema:
+            type: integer
+        - in: query
+          name: build_types
+          description: filter of build type
+          required: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum: [apk, vr-apk]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDailyBuildListResponse"
+  /_cms/v1/daily_build/delete:
+    delete:
+      summary: Delete a specific daily build
+      operationId: DailyBuildDelete
+      security: [BearerAuth: []]
+      tags: [daily-build]
+      parameters:
+        - in: query
+          name: file_path
+          description: Key of the daily build to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeleteDailyBuildListResponse"
+components:
+  schemas:
+    GetDailyBuildListResponse:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/BaseResponse"
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                total:
+                  type: integer
+                items:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/DailyBuild"
+    DeleteDailyBuildListResponse:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/BaseResponse"
+        - type: object
+          properties:
+            Success:
+              type: boolean
+            Message:
+              type: string
+    DailyBuild:
+      type: object
+      properties:
+        key:
+          type: string
+        date:
+          type: string
+          format: date-time
+        build_type:
+          type: string
+          enum: [apk, vr-apk]
+        url:
+          type: string
+        file_path:
+          type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

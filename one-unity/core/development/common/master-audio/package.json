@@ -1,0 +1,24 @@
+{
+    "name": "io.xrspace.tpfive.extended.masteraudio",
+    "displayName": "TPFive 52 Extended MasterAudio",
+    "description": "TPFive Extended MasterAudio",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "ray.wang@xrspace.io",
+            "name": "Ray Wang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

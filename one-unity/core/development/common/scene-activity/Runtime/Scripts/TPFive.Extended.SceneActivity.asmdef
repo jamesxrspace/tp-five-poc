@@ -1,0 +1,33 @@
+{
+    "name": "TPFive.Extended.SceneActivity",
+    "rootNamespace": "TPFive.Extended.SceneActivity",
+    "references": [
+        "Unity.Addressables",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.DotNet.Foundation",
+        "TPFive.Game",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "TPFive.Game.SceneFlow",
+        "TPFive.Game.Audio",
+        "TPFive.Creator",
+        "TPFive.Game.FlutterUnityWidget"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+    ],
+    "versionDefines": [
+    ],
+    "noEngineReferences": false
+}

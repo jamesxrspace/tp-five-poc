@@ -1,0 +1,16 @@
+PODS:
+  - SimpleKeychain (1.0.1)
+
+DEPENDENCIES:
+  - SimpleKeychain (= 1.0.1)
+
+SPEC REPOS:
+  trunk:
+    - SimpleKeychain
+
+SPEC CHECKSUMS:
+  SimpleKeychain: 130211269f88f038d7dc5254cf0b1b9ce978c398
+
+PODFILE CHECKSUM: 6ae27f473ae53b75e9421aec72112971d46cc147
+
+COCOAPODS: 1.12.1

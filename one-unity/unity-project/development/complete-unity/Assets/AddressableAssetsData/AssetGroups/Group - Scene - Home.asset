@@ -1,0 +1,510 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - Scene - Home
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - Scene - Home
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9bfe31658759eac42889c1e3b7bd1c0e
+  m_SerializeEntries:
+  - m_GUID: 3d6d1e79c9f62964b904e87b1ba8f307
+    m_Address: Entry/Data Assets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e0e7b9e2f4592948825f432f87457fe
+    m_Address: Entry/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4682e070591f984b8d4a4ef07362580
+    m_Address: My/Data Assets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8eb27aba17331742a2d6a3874f2511c
+    m_Address: My/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 309e9e278a451ce45aa48e06c6e50d96
+    m_Address: My/Data Assets/Art3D
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 642c9a40c4dad1146a404c21670415d1
+    m_Address: My/Data Assets/Art3D/SuperNovaHome
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4188bab5c1dd834fbb764d59fa3f659
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/LightingData
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa42e2f0a76af8b4fbdcf74cf5ae3107
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bbb692573fdf6da4899de6d6838d5452
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Models
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b1dd78b3678fda47a8e63e2f4ba352a
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea7e932b1c5089943a71d264d6674bd6
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/ShaderGraphics
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 258f18f8f25dfa64480edc6889c6e0f0
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad12708fd6593d34683183b8baf340b2
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Skybox
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86536a510d62d614b86a5e47a13c1c55
+    m_Address: Entry/Scenes/Home - Entry - VR.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c6086b328bbdeb479cd7dbc22d5f5d0
+    m_Address: My/Scenes/Home - My.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66cccaffb1423ea499800f5d711ac003
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/LightingData/LightingData.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2029459acbe5f5d44aa92155ea151f19
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/LightingData/Lightmap-0_comp_light.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b5008d0010803447b0a1376fcf5e07d
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/LightingData/ReflectionProbe-0.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4f6fc3bcc3ee5a49b4973123424224d
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/LightingData/ReflectionProbe-1.exr
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e9e62adc95d60a418e2d880e399481b
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/ceiling_yellow01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: acf6dfdafa27ad047bea9499abc734cd
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/ceiling_yellow02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6cad9c7ab6dc8646ad172b1c8445fa2
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/cityhall_bush.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2162190e23ca814599ec7deafeb6409
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/cityhall_bush_02.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f56d067589ca40f40a3eaf337cd9a017
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/emission_flow_03.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 244404edfdd217140a95e6f37b4c9efa
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/fabric_yellow_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8135b145e4be0254b81e12ce68db655a
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Floor_fabricblue.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff5d70769cdfd0c4391d4b7421536cc9
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Floor_wood.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 960fbd096be3b274d92cc0a55631c5f1
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_ wood.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a4c2dfa9f3ab414dba73d694dcbe185
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_blueglass.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 174c8145bbb919d4eb8394d22e7357b7
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_ceilinglight.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3b7bc69f94862140b97e223029762e0
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_flower.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb9aa224de9d5d14aac7e8320e95bfdd
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_grass.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 66757f7564cf0c741ae5e5b7b2a3b920
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_insidedoor.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b40dbf077fb358548bf48a7030bcad97
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_outside.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0db344b6058ec134c8d732e6b596e41c
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Home3_rock.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b3df015d6ffcaf4e8b43785d3622fd6
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/paint_white.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ea1d30965df06a448b80e1893b8db85
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Skybox_Home.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d83fda68a238b14fa46017e66a51975
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Wall_concreteblue.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a4d4426059b7094f9c135c3a1a1be92
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Wall_redbrick.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d42401da942052a44a111926e06b5c97
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Materials/Wall_whitebrick_01.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07cd15dda970e5646ab254229ff693bd
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Models/home3_light_1.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4392f2bcb93026a48b3e5b40bf4ea5f0
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Models/home3_terrain_wall.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ca8dbb8b16370b489b34f155341ec87
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Prefabs/Character_Light.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa5e1400aade84c41bc9cd80c91df387
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Prefabs/Light.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 028b286a5ff892b4bad38377135b7c0b
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/ShaderGraphics/NeonFlow.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed8f7f96a713ad24aa4c984fe4f343a1
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/ceiling_light_ao.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16f0cb85533891c449c59fcb0718ece8
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/ceiling_light_Home_02_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efe8237afe8de274c9cb123c988c296f
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/ceiling_yellow01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54a9abf4659b9e44783ed63ad61aa8ba
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/ceiling_yellow02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 498d48bebb54d4b4d9af99cd30101fe5
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/cityhall_bush.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0825ac9e94278647b6d8478a98b1b7b
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/concrete_grey_05_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68b1d74cfa448644fa6dfde3cf74111e
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/emission_flow_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3eedab33890dfc6409af8748523b8f17
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/fabric_grey_03_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c940672fbb4f9244a6d0e7043142190
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Floor_fabricblue01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bb07c4e08134c841b0041fe4e8df901
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Floor_wood01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83efbb52380a26940ab3efe3a581a6db
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/home3_flower.tga
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f6fcf4039f22a54cb4950069afecdec
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Home3_gardon.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0b40f3bedce06f42b110bb96a72f064
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/home3_grass.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f5a15894cd0fc949a525ce29e791f13
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Home3_rock.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37e884ed43f2b374580c65991cdb06bb
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Home3_wall.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7bcbd1f752b8874b8b08a33780adf71
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Home3_wood.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e094791a5308d874684a7b55aa69d433
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/paint_white_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76023889b141cdd41b429852289014aa
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/wall_concreteblue01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a937545fb20d3e4419938f430c5cb260
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/wall_redbrick01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0eb68da27f9f394b8a04442b54dac84
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/wall_whiterick01.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dc2996172bd771448e684964830b774
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Skybox/skybox_home_day_back_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ec67a29af860bd4da012d85a24075b1
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Skybox/skybox_home_day_down_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ca9e669279233648ace446ade6cd143
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Skybox/skybox_home_day_front_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d2619330809d5a4f85f33e77f49bb3b
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Skybox/skybox_home_day_left_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6984a234ed7f40e42ac7bab1ad058687
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Skybox/skybox_home_day_right_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f919d3f32440df5478fee0005e436465
+    m_Address: My/Data Assets/Art3D/SuperNovaHome/Textures/Skybox/skybox_home_day_up_alb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3251e2b8c21f9ec42a7f60f36ea9865e
+    m_Address: Entry/Data Assets/ScM.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 971a58e9cca49cc438cfc881c536840a
+    m_Address: My/Data Assets/Art3D/Passage/Materials/Passage.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 780cef70ebea26a4bb25966cb39d5d22
+    m_Address: My/Data Assets/Art3D/Passage/Textures/River.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3d1d531b98543545a10a17cbc6f1ecd
+    m_Address: My/Data Assets/Art3D/Passage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9adb2ae030f5b6947a9a0bb7c77d28ca
+    m_Address: My/Data Assets/Art3D/Passage/Materials
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6ee3f41c3273f74682160284de1f0f8
+    m_Address: My/Data Assets/Art3D/Passage/Textures
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 610d966228d0cea4f8bf9da43d04616f
+    m_Address: My/Data Assets/Art3D/Passage/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34ab1524c30397c47859043c512628db
+    m_Address: My/Data Assets/Art3D/Passage/Prefabs/CommonPassage.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b38a64a68425b04cb4c4baf18fd4d43
+    m_Address: Entry/Scenes/Home - Entry - Mobile.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad123f8ff1d8c184190deb52f9ed3d64
+    m_Address: Textures/social_pressed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fb5e3432effe0d4393a5d7622806c0f
+    m_Address: Textures/bg_rounded_r16.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9c3b49eef796f14e863b692d3398097
+    m_Address: Textures/music_pressed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d989fc9445d1e044b9e7211ff6a28be9
+    m_Address: Textures/world_default.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5dad6bffbb4dadd4d8afd95cc7b21414
+    m_Address: Textures/Frame 1321314217.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a36eb581f072444cbe6a78fd4117b0e
+    m_Address: Textures/bg_circle_2px.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 00e1cbcb9bb8565458db17e9dce4700b
+    m_Address: Textures/theme_default.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 363d0a2e52e0bc548855a6eac25e255b
+    m_Address: Textures/music_default.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eaa86f95aba647b4d850abc925a1561d
+    m_Address: Textures/world_pressed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7da966703021be249bced76c6eaba86b
+    m_Address: Textures/feeds_default.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6229cc519690a5f4a89d7271f21fac35
+    m_Address: Textures/theme_pressed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec3e9077ce41169429a21db29b04a5f5
+    m_Address: Textures/social_default.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 838e81fb37b815242a85ab3d3e339ce9
+    m_Address: Textures/decoration_pressed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14befb7df288ad24b92d991441b07d4d
+    m_Address: Textures/feeds_pressed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b5f67a9fb87c2e4b9fd7f3ebdd3489b
+    m_Address: Textures/decoration_default.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea72963af3d7a214f83352121f87adeb
+    m_Address: SocialLobbyMobile/Home - SocialLobby - Mobile.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74eb781e1cbeb7f47a8df9088b832ed5
+    m_Address: Entry/Data Assets/Mocap Service Settings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 051690a0401399043b5e38daff99e091, type: 2}
+    - {fileID: 11400000, guid: 3f7551ace59a8d347974d449fcabd28a, type: 2}

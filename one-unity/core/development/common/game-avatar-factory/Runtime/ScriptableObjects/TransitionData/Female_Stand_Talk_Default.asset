@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe6c192ba50f4d219e495d033e0235f, type: 3}
+  m_Name: Female_Stand_Talk_Default
+  m_EditorClassIdentifier: 
+  mask: {fileID: 31900000, guid: eb5eea29f2b9d714583b6d9f0adf6fd3, type: 2}
+  layerFadeDuration: 0.25
+  onStartClip:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 0}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  onEndClip:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 0}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  onPerformClips:
+  - _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: 4c3e33f9fce99ee43ad1b766a26b5445, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  - _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: 1ffca3b1b8ef62d4c81e2caf789623da, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  - _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: adcc644253721fb4591b7903dba772aa, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  - _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: 47be1f424cef74843b74baaa4f66b84d, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  - _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: e35a3571dcca60f49aa8f44ac4e81d41, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN

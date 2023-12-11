@@ -1,0 +1,26 @@
+{
+    "name": "TPFive.Game.SceneFlow",
+    "rootNamespace": "TPFive.Game.SceneFlow",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.DotNet.Foundation",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

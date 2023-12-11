@@ -1,0 +1,164 @@
+
+loki:
+  auth_enabled: false
+  # -- Storage config. Providing this will automatically populate all necessary storage configs in the templated config.
+  storage:
+    bucketNames:
+      chunks: ${S3_BUCKET_NAME}
+      ruler: ${S3_BUCKET_NAME}
+      admin: ${S3_BUCKET_NAME}
+    type: s3
+    s3:
+      s3: s3://${S3_BUCKET_NAME}
+      endpoint: null
+      region: ${AWS_REGION}
+      secretAccessKey: null
+      accessKeyId: null
+      signatureVersion: null
+      s3ForcePathStyle: false
+      insecure: false
+      http_config: {}
+serviceAccount:
+  # -- Specifies whether a ServiceAccount should be created
+  create: false
+  # -- The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ${SERVICEACCOUNT_NAME}
+# -- Section for configuring optional Helm test
+test:
+  enabled: false
+# Monitoring section determines which monitoring features to enable
+monitoring:
+  dashboards:
+    enabled: false
+  # Recording rules for monitoring Loki, required for some dashboards
+  rules:
+    # -- If enabled, create PrometheusRule resource with Loki recording rules
+    enabled: true
+    # -- Include alerting rules
+    alerting: true
+    # -- Alternative namespace to create PrometheusRule resources in
+    namespace: null
+    # -- Additional annotations for the rules PrometheusRule resource
+    annotations: {}
+    # -- Additional labels for the rules PrometheusRule resource
+    labels: {}
+    # -- Additional labels for PrometheusRule alerts
+    additionalRuleLabels: {}
+    # -- Additional groups to add to the rules file
+    additionalGroups: []
+    # - name: additional-loki-rules
+    #   rules:
+    #     - record: job:loki_request_duration_seconds_bucket:sum_rate
+    #       expr: sum(rate(loki_request_duration_seconds_bucket[1m])) by (le, job)
+    #     - record: job_route:loki_request_duration_seconds_bucket:sum_rate
+    #       expr: sum(rate(loki_request_duration_seconds_bucket[1m])) by (le, job, route)
+    #     - record: node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate
+    #       expr: sum(rate(container_cpu_usage_seconds_total[1m])) by (node, namespace, pod, container)
+  # ServiceMonitor configuration
+  serviceMonitor:
+    # -- If enabled, ServiceMonitor resources for Prometheus Operator are created
+    enabled: true
+    # -- Namespace selector for ServiceMonitor resources
+    namespaceSelector: {}
+    # -- ServiceMonitor annotations
+    annotations: {}
+    # -- Additional ServiceMonitor labels
+    labels:
+      release: kube-prometheus-stack
+    # -- ServiceMonitor scrape interval
+    # Default is 15s because included recording rules use a 1m rate, and scrape interval needs to be at
+    # least 1/4 rate interval.
+    interval: 15s
+    # -- ServiceMonitor scrape timeout in Go duration format (e.g. 15s)
+    scrapeTimeout: null
+    # -- ServiceMonitor relabel configs to apply to samples before scraping
+    # https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#relabelconfig
+    relabelings: []
+    # -- ServiceMonitor metric relabel configs to apply to samples before ingestion
+    # https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#endpoint
+    metricRelabelings: []
+    # -- ServiceMonitor will use http by default, but you can pick https as well
+    scheme: http
+    # -- ServiceMonitor will use these tlsConfig settings to make the health check requests
+    tlsConfig: null
+    # -- If defined, will create a MetricsInstance for the Grafana Agent Operator.
+    metricsInstance:
+      # -- If enabled, MetricsInstance resources for Grafana Agent Operator are created
+      enabled: false
+      # -- MetricsInstance annotations
+      annotations: {}
+      # -- Additional MetricsInstance labels
+      labels: {}
+      # -- If defined a MetricsInstance will be created to remote write metrics.
+      remoteWrite: null
+  # Self monitoring determines whether Loki should scrape its own logs.
+  # This feature currently relies on the Grafana Agent Operator being installed,
+  # which is installed by default using the grafana-agent-operator sub-chart.
+  # It will create custom resources for GrafanaAgent, LogsInstance, and PodLogs to configure
+  # scrape configs to scrape its own logs with the labels expected by the included dashboards.
+  selfMonitoring:
+    enabled: false
+    grafanaAgent:
+      installOperator: false
+  # The Loki canary pushes logs to and queries from this loki installation to test
+  # that it's working correctly
+  lokiCanary:
+    enabled: false
+# Configuration for the write pod(s)
+write:
+  priorityClassName: system-node-critical
+  resources: {}
+  nodeSelector:
+    Service: monitor
+  persistence:
+    # -- Enable StatefulSetAutoDeletePVC feature
+    enableStatefulSetAutoDeletePVC: true
+    # -- Size of persistent disk
+    size: 10Gi
+    # -- Storage class to be used.
+    # If defined, storageClassName: <storageClass>.
+    # If set to "-", storageClassName: "", which disables dynamic provisioning.
+    # If empty or set to null, no storageClassName spec is
+    # set, choosing the default provisioner (gp2 on AWS, standard on GKE, AWS, and OpenStack).
+    storageClass: efs-sc
+    # -- Selector for persistent disk
+    selector: null
+# Configuration for the read pod(s)
+read:
+  priorityClassName: system-node-critical
+  resources: {}
+  nodeSelector:
+    Service: monitor
+  persistence:
+    # -- Enable StatefulSetAutoDeletePVC feature
+    enableStatefulSetAutoDeletePVC: true
+    # -- Size of persistent disk
+    size: 10Gi
+    # -- Storage class to be used.
+    # If defined, storageClassName: <storageClass>.
+    # If set to "-", storageClassName: "", which disables dynamic provisioning.
+    # If empty or set to null, no storageClassName spec is
+    # set, choosing the default provisioner (gp2 on AWS, standard on GKE, AWS, and OpenStack).
+    storageClass: efs-sc
+    # -- Selector for persistent disk
+    selector: null
+# Configuration for the backend pod(s)
+backend:
+  priorityClassName: system-node-critical
+  resources: {}
+  nodeSelector:
+    Service: monitor
+  persistence:
+    # -- Enable StatefulSetAutoDeletePVC feature
+    enableStatefulSetAutoDeletePVC: true
+    # -- Size of persistent disk
+    size: 10Gi
+    # -- Storage class to be used.
+    # If defined, storageClassName: <storageClass>.
+    # If set to "-", storageClassName: "", which disables dynamic provisioning.
+    # If empty or set to null, no storageClassName spec is
+    # set, choosing the default provisioner (gp2 on AWS, standard on GKE, AWS, and OpenStack).
+    storageClass: efs-sc
+    # -- Selector for persistent disk
+    selector: null

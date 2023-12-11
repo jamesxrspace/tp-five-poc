@@ -1,0 +1,40 @@
+config:
+  registries:
+    - name: Docker Hub
+      api_url: https://registry-1.docker.io
+      prefix: docker.io
+    - name: ECR
+      api_url: https://${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+      prefix: ${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com
+      default: true
+      ping: yes
+      tagsortmode: none
+      insecure: no
+      credentials: ext:/scripts/ecr-login.sh
+      credsexpire: 1m
+
+authScripts:
+  enabled: true
+  scripts:
+    ecr-login.sh: | # notice script name matches above    
+      #!/bin/sh
+      aws ecr --region ${AWS_REGION} get-authorization-token --output text --query 'authorizationData[].authorizationToken' | base64 -d
+
+extraEnv:
+  - name: AWS_REGION
+    value: ${AWS_REGION}
+
+serviceAccount:
+  create: false
+  name: ${SERVICEACCOUNT_NAME}
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+nodeSelector:
+  Service: core-component

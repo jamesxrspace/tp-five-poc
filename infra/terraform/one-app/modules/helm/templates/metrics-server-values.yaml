@@ -1,0 +1,38 @@
+replicas: 2
+
+updateStrategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxUnavailable: 1
+
+defaultArgs:
+  - --cert-dir=/tmp
+  - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+  - --kubelet-use-node-status-port
+  - --metric-resolution=15s
+
+metrics:
+  enabled: true
+
+serviceMonitor:
+  enabled: true
+  additionalLabels:
+    release: kube-prometheus-stack
+  interval: 1m
+  scrapeTimeout: 10s
+  metricRelabelings: []
+  relabelings: []
+
+nodeSelector:
+  Service: monitor
+
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: k8s-app
+              operator: In
+              values:
+                - metrics-server
+        topologyKey: kubernetes.io/hostname

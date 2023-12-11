@@ -1,0 +1,16 @@
+{
+    "name": "I2Localization.Generated",
+    "rootNamespace": "",
+    "references": [
+        "GUID:112c754dfaac4474aa9599d2674ee5d8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

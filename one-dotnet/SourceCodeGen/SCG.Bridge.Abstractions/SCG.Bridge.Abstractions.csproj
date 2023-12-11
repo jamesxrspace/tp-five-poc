@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <DllToCopy Include="$(OutputPath)\$(ProjectName).dll" />
+    </ItemGroup>
+
+    <Target Name="CopyDll" AfterTargets="Build">
+        <Copy SourceFiles="@(DllToCopy)" DestinationFolder="$(ProjectDir)..\..\..\one-unity\core\development\common\dep-foundation\Dependencies\Custom\$(ProjectName)" />
+    </Target>
+
+</Project>

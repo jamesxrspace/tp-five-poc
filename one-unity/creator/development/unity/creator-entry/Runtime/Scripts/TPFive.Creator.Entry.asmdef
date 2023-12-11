@@ -1,0 +1,101 @@
+{
+    "name": "TPFive.Creator.Entry",
+    "rootNamespace": "TPFive.Creator.Entry",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "HellTap.PoolKit",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Config",
+        "TPFive.Game.Resource",
+        "TPFive.Game.SceneFlow",
+        "TPFive.Game.ObjectPool",
+        "TPFive.Game.Audio",
+        "TPFive.Game.Hud",
+        "TPFive.Game.Localization",
+        "TPFive.Game.Actor",
+        "TPFive.Game.ReferenceLocator",
+        "TPFive.Game.Interactable.Toolkit",
+        "TPFive.Game.FlutterUnityWidget",
+        "TPFive.Extended.Addressable",
+        "TPFive.Extended.Doozy",
+        "TPFive.Extended.ECM2",
+        "TPFive.Extended.FirebaseRemoteConfig",
+        "TPFive.Extended.I2Localization",
+        "TPFive.Extended.LocalConfig",
+        "TPFive.Extended.MasterAudio",
+        "TPFive.Extended.PoolKit",
+        "TPFive.Extended.SceneActivity",
+        "TPFive.Extended.UnityRemoteConfig",
+        "TPFive.Creator",
+        "TPFive.Creator.MessageRepo",
+        "TPFive.Creator.VisualScripting",
+        "TPFive.Creator.VisualScripting.EventRepo"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "io.xrspace.tpfive.game.app.entry",
+            "expression": "0.1.0",
+            "define": "HAS_HIGH_PRIORITY_ENTRY"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.addressable",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_ADDRESSABLE"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.doozy",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_DOOZY"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.ecm2",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_ECM2"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.firebase-remoteconfig",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_FIREBASE_REMOTECONFIG"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.localconfig",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_LOCAL_CONFIG"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.masteraudio",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_MASTER_AUDIO"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.poolkit",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_POOLKIT"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.sceneactivity",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_SCENE_ACTIVITY"
+        },
+        {
+            "name": "io.xrspace.tpfive.extended.unity-remoteconfig",
+            "expression": "0.1.0",
+            "define": "HAS_TPFIVE_EXTENDED_UNITY_REMOTECONFIG"
+        }
+    ],
+    "noEngineReferences": false
+}

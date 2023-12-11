@@ -1,0 +1,27 @@
+{
+    "name": "io.xrspace.tpfive.game.user.entry",
+    "displayName": "TPFive 72 Game User Entry",
+    "description": "TPFive Game Login Entry",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp",
+        "User"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "william.ke@xrspace.io",
+            "name": "William Ke"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    },
+    "samples": [
+    ]
+}

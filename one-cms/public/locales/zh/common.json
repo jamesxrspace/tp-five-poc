@@ -1,0 +1,70 @@
+{
+  "logo": "One CMS",
+  "pagination": {
+    "currentAndTotal": "第 <bold>{{current}}</bold> 頁，共 <bold>{{total}}</bold> 頁",
+    "rowsPerPage": "每頁顯示數量"
+  },
+  "table": {
+    "loading": "載入中",
+    "noData": "無資料"
+  },
+  "navigation": {
+    "space": {
+      "space": "空間",
+      "list": "空間列表",
+      "groupList": "空間群組列表",
+      "recommendedTag": "推薦標籤"
+    },
+    "account": {
+      "account": "使用者",
+      "userManagement": "使用者管理",
+      "role": "角色管理",
+      "roleSettings": "角色設定",
+      "banIp": "Ban IP",
+      "batchUserSearch": "批次搜尋使用者"
+    },
+    "event": {
+      "event": "事件",
+      "promotion": "Promotion"
+    },
+    "develop": {
+      "develop": "開發",
+      "dailyBuild": "每日Build",
+      "dailyDatabase": "每日Database"
+    },
+    "common": {
+      "home": "首頁",
+      "notFound": "找不到頁面",
+      "unauthorized": "未授權"
+    }
+  },
+  "userMenu": {
+    "account": "帳號資訊",
+    "logout": "登出"
+  },
+  "form": {
+    "error": {
+      "required": "此欄位為必填"
+    }
+  },
+  "upload": {
+    "dropzone": {
+      "description": "點擊或拖曳檔案至此上傳"
+    },
+    "errorMessage": "上傳檔案失敗"
+  },
+  "toast": {
+    "sessionExpired": {
+      "title": "登入逾時",
+      "description": "登入逾時，請重新登入"
+    }
+  },
+  "alert": {
+    "delete": {
+      "title": "刪除",
+      "description": "確定要刪除嗎？刪除後無法復原此動作。",
+      "confirm": "刪除",
+      "cancel": "取消"
+    }
+  }
+}

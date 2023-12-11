@@ -1,0 +1,30 @@
+{
+    "name": "TPFive.Creator.VisualScripting.EventRepo",
+    "rootNamespace": "TPFive.Creator.VisualScripting.EventRepo",
+    "references": [
+        "Unity.VisualScripting.Core",
+        "Unity.VisualScripting.Flow",
+        "Unity.VisualScripting.State",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "TPFive.Creator",
+        "TPFive.Creator.MessageRepo",
+        "TPFive.Creator.VisualScripting"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

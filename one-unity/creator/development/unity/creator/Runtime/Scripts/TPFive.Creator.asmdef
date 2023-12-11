@@ -1,0 +1,27 @@
+{
+    "name": "TPFive.Creator",
+    "rootNamespace": "TPFive.Creator",
+    "references": [
+        "DOTweenPro.Scripts",
+        "MessagePipe",
+        "MixedReality.Toolkit.Core",
+        "MixedReality.Toolkit.Input",
+        "MixedReality.Toolkit.SpatialManipulation",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Game.Interactable.Toolkit",
+        "UniRx",
+        "Unity.Addressables",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.Timeline"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

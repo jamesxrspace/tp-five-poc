@@ -1,0 +1,37 @@
+{
+  "name": "io.xrspace.tpfive.extended.inputxrevent",
+  "displayName": "TPFive 52 Extended Input XREvent",
+  "description": "TPFive Extended Input XREvent",
+  "version": "0.1.0",
+  "unity": "2022.3",
+  "keywords": [
+    "Unity",
+    "TPFive",
+    "OneApp"
+  ],
+  "category": "",
+  "dependencies": {
+    "org.mixedrealitytoolkit.core": "3.0.0",
+    "org.mixedrealitytoolkit.input": "3.0.0",
+    "com.unity.xr.interaction.toolkit": "2.4.0",
+    "com.vovgou.loxodon-framework": "2.5.6",
+    "io.xrspace.tpfive.game.reference-locator": "0.1.0"
+  },
+  "contributors": [
+    {
+      "email": "hugo.kuo@xrspace.io",
+      "name": "Hugo Kuo"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+  },
+  "samples": [
+    {
+      "displayName": "",
+      "description": "",
+      "path": "Samples~/"
+    }
+  ]
+}

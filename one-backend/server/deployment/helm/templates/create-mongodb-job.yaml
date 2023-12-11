@@ -1,0 +1,44 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-create-mongodb-index
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "backend.labels" . | nindent 4 }}
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+spec:
+  template:
+    metadata:
+      name: {{ .Release.Name }}-create-mongodb-index
+      annotations:
+        sidecar.istio.io/inject: "false"
+    spec:
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: create-mongodb-index
+          image: "{{ .Values.image.repository }}/tp-five/one-backend/server:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          env:
+            - name: ACTION
+              value: create-index
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: config-yaml
+              mountPath: /home/xrspace/config.yaml
+              subPath: config.yaml
+      volumes:
+        - name: config-yaml
+          configMap:
+            name: {{ .Release.Name }}-config
+            items:
+              - key: config.yaml
+                path: config.yaml
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      restartPolicy: Never
+  backoffLimit: 0

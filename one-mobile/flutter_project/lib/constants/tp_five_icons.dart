@@ -1,0 +1,89 @@
+import 'package:flutter/widgets.dart';
+
+class TPFiveIcon {
+  TPFiveIcon._();
+
+  static const _kFontFam = 'TPFiveIcon';
+  static const String? _kFontPkg = null;
+
+  static const IconData three_d_view =
+      IconData(0x1f574, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData more =
+      IconData(0x1f170, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData more_verticle =
+      IconData(0x1f171, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera_1 =
+      IconData(0x1f3a6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData reels =
+      IconData(0x1f3ac, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData sofa =
+      IconData(0x1fa91, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData motion =
+      IconData(0x1f483, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera =
+      IconData(0x1f4f7, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData circlePlay =
+      IconData(0x1f53c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData mute =
+      IconData(0x1f507, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData unmute =
+      IconData(0x1f508, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData search =
+      IconData(0x1f50d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData speaker =
+      IconData(0x1f632, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData mute_speaker =
+      IconData(0x1f92b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData join =
+      IconData(0x1f93c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData trackingFace =
+      IconData(0x1f642, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData trackingUpbody =
+      IconData(0x1f64e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData motionAIGC =
+      IconData(0x1f938, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData arrowLeft =
+      IconData(0x2190, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData pause =
+      IconData(0x23f8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData stop =
+      IconData(0x23f9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData play =
+      IconData(0x25b6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData heart =
+      IconData(0x2661, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData heart_on =
+      IconData(0x2665, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData musicAdd =
+      IconData(0x266a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData tick =
+      IconData(0x2714, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData arrowRight =
+      IconData(0x276f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData add =
+      IconData(0x2795, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData music =
+      IconData(0x266b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData share =
+      IconData(0x2b08, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData edit =
+      IconData(0x1f4dd, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData delete =
+      IconData(0x1f5d1, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData close =
+      IconData(0x2718, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData feed =
+      IconData(0x2756, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData lock_camera =
+      IconData(0x1f50f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera_track_1 =
+      IconData(0x278a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera_track_2 =
+      IconData(0x278b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera_track_3 =
+      IconData(0x278c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera_track_4 =
+      IconData(0x278d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera_track_5 =
+      IconData(0x278e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+}

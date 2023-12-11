@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.9.0
+    environment:
+      - discovery.type=single-node
+      - network.host=0.0.0.0
+      - http.host=0.0.0.0
+      - xpack.security.enabled=false
+      - xpack.security.authc.api_key.enabled=false
+    ports:
+      - 9200:9200
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.9.0
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es01:9200
+    volumes:
+      - ${PWD}/.data/kibana/data:/usr/share/kibana/data
+    ports:
+      - 5601:5601
+    depends_on:
+      - es01
+
+  fluent-bit:
+    image: fluent/fluent-bit:2.1.8
+    command: /fluent-bit/bin/fluent-bit -c /fluent-bit/config/fluent-bit.conf
+    volumes:
+      - /var/lib/docker/:/var/lib/docker/:ro
+      - ./config/fluent-bit.conf:/fluent-bit/config/fluent-bit.conf
+    ports:
+      - 5170:5170
+    depends_on:
+      - es01

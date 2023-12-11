@@ -1,0 +1,107 @@
+@host=http://localhost:8090
+
+### get xr local provider token
+# @name token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=test_1234&email=xrspacetest1000@xrspace.io&password=1qazXSW@&scope=openid%20offline_access%20username%20profile%20email%20
+
+### Login
+@access_token = {{token.response.body.$.access_token}}
+
+# @name login
+POST {{host}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+###
+# Create Avatar with File
+# @name createAvatar
+POST {{host}}/api/v1/avatar/save
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+accept: application/json
+Authorization: Bearer {{access_token}}
+
+--WebAppBoundary
+Content-Disposition: form-data; name="xrid"
+
+2CC18
+--WebAppBoundary
+Content-Disposition: form-data; name="app_id"
+
+mock_app_id
+--WebAppBoundary
+Content-Disposition: form-data; name="type"
+
+xr_v2
+--WebAppBoundary
+Content-Disposition: form-data; name="avatar_format"
+
+{"test": 123}
+
+--WebAppBoundary
+Content-Disposition: form-data; name="avatar_asset"; filename="golang-logo.zip"
+
+< ./assets/golang-logo.zip
+--WebAppBoundary
+Content-Disposition: form-data; name="avatar_head"; filename="golang-logo.png"
+
+< ./assets/golang-logo.png
+--WebAppBoundary
+Content-Disposition: form-data; name="avatar_upper_body"; filename="golang-logo.png"
+
+< ./assets/golang-logo.png
+--WebAppBoundary
+Content-Disposition: form-data; name="avatar_full_body"; filename="golang-logo.jpg"
+
+< ./assets/golang-logo.jpg
+--WebAppBoundary--
+
+
+###
+# Update Avatar
+# @name updateAvatar
+POST {{host}}/api/v1/avatar/save
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+accept: application/json
+Authorization: Bearer {{access_token}}
+
+--WebAppBoundary
+Content-Disposition: form-data; name="avatar_id"
+
+688c49d6-b29c-45f7-a557-23e51a08496a
+--WebAppBoundary
+Content-Disposition: form-data; name="avatar_asset"; filename="golang-logo.zip"
+
+< ./assets/golang-logo.zip
+--WebAppBoundary--
+
+###
+# Set Current Avatar
+# @name setCurrentAvatar
+POST {{host}}/api/v1/avatar/activate/30315f5f-41f3-4d1c-bca9-c9ee35f88960
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{}
+
+###
+# Get Current Avatar
+# @name getCurrentAvatar
+GET {{host}}/api/v1/avatar/current
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+###
+# Get Current Avatar list
+# @name getCurrentAvatarList
+GET {{host}}/api/v1/avatar/current/list?offset=0&size=50&xrids=2CC18&xrids=svsdvfsv&xrids=ionioewv
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+###

@@ -1,0 +1,6 @@
+@host=
+
+### redirect
+GET {{host}}/api/v1/auth/authing/authn/abc/def?test=test
+accept: application/json
+Content-Type: application/json

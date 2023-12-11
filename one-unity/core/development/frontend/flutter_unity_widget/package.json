@@ -1,0 +1,21 @@
+{
+  "name": "io.xrspace.flutter-unity-widget",
+  "displayName": "Flutter Unity Widget",
+  "description": "Flutter and unity communicate by parsing string",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "keywords": [
+    "Unity",
+    "Flutter"
+  ],
+  "category": "",
+  "contributors": [
+    {
+      "email": "roy.zeng@xrspace.io",
+      "name": "Roy Zeng"
+    }
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  }
+}

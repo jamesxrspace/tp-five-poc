@@ -1,0 +1,31 @@
+{
+    "name": "io.xrspace.tpfive.game.interactable.toolkit",
+    "displayName": "TPFive 38 Game Interactable Toolkit",
+    "description": "TPFive Game Interactable Toolkit",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "tingwei.yang@xrspace.io",
+            "name": "Tingwei"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    },
+    "samples": [
+        {
+            "displayName": "Scene - Interactable Toolkit",
+            "description": "Scene - Interactable Toolkit",
+            "path": "Samples~/Scene - Interactable Toolkit"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+@baseUrl=http://localhost:8090
+
+### get xr local provider token
+# @name token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=test_1234&email=xrspacetest1000@xrspace.io&password=1qazXSW@&scope=openid%20offline_access%20username%20profile%20email%20
+
+### login 
+@access_token = {{token.response.body.$.access_token}}
+
+# @name login
+POST {{baseUrl}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+### List decoration category
+# @name category
+GET {{baseUrl}}/api/v1/asset/decoration/category?offset=0&size=50
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+
+### decoration list
+# @name uploadRequst
+GET {{baseUrl}}/api/v1/asset/decoration/list?offset=0&size=50&cate=002
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json

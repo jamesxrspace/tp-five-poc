@@ -1,0 +1,31 @@
+{
+    "name": "TPFive.Extended.Zone",
+    "displayName": "TPFive 52 Extended Zone",
+    "description": "This service provider will manage the actual scene being load or unload according to the scene flow.",
+    "rootNamespace": "TPFive.Extended.Zone",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "MAScripts",
+        "TPFive.Game",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "TPFive.Game.SceneFlow",
+        "TPFive.Game.Zone",
+        "TPFive.Room"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

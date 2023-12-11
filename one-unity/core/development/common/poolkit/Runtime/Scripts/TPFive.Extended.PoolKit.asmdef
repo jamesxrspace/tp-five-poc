@@ -1,0 +1,33 @@
+{
+    "name": "TPFive.Extended.PoolKit",
+    "rootNamespace": "TPFive.Extended.PoolKit",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "HellTap.PoolKit",
+        "TPFive.Game",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "TPFive.Game.ObjectPool"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "HellTap.PoolKit",
+            "expression": "",
+            "define": "HAS_XSPO_EXTENDED_POOLKIT"
+        }
+    ],
+    "noEngineReferences": false
+}

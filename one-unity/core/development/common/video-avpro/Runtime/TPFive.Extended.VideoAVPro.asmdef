@@ -1,0 +1,22 @@
+{
+    "name": "TPFive.Extended.Video",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3ca842002c51d0a43b73e45298809a13",
+        "GUID:3bd657f68851a7f448c82186c6797ee0",
+        "GUID:8356b4894c5f6d444bf562506cf93bdf",
+        "GUID:92971db799d184644a45bb2328cb20be",
+        "GUID:dccb0b28fc0e4404e8416e0b4c8afc8b",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

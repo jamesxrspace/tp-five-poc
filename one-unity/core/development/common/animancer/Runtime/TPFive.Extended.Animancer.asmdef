@@ -1,0 +1,17 @@
+{
+    "name": "TPFive.Extended.Animancer",
+    "rootNamespace": "TPFive.Extended.Animancer",
+    "references": [
+        "Animancer",
+        "TPFive.Game"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

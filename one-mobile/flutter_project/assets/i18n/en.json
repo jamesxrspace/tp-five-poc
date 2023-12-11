@@ -1,0 +1,8 @@
+{
+    "HelloWorld": "Hello World!",
+    "SignIn": "SignIn",
+    "SignOut": "SignOut",
+    "SingOutFailed": "SingOutFailed",
+    "General_Confirm_TOU_Privacy": "By continuing, you agree to the {AppName} <b><link='https://www.xrspace.io/legal/terms_of_use'>Terms of Use</link></b> and <b><link='https://www.xrspace.io/legal/privacy_policy'>Privacy Policy</link></b>.",
+    "AppName_TPFive": "TPFive"
+}

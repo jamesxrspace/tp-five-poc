@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReelFilePath",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "xrs": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "audio": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "video": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "thumbnail": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+  },
+}

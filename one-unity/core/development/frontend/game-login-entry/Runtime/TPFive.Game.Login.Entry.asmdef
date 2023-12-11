@@ -1,0 +1,31 @@
+{
+    "name": "TPFive.Game.Login.Entry",
+    "rootNamespace": "TPFive.Game.Login.Entry",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Login",
+        "Loxodon.Framework",
+        "TPFive.Extended.LoxodonFramework",
+        "TPFive.Game.SceneFlow",
+        "TPFive.Game.App.Entry",
+        "Unity.TextMeshPro",
+        "TPFive.Game.Hud",
+        "TPFive.Game",
+        "TPFive.Game.UI",
+        "TPFive.Game.FlutterUnityWidget"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

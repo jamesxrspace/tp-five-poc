@@ -1,0 +1,20 @@
+{
+    "name": "TPFive.Game.PlayerPrefs",
+    "rootNamespace": "TPFive.Game.PlayerPrefs",
+    "references": [
+        "TPFive.Game.FlutterUnityWidget",
+        "UniRx",
+        "MessagePipe",
+        "VContainer",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

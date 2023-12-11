@@ -1,0 +1,27 @@
+{
+    "name": "TPFive.Extended.MasterAudio",
+    "rootNamespace": "TPFive.Extended.MasterAudio",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "MAScripts",
+        "TPFive.Game",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "TPFive.Game.Audio"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

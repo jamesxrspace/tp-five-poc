@@ -1,0 +1,21 @@
+{
+    "name": "TPFive.Game.Account",
+    "rootNamespace": "",
+    "references": [
+        "VContainer",
+        "VContainer.EnableCodeGen",
+        "MessagePipe",
+        "TPFive.Game.ApplicationConfiguration",
+        "UniTask",
+        "TPFive.Game"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,37 @@
+{
+    "name": "TPFive.Extended.Addressable.Editor",
+    "rootNamespace": "TPFive.Extended.Addressable.Editor",
+    "references": [
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "Unity.AddressableImporter.Editor",
+        "TPFive.Game",
+        "TPFive.Game.Editor",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "TPFive.Creator",
+        "TPFive.Creator.Editor",
+        "Unity.ScriptableBuildPipeline.Editor",
+        "Unity.ScriptableBuildPipeline",
+        "Unity.Addressables.Editor",
+        "Unity.Addressables.Editor.Tests"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

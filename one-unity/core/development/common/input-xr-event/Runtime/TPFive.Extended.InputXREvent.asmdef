@@ -1,0 +1,24 @@
+{
+    "name": "TPFive.Extended.InputXREvent",
+    "rootNamespace": "TPFive.Extended.InputXREvent",
+    "references": [
+        "Loxodon.Framework",
+        "MixedReality.Toolkit.Core",
+        "MixedReality.Toolkit.Input",
+        "MixedReality.Toolkit.SpatialManipulation",
+        "TPFive.Extended.ScreenPointer",
+        "TPFive.Game",
+        "TPFive.Game.ReferenceLocator",
+        "Unity.XR.Interaction.Toolkit",
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,53 @@
+name: Test CMS
+
+on:
+  pull_request:
+    paths:
+      - 'one-cms/**'
+
+env:
+  BUILD_ENV: dev
+  CMS_S3_BUCKET_NAME: one-app-develop-s3-cms
+
+jobs:
+  test_cms:
+    name: Test CMS
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Setup
+      # ==================================================
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          run_install: false
+          version: 8.6.12
+          package_json_file: one-cms/package.json
+      - name: Sops Binary Installer
+        uses: mdgreenwald/mozilla-sops-action@v1.4.1
+        with:
+          version: 3.7.3
+        id: install
+      - uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-1
+      # Should add a step to determine which configuration file should be used.
+      - name: decrypt_env.sh
+        run: |
+          one-utility/decrypt_env.sh ${{ env.BUILD_ENV }}
+
+      - name: Install Dependencies, Test and Build
+        run: |
+          pushd one-cms || exit 1
+          pnpm install
+          pnpm ci:test
+          pnpm build
+          popd

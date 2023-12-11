@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - Scene - Record
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - Scene - Record
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 026c073322904fb4d8008d9c1f03c5fd
+  m_SerializeEntries:
+  - m_GUID: d54b3ec629a80d2498f863d5fbc8abf3
+    m_Address: Entry/Prefabs/ReelSelectWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 351b6a339b9cf5c499e031c827363c92
+    m_Address: Studio/Scenes/Record - Scene2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26e0519055bcf3647b75c7a1f0eb911d
+    m_Address: Studio/Scenes/Materials/Tarnsparent.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc5c3159aa3a62f4fa9805b0563bd913
+    m_Address: Entry/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e4e1f033003bc74aa813bef16f23393
+    m_Address: Studio/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d8d3ec2446054a9182c8d0a324956ff
+    m_Address: Entry/Data Assets/Prefabs/LocalPlayer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b1052fba119e4e6882db88f5585689a
+    m_Address: Entry/Data Assets/RecordSetting.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0af3bc226643141fcaa2270211412fe7
+    m_Address: Entry/Data Assets/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 857d940ca9ed7da4b819f0d8a5f91962
+    m_Address: Studio/Scenes/Record - Scene1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c150d91a414fd014288c47c2349410ba
+    m_Address: Entry/Data Assets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3a34f686743e6f4db9f05683ae10dd9
+    m_Address: Studio/Scenes/Materials
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc96e9c85d666ca43bad41c5dce3f13d
+    m_Address: Entry/Scenes/Record - Entry.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1326288df2346344ca7406ba06301988
+    m_Address: Entry/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 00408931bfaeedf4fbb5548b9e4579d7
+    m_Address: Entry/Data Assets/Record Root Type.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a60f9dcaf303778419f6af956d0d2a31
+    m_Address: Entry/Prefabs/RecordWindow.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a370bd7bc91fe094bace7fa68024ecf1
+    m_Address: Entry/Data Assets/Default Record UI State.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7dc3c5f368d024d1e95c6eca4b68ce69
+    m_Address: Entry/Data Assets/Prefabs/MotionPlayer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 750dacd9fb9f842abb41a1fd3dc132b5
+    m_Address: Entry/Data Assets/Music To Motion Player Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b25f3d89433a984b8469af7f1d063ea
+    m_Address: Entry/Data Assets/RecordMaleFactoryPreset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d325a50b821396d46baa0f3f80cd231f
+    m_Address: Entry/Data Assets/RecordFemaleFactoryPreset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49bfd97f08a9dc54fa22661a0b9e6c9d
+    m_Address: Entry/Data Assets/RecordAvatarFactorySettings.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5a43095677f39949b650b7ec7631ab2
+    m_Address: Entry/AnimationController
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2a124d968503954ebe727e0d224d7bd
+    m_Address: Entry/AnimationController/Male_Without_IK.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca579b9efbca3484f84cd40291fe654e
+    m_Address: Entry/AnimationController/Female_Without_IK.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d25e852ff13d9e4e9a2a22f50e8aaee
+    m_Address: Entry/Animations
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c91c4c66a34bc004a975009b8f6c4b02
+    m_Address: Entry/TimelineAssets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 337651ed90cd4c147be225dc91d5a2d5
+    m_Address: Entry/Animations/Guitar.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67ab584e123a9d443bf6740bbe95f9ea
+    m_Address: Entry/Animations/Drum.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96d6da571dbcd2945b0817a655d9b6d9
+    m_Address: Entry/Animations/Bass.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e16e4ac1397e0cb4db064701d635cfcd
+    m_Address: Entry/Animations/Singer.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 84433d6fdbe261b458b2652e8e30b590
+    m_Address: Entry/Data Assets/ReelMotionCategory.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 466b1413cd0364eae977c4df45c2f629
+    m_Address: Entry/TimelineAssets/Bass.playable
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98e8c3a3a586045f49b4ff9b5c32f375
+    m_Address: Entry/TimelineAssets/Drum.playable
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca1d8fe5eea08451bb7cba09583eab68
+    m_Address: Entry/TimelineAssets/Guitar.playable
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0e49e25b871df4c668c0762bbed25392
+    m_Address: Entry/TimelineAssets/Singer.playable
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5ffa46cc877aaaa4299ef9c8d183f917, type: 2}
+    - {fileID: 11400000, guid: cfda67eb535e0744f952f81de7ecc188, type: 2}

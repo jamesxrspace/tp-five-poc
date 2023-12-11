@@ -1,0 +1,131 @@
+#! /usr/bin/env bash
+
+# NOTE - the bashrc will not be loaded with non-interactive mode
+PROFILE="$HOME/.profile"
+
+reload_shell_rc() {
+    # ShellCheck can't follow non-constant source
+    # shellcheck disable=SC1090
+    source "$PROFILE"
+}
+
+install_homebrew() {
+    if ! command -v brew &>/dev/null; then
+        echo "install homebrew ..."
+
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+        case $(uname) in
+            Darwin) ;;
+            *)
+                # Expressions don't expand in single quotes, use double quotes for that
+                # shellcheck disable=SC2016
+                echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>"$PROFILE"
+
+                reload_shell_rc
+                ;;
+        esac
+    fi
+}
+
+install_brew_packages() {
+    echo "Install necessary package by homebrew ..."
+    brew install --quiet make git git-lfs pre-commit awscli shellcheck shfmt
+
+    git lfs install
+}
+
+install_sops() {
+    echo "Install necessary sops by platform ..."
+    if ! command -v sops &>/dev/null; then
+        case $(uname) in
+            Darwin)
+                brew install --quiet sops
+                ;;
+            *)
+                wget https://github.com/getsops/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb
+                sudo dpkg -i sops_3.7.3_amd64.deb
+                ;;
+        esac
+    fi
+}
+
+install_pnpm() {
+    echo "Install necessary nvm ..."
+    brew install --quiet nvm
+
+    if [ ! -d ~/.nvm ]; then
+        mkdir -p ~/.nvm
+
+        # Expressions don't expand in single quotes, use double quotes for that
+        # shellcheck disable=SC2016
+        {
+            echo 'export NVM_DIR="$HOME/.nvm"'
+            echo '[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"'
+            echo '[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"'
+        } >>"$PROFILE"
+    fi
+
+    reload_shell_rc
+
+    nvm install node
+    nvm install --lts
+    npm install -g --force --silent pnpm
+}
+
+setup_aws_cred() {
+    if [ ! -f ~/.aws/credentials ]; then
+        echo "You need to ask the AWS credentials to the DevOps team ..."
+        aws configure
+    fi
+}
+
+setup_aliases() {
+    if [ "$(uname)" != "Linux" ]; then
+        # only setup for Windows/WSL
+        return
+    fi
+
+    if ! grep -q "alias git=git.exe" ~/.bash_aliases; then
+        if command -v git.exe 2>/dev/null; then
+            echo "Setup aliases ..."
+            echo "alias git=git.exe" >>~/.bash_aliases
+        fi
+    fi
+}
+
+setup_wsl() {
+    WSL=$(uname -a | grep WSL)
+    if [ -z "$WSL" ]; then
+        # not WSL, skip
+        return
+    fi
+
+    # ref: https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#ensure-volume-mounts-work
+    if ! grep automount /etc/wsl.conf; then
+        {
+            echo "# Now make it look like this and save the file when you're done:"
+            echo '[automount]'
+            echo 'root = /'
+            echo 'options = "metadata"'
+        } | sudo tee -a /etc/wsl.conf
+
+        echo "Please restart the WSL to take effect ..."
+    fi
+}
+
+main() {
+    install_homebrew
+
+    reload_shell_rc
+
+    install_brew_packages
+    install_sops
+    install_pnpm
+    setup_aws_cred
+
+    setup_aliases
+    setup_wsl
+}
+
+main

@@ -1,0 +1,85 @@
+name: Nightly Merge
+
+on:
+  workflow_dispatch:
+  schedule:
+    # schedule on 21:00 (UTC) = 05:00 (UTC+8) everyday
+    - cron: '0 21 * * *'
+
+jobs:
+  nightly-merge:
+    name: Nightly Merge
+    runs-on: ubuntu-latest
+
+    outputs:
+      commits: ${{ steps.commits.outputs.commits }}
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # raise `refusing to merge unrelated histories` if checkout less commits
+          # and expect less then 256 commits per day.
+          #
+          # ref: https://github.com/robotology/gh-action-nightly-merge/issues/10
+          fetch-depth: 256
+          ssh-key: ${{ secrets.INTERNAL_GITHUB_SSH_PRIVATE_KEY }}
+
+      - name: Merge from main to pre-release
+        run: |
+          git config --global user.email "runner@xrspace.io"
+          git config --global user.name  "GitHub Nightly Merge Action"
+
+          git fetch origin pre-release
+          git checkout pre-release
+          git merge --no-ff --no-edit main
+
+          git push origin pre-release
+      - name: Number of commits within nightly merge
+        id: commits
+        run: |
+          # show the commits after 1AM today
+          git log --after="today.1:00am" --oneline
+          # count the number of commits
+          COUNT=$(git log --after="today.1:00am" --oneline | wc -l | xargs)
+
+          echo "commits=${COUNT}" >> "$GITHUB_OUTPUT"
+
+  # Build and Deploy other services
+  # ==================================================
+  nightly-build-backend:
+    uses: ./.github/workflows/build_backend.yml
+    # pass all the calling workflow's secrets to the called workflow
+    # ref: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit
+    needs:
+      - nightly-merge
+    with:
+      TARGET_BRANCH: pre-release
+
+  nightly-build-unity:
+    uses: ./.github/workflows/build_unity.yml
+    # pass all the calling workflow's secrets to the called workflow
+    # ref: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit
+    needs:
+      - nightly-merge
+    with:
+      TARGET_BRANCH: pre-release
+
+  nightly-build-cms:
+    uses: ./.github/workflows/build_cms.yml
+    # pass all the calling workflow's secrets to the called workflow
+    # ref: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit
+    needs:
+      - nightly-merge
+    with:
+      TARGET_BRANCH: pre-release
+
+  nightly-build-deploy-ai:
+    uses: ./.github/workflows/build_ai.yml
+    secrets: inherit
+    needs:
+      - nightly-merge
+    with:
+      TARGET_BRANCH: pre-release

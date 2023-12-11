@@ -1,0 +1,35 @@
+{
+    "name": "TPFive.Game.Assist.Entry.Editor",
+    "rootNamespace": "TPFive.Game.Assist.Entry.Editor",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Config",
+        "TPFive.Game.Resource",
+        "TPFive.Game.SceneFlow",
+        "TPFive.Game.Audio",
+        "TPFive.Game.Hud",
+        "TPFive.Game.Input",
+        "TPFive.Game.Localization",
+        "TPFive.Cross.Editor",
+        "TPFive.Game.Assist.Entry",
+        "com.xrspace.avatarsdk"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

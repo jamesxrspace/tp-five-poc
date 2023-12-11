@@ -1,0 +1,26 @@
+{
+    "name": "TPFive.Game.Resource",
+    "rootNamespace": "TPFive.Game.Resource",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "Newtonsoft.Json.UnityConverters",
+        "TPFive.Creator"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

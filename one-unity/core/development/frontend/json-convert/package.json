@@ -1,0 +1,21 @@
+{
+  "name": "io.xrspace.jsonconvert",
+  "displayName": "Json Convert",
+  "description": "CSharp class convert to json file and then convert to flutter freezed dart",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "keywords": [
+    "Unity",
+    "jsonconvert"
+  ],
+  "category": "",
+  "contributors": [
+    {
+      "email": "roy.zeng@xrspace.io",
+      "name": "Roy Zeng"
+    }
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  }
+}

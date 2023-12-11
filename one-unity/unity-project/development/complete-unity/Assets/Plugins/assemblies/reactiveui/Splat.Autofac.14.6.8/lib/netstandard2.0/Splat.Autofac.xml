@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Splat.Autofac</name>
+    </assembly>
+    <members>
+        <member name="T:Splat.Autofac.AutofacDependencyResolver">
+            <summary>
+            Autofac implementation for <see cref="T:Splat.IDependencyResolver"/>.
+            </summary>
+        </member>
+        <member name="F:Splat.Autofac.AutofacDependencyResolver._internalContainer">
+            <summary>
+                The internal container, which takes care of mutability needed for ReactiveUI initialization procedure.
+                It is disposed of once the user sets the actual lifetime scope from which to resolve by calling SetLifetimeScope.
+            </summary>
+        </member>
+        <member name="F:Splat.Autofac.AutofacDependencyResolver._lifetimeScopeSet">
+            <summary>
+                Set to true, when SetLifetimeScope has been called.
+                Prevents mutating the ContainerBuilder or setting the lifetime again.
+            </summary>
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.#ctor(Autofac.ContainerBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Splat.Autofac.AutofacDependencyResolver" /> class.
+            </summary>
+            <param name="builder">Autofac container builder.</param>
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.GetService(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.SetLifetimeScope(Autofac.ILifetimeScope)">
+            <summary>
+                Sets the lifetime scope which will be used to resolve ReactiveUI services.
+                It should be set after Autofac application-wide container is built.
+            </summary>
+            <param name="lifetimeScope">Lifetime scope, which will be used to resolve ReactiveUI services.</param>
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.GetServices(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.HasRegistration(System.Type,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.Register(System.Func{System.Object},System.Type,System.String)">
+            <summary>
+                Important: Because <see href="https://autofaccn.readthedocs.io/en/latest/best-practices/#consider-a-container-as-immutable">Autofac 5+ containers are immutable</see>,
+                this method should not be used by the end-user.
+                It is still needed to satisfy ReactiveUI initialization procedure.
+                Register a function with the resolver which will generate a object
+                for the specified service type.
+                Optionally a contract can be registered which will indicate
+                that registration will only work with that contract.
+                Most implementations will use a stack based approach to allow for multiple items to be registered.
+            </summary>
+            <param name="factory">The factory function which generates our object.</param>
+            <param name="serviceType">The type which is used for the registration.</param>
+            <param name="contract">A optional contract value which will indicates to only generate the value if this contract is specified.</param>
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.UnregisterCurrent(System.Type,System.String)">
+            <summary>
+                Because <see href="https://autofaccn.readthedocs.io/en/latest/best-practices/#consider-a-container-as-immutable">Autofac 5+ containers are immutable</see>,
+                UnregisterCurrent method is not available anymore.
+                Instead, simply <see href="https://autofaccn.readthedocs.io/en/latest/register/registration.html#default-registrations">register your service after InitializeReactiveUI</see> to override it.
+            </summary>
+            <param name="serviceType">The service type to unregister.</param>
+            <param name="contract">The optional contract value, which will only remove the value associated with the contract.</param>
+            <exception cref="T:System.NotImplementedException">This is not implemented by default.</exception>
+            <inheritdoc />
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.UnregisterAll(System.Type,System.String)">
+            <summary>
+                Because <see href="https://autofaccn.readthedocs.io/en/latest/best-practices/#consider-a-container-as-immutable">Autofac 5+ containers are immutable</see>,
+                UnregisterAll method is not available anymore.
+                Instead, simply <see href="https://autofaccn.readthedocs.io/en/latest/register/registration.html#default-registrations">register your service after InitializeReactiveUI</see> to override it.
+            </summary>
+            <param name="serviceType">The service type to unregister.</param>
+            <param name="contract">The optional contract value, which will only remove the value associated with the contract.</param>
+            <exception cref="T:System.NotImplementedException">This is not implemented by default.</exception>
+            <inheritdoc />
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.ServiceRegistrationCallback(System.Type,System.String,System.Action{System.IDisposable})">
+            <inheritdoc />
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Splat.Autofac.AutofacDependencyResolver.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the instance.
+            </summary>
+            <param name="disposing">Whether or not the instance is disposing.</param>
+        </member>
+        <member name="T:Splat.Autofac.SplatAutofacExtensions">
+            <summary>
+            Extension methods for the Autofac adapter.
+            </summary>
+        </member>
+        <member name="M:Splat.Autofac.SplatAutofacExtensions.UseAutofacDependencyResolver(Autofac.ContainerBuilder)">
+            <summary>
+            Initializes an instance of <see cref="T:Splat.Autofac.AutofacDependencyResolver"/> that overrides the default <see cref="T:Splat.Locator"/>.
+            </summary>
+            <param name="builder">Autofac container builder.</param>
+            <returns>The Autofac dependency resolver.</returns>
+        </member>
+    </members>
+</doc>

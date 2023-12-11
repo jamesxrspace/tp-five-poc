@@ -1,0 +1,130 @@
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+        exclude: ^.*/helm/
+      - id: trailing-whitespace
+        exclude: ^.*?/.[meta|asset]
+      - id: end-of-file-fixer
+        exclude: ^.*?/.[meta|asset]
+  - repo: https://github.com/dnephin/pre-commit-golang
+    rev: v0.5.1
+    hooks:
+      - id: go-fmt
+      - id: go-mod-tidy
+  - repo: https://github.com/jorisroovers/gitlint
+    # NOTE - upgrade to v0.18.0+ will got issue inside pre-commit
+    rev:  v0.18.0
+    hooks:
+    - id: gitlint
+      stages:
+        - commit-msg
+      args:
+        - --staged
+        - --msg-filename
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.55.2
+    hooks:
+      - id: golangci-lint
+        files: one-backend/server
+        entry: bash -c "cd one-backend/server && golangci-lint run --new-from-rev HEAD --fix"
+        pass_filenames: true
+        args:
+          - --timeout=10m
+      - id: golangci-lint
+        files: one-backend/auth_platform
+        entry: bash -c "cd one-backend/auth_platform && golangci-lint run --new-from-rev HEAD --fix"
+        pass_filenames: true
+        args:
+          - --timeout=10m
+      - id: golangci-lint
+        files: one-utility/license-server
+        entry: bash -c "cd one-utility/license-server/server && golangci-lint run --new-from-rev HEAD --fix"
+        pass_filenames: true
+        args:
+          - --timeout=10m
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.12.1-beta
+    hooks:
+      - id: hadolint-docker
+        args:
+          # ignore the Pin version in "apk add" since alpine only fetch the latest
+          # version of package.
+          #
+          # RUN apk add --no-cache curl         # DL3018 warning
+          # RUN apk add --no-cache curl=8.1.0   # No DL3018 warning
+          - --ignore
+          - DL3018
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.83.5
+    hooks:
+      - id: terraform_fmt
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.37.0
+    hooks:
+      - id: markdownlint-fix
+        exclude: ^(one-dotnet/SourceCodeGen/|.github/|one-mobile/flutter_project/packages/tpfive_game_server_api_client/|one-unity/unity-project/development/complete-unity/Packages/CodeStage/|one-unity/unity-project/development/complete-unity/Packages/graphy-3.0.4/)
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: shellcheck
+        exclude: ^(infra/packer/|one-native/xrauth-android/gradlew)
+      - id: shfmt
+        exclude: ^(infra/packer/|one-native/xrauth-android/gradlew)
+        args:
+          - --indent=4
+          - --case-indent
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.1.5
+    hooks:
+      - id: ruff
+        args:
+          - --fix
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.27.1
+    hooks:
+      - id: check-github-actions
+        files: ^one-utility/actions/.*/.*.(yml|yaml)$
+      - id: check-github-workflows
+
+  - repo: local
+    hooks:
+      - id: not-allow-gameobject-name-with-lifetimescope
+        name: Forbidden GameObject name with LifetimeScope
+        language: system
+        files: ^one-unity/.*\.unity$
+        entry: bash one-utility/pre-commit-hooks/check-lifetime-scope-naming.sh
+      - id: dart-format
+        name: run dart formatter
+        files: \.dart$
+        language: system
+        entry: dart format
+        exclude: ^(one-mobile/flutter_project/packages/tpfive_game_server_api_client/|one-mobile/flutter_project/lib/generated/)
+      - id: dart-analyzer
+        name: run dart analyzer
+        files: \.dart$
+        language: system
+        entry: dart analyze --fatal-infos
+        exclude: ^(one-mobile/flutter_project/packages/tpfive_game_server_api_client/|one-mobile/flutter_project/lib/generated/)
+      - id: one-cms-lint
+        name: One CMS Lint
+        language: system
+        entry: bash -c "cd one-cms && pnpm lint"
+        files: ^one-cms/.*\.(ts|tsx|js|jsx)$
+        exclude: ^one-cms/(node_modules|build)/.*$
+      - id: one-backend-k6-test-lint
+        name: One Backend integration test lint
+        language: system
+        entry: bash -c "cd one-backend/e2e/k6-ts-test && pnpm lint"
+        files: ^one-backend/e2e/k6-ts-test/.*\.(ts|tsx|js|jsx)$
+        exclude: ^one-backend/e2e/k6-ts-test/(node_modules|build)/.*$
+  - repo: https://github.com/python-openapi/openapi-spec-validator
+    rev: 0.7.1 # The version to use or 'master' for latest
+    hooks:
+      - id: openapi-spec-validator
+        exclude: ^(.github/|one-schema/openapi-doc/game-server/documents/common/|one-cms/|one-unity/core/development/frontend|one-mobile/flutter_project/)

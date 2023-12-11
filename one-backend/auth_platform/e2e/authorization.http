@@ -1,0 +1,64 @@
+@host=http://localhost:9453
+@access_token=
+@refresh_token=
+
+### get token
+
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&email=xrspacetest1000@xrspace.io&password=1qazXSW@&expire_secs=60
+
+### get jwks
+GET {{host}}/oidc/.well-known/jwks.json
+accept: application/json
+
+### get profile
+GET {{host}}/oidc/me
+accept: application/json
+Authorization: Bearer {{access_token}}
+
+### refresh token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&client_id=client_id&refresh_token={{refresh_token}}&expire_secs=60
+
+### update profile
+POST {{host}}/api/v3/update-profile
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+	"email": "xrspacetest1000@xrspace.io",
+	"nickname": "test"
+}
+
+### get manager token
+POST {{host}}/api/v3/get-management-token
+accept: application/json
+Content-Type: application/json
+x-authing-userpool-id: mock_pool_id
+
+{
+	"accessKeyId": "mock_pool_id",
+	"accessKeySecret": "mock_secret"
+}
+
+@manager_token=
+
+### create user
+POST {{host}}/api/v3/create-user
+accept: application/json
+Authorization: Bearer {{manager_token}}
+Content-Type: application/json
+x-authing-userpool-id: mock_pool_id
+
+{
+	"email": "test_user3@xrspace.io",
+	"password": "1qazXSW@",
+	"nickname": "test_user",
+	"emailVerified": true,
+	"company": "xrguest"
+}

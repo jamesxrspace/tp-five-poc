@@ -1,0 +1,29 @@
+{
+    "name": "TPFive.Extended.Decoration",
+    "rootNamespace": "TPFive.Extended.Decoration",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game",
+        "TPFive.Game.Decoration",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "TPFive.Creator",
+        "Unity.Addressables",
+        "TPFive.OpenApi.GameServer",
+        "com.xrspace.openapi"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

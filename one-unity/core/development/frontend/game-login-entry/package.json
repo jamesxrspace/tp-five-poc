@@ -1,0 +1,27 @@
+{
+    "name": "io.xrspace.tpfive.game.login.entry",
+    "displayName": "TPFive 71 Game Login Entry",
+    "description": "TPFive Game Login Entry",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp",
+        "Login"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "bala.huang@xrspace.io",
+            "name": "Bala Huang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    },
+    "samples": [
+    ]
+}

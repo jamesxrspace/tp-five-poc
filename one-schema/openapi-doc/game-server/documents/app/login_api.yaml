@@ -1,0 +1,86 @@
+openapi: 3.0.3
+info:
+  title: Server API - Login
+  description: The Restful APIs of Login.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/account/login: 
+    post:
+      summary: Login game server.
+      operationId: PostLogin
+      tags: [Login]
+      security: [BearerAuth: []]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+                
+  /api/v1/account/profile:
+    get:
+      summary: Get user profile.
+      operationId: GetUserProfile
+      tags: [Login]
+      security: [BearerAuth: []]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetProfileResponse'
+
+components:
+  schemas:
+    # Model
+    Profile:
+      type: object
+      description: user profile
+      properties:
+        xr_id:
+          type: string
+          description: xrspace user id
+        email:
+          type: string
+          description: email
+        issuer_resource_owner_ids:
+          $ref: '#/components/schemas/IssuerResourceOwnerIds'
+          description: user auth issuer
+        username:
+          type: string
+          description: username
+        nickname:
+          type: string
+          description: nickname
+        is_email_verified:
+          type: boolean
+          description: is email verified
+    IssuerResourceOwnerIds:
+      type: object
+      additionalProperties:
+        type: string
+    # Resonse
+    GetProfileResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/Profile'
+        
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

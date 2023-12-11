@@ -1,0 +1,22 @@
+{
+  "name": "io.xrspace.tpfive.game.video",
+  "displayName": "TPFive 35 Game Video",
+  "description": "TPFive Game Video",
+  "version": "0.1.0",
+  "unity": "2022.3",
+  "keywords": [
+    "video"
+  ],
+  "category": "",
+  "dependencies": {},
+  "contributors": [
+    {
+      "email": "hugo.kuo@xrspace.io",
+      "name": "Hugo Kuo"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:XRSPACE-Inc/tp-five.git"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReelConfig",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "entry": {
+      "$ref": "ReelEntryType.schema#/"
+    },
+    "sceneName": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "bundleId": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

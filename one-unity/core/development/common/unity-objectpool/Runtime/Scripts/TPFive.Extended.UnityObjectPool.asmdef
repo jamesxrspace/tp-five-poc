@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Extended.UnityObjectPool",
+    "rootNamespace": "TPFive.Extended.UnityObjectPool",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Config",
+        "TPFive.Game.ObjectPool"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

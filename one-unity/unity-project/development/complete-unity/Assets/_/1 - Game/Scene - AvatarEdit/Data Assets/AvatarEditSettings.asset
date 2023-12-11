@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d089958591704c57946dba1638f1ab48, type: 3}
+  m_Name: AvatarEditSettings
+  m_EditorClassIdentifier: 
+  _presetAvatarJsonAsset: {fileID: 4900000, guid: aaf3d8aa86ecb2046b62541177bfce22,
+    type: 3}
+  _avatarLayerName: Snapshot
+  _avatarRenderTexture: {fileID: 8400000, guid: 95c1bcf4b87291b4f93faf5f46bb3294,
+    type: 2}
+  _types:
+  - _proxy: Male2
+    _index: 11
+    _value: 11
+  - _proxy: Female2
+    _index: 12
+    _value: 12
+  _controllers:
+  - {fileID: 22100000, guid: 02d104a22988c5042afe79460977aa3c, type: 2}
+  - {fileID: 22100000, guid: 9272e005da14eb646a2b4903de136c0a, type: 2}
+  _presetIdleImagePathFormat: Data Assets/PresetImages/Idle/{0}.png
+  _presetSelectedImagePathFormat: Data Assets/PresetImages/Selected/{0}.png
+  _appearancesStylePath: /appearance
+  _apparelsStylePath: /apparel
+  _makeupStylePath: /makeup

@@ -1,0 +1,102 @@
+{
+  "name": "one-cms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "ci:test": "CI=true craco test",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "serve": "serve -s build",
+    "prettier": "prettier --write .",
+    "eslint": "eslint \"./**/*.{ts,tsx,js,jsx,d.ts}\" --fix",
+    "lint": "pnpm run eslint && pnpm run prettier",
+    "preview": "pnpm run build && pnpm run serve"
+  },
+  "dependencies": {
+    "@authing/web": "^5.1.9",
+    "@chakra-ui/anatomy": "^2.2.1",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@tanstack/match-sorter-utils": "^8.8.4",
+    "@tanstack/react-query": "^5.0.5",
+    "@tanstack/react-table": "^8.9.3",
+    "@xstate/react": "^3.2.2",
+    "chakra-react-select": "^4.7.2",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^10.15.2",
+    "i18next": "^23.4.6",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "i18next-http-backend": "^2.2.1",
+    "lodash-es": "^4.17.21",
+    "ramda": "^0.29.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^1.3.0",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.46.2",
+    "react-i18next": "^13.2.0",
+    "react-icons": "^4.10.1",
+    "react-router-dom": "^6.15.0",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.4",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4",
+    "xstate": "^4.38.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@craco/craco": "^7.1.0",
+    "@testing-library/cypress": "^9.0.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/lodash-es": "^4.17.8",
+    "@types/node": "^16.18.40",
+    "@types/ramda": "^0.29.4",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-helmet": "^6.1.8",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "@types/webpack-env": "^1.18.1",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "cypress": "^12.17.4",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.1",
+    "serve": "^14.2.0",
+    "ts-jest": "^29.1.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "TPFive.Extended.InputSystem.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.InputSystem",
+        "TPFive.Extended.InputSystem"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,22 @@
+{
+    "name": "TPFive.Game.FlutterUnityWidget",
+    "rootNamespace": "",
+    "references": [
+        "FlutterUnityWidget.Runtime",
+        "TPFive.Game",
+        "MessagePipe",
+        "VContainer",
+        "UniTask",
+        "UniRx",
+        "TPFive.Json.Convert.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

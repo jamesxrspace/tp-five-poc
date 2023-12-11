@@ -1,0 +1,135 @@
+openapi: 3.0.3
+info:
+  title: Server API - Decoration
+  description: The Restful APIs of Decoration.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8090
+    description: Local server
+  - url: https://backend.dev.xrspace.io
+    description: Development server
+  - url: https://backend.qa.xrspace.io
+    description: QA server
+  - url: https://backend.xrspace.io
+    description: Production server
+
+paths:
+  /api/v1/asset/decoration/category:
+    get:
+      summary: Get decoration categories
+      operationId: GetDecorationCategoryList
+      security:
+        - BearerAuth: []
+      tags: [decoration]
+      parameters:
+        - $ref: "../common/common.yaml#/components/schemas/PaginationRequest/Offset"
+        - $ref: "../common/common.yaml#/components/schemas/PaginationRequest/Size"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDecorationCategoryListResponse"
+  /api/v1/asset/decoration/list:
+    get:
+      summary: Get decoration items
+      operationId: GetDecorationItems
+      security:
+        - BearerAuth: []
+      tags: [decoration]
+      parameters:
+        - $ref: "../common/common.yaml#/components/schemas/PaginationRequest/Offset"
+        - $ref: "../common/common.yaml#/components/schemas/PaginationRequest/Size"
+        - name: cate
+          in: query
+          description: filter by category
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GetDecorationListResponse"
+
+components:
+  schemas:
+    CategoryItem:
+      type: object
+      properties:
+        id:
+          type: string
+        title_i18n:
+          type: string
+
+    Decoration:
+      type: object
+      properties:
+        id:
+          type: string
+        title_i18n:
+          type: string
+        thumbnail_url:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        bundle_id:
+          type: string
+        decoration_key:
+          type: string
+        category_id:
+          type: array
+          items:
+            type: string
+    # Wrapped ITEMS
+    GetDecorationResponse:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/BaseResponse"
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/Decoration"
+
+    DecorationCategoryPage:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/PaginationBase"
+        - type: object
+          properties:
+            items:
+              type: array
+              items:
+                $ref: "#/components/schemas/CategoryItem"
+
+    GetDecorationCategoryListResponse:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/BaseResponse"
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/DecorationCategoryPage"
+
+    DecorationPage:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/PaginationBase"
+        - type: object
+          properties:
+            items:
+              type: array
+              items:
+                $ref: "#/components/schemas/Decoration"
+
+    GetDecorationListResponse:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/BaseResponse"
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/DecorationPage" 
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+package "usecase" {
+    abstract class AbsFacade{
+        Execute(ctx context.Context, cmd any) (any, error)
+        {abstract} CreateUseCase(cmd any) IUseCase
+    }
+    interface IFacade{
+        Execute(ctx context.Context, cmd any) (any, error)
+        CreateUseCase(cmd any) IUseCase
+    }
+    interface IUseCase {
+        Execute(ctx context.Context, cmd any) (any, error)
+    }
+    interface ICommand{
+        Validate() error
+    }
+}
+
+package "application" {
+    class ConcreteFacade{
+        CreateUseCase(cmd any) IUseCase
+    }
+
+    class ConcreteUseCase{
+        Execute(ctx context.Context, cmd any) (any, error)
+    }
+
+    class ConcreteCommand{
+        Validate() error
+    }
+}
+
+package "port"{
+    class gin_handler{
+    }
+
+    gin_handler --> ConcreteFacade
+    gin_handler --> ConcreteCommand
+}
+
+IFacade <|-- AbsFacade
+AbsFacade --> IUseCase
+AbsFacade --> ICommand
+
+ConcreteFacade --|> AbsFacade
+ConcreteFacade --> ConcreteUseCase
+IUseCase <|-- ConcreteUseCase
+
+@enduml

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Group - Scene - Room
+  m_EditorClassIdentifier: 
+  m_GroupName: Group - Scene - Room
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 0f184edfbe7451847bdeee13fcecc3a1
+  m_SerializeEntries:
+  - m_GUID: 73480bc029febc848818a53d31dbab69
+    m_Address: Entry/Scenes/Room - Entry.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58242cf1f6195ab46b67f783ee29c821
+    m_Address: Entry/Animations/f_t0_run_f.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d96b7431199b35949bd17ad703c9c0e6
+    m_Address: Entry/Data Assets/RoomSetting.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 917a63ced463cfe49a04d10e91886868
+    m_Address: Entry/Prefab/Player.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e922cb1a6728eca45bb1a154fd37301f
+    m_Address: Entry/Animations/f_t0_move_f.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc46bb517067ae34fab952b5a55e4c29
+    m_Address: Entry/Prefab/NetSceneController.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b67068b2070f43e09533ec30992c5be
+    m_Address: Entry/Prefab/PlayerDataBroker.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3765321c0aa5a844f803865b484e432c
+    m_Address: Entry/Animations/f_t0_idle_stand_02.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 067a11fec3dbf4c31abb23d0b90aad09
+    m_Address: Entry/Prefab/FusionTelemeter.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee0180c2a2e2592469e60117903aee87
+    m_Address: Entry/Prefab/PlayerHudView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b15c110f1fcdf348b6d78f459efa35c
+    m_Address: Entry/Scenes
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3e3022f208a2e14190fbcab117dc3db
+    m_Address: Entry/Animations
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6e6b8dd6825ce44aa76e4f963040555
+    m_Address: Entry/Prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e57bd18f46a43742976698ff786112e
+    m_Address: Entry/AnimCtrl.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8ac9ff92197f4dfd9b6b42c3a237d26
+    m_Address: Entry/Data Assets
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5c884fd144d52a4594da3ed731b7d81
+    m_Address: Entry/Prefab/AvatarDemoUI.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0f53d35f745ca14b8c16b30aeba901e
+    m_Address: Entry/Data Assets/Room Root Type.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 5fb15cea5fd14b04e86b39ec7c95b57c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: bee876c38c70f024c86c3a6a87b3750d, type: 2}
+    - {fileID: 11400000, guid: d0d6ab3d99748a54bae782ffa63f73e6, type: 2}

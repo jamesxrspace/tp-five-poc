@@ -1,0 +1,20 @@
+{
+    "name": "TPFive.Game.Avatar-Motion",
+    "rootNamespace": "TPFive.Game.Avatar-Motion",
+    "references": [
+        "Animancer",
+        "TPFive.Game.Avatar",
+        "TPFive.Game.Avatar-Timeline",
+        "Unity.SerializableGuid",
+        "Unity.Timeline"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

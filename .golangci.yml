@@ -1,0 +1,18 @@
+linters:
+  enable:
+    # there are many linter rules
+    #
+    # ref: https://golangci-lint.run/usage/linters/
+    - bodyclose     # Checks whether HTTP response body is closed successfully.
+    - cyclop        # Checks function and package cyclomatic complexity.
+    - dupl          # Tool for code clone detection.
+    - dupword       # Checks for duplicate words in the source code
+    - goconst       # Finds repeated strings that could be replaced by a constant.
+    - gocyclo       # Computes and checks the cyclomatic complexity of functions.
+    - goimports     # Check import statements are formatted according
+
+issues:
+  exclude-rules:
+    - path: _test\.go$  # Matches files ending in _test.go
+      linters:
+        - errcheck

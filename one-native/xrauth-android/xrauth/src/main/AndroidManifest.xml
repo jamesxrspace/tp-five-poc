@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name="com.xrspace.xrauth.appauth.AuthActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            android:exported="true"
+            tools:node="replace" />
+
+        <activity
+            android:name="com.xrspace.xrauth.appauth.RedirectUriActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/redirect_domain"
+                    android:path="/authing/android/${applicationId}/callback"
+                    android:scheme="@string/redirect_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.xrspace.xrauth.appauth.LogoutCallbackActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/redirect_domain"
+                    android:path="/authing/android/${applicationId}.logout/callback"
+                    android:scheme="@string/redirect_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

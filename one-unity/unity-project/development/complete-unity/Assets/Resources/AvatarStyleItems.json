@@ -1,0 +1,189 @@
+{
+  "name": "/",
+  "items": [
+    {
+      "name": "appearance",
+      "items": [
+        {
+          "name": "head",
+          "items": [
+            {
+				"name": "face_preset",
+				"type": "preset"
+			},
+            {
+				"name": "skin_color",
+				"type": "color"
+            }
+          ]
+        },
+        {
+          "name": "eyes",
+          "items": [
+            {
+              "name": "eyes",
+              "items":[
+			  {
+				  "name": "eyeliner_color",
+				  "type": "color"
+			  },
+			  {
+				  "name": "eyes_preset",
+				  "type": "preset"
+			  }
+			  ]
+            },
+            {
+              "name": "eye",
+              "type": "preset"
+            },
+            {
+              "name": "eyebrow",
+              "items": [
+                {
+                  "name": "eyebrow_color",
+                  "type": "color"
+                },
+                {
+                  "name": "eyebrow_preset",
+                  "type": "preset"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "nose_preset",
+          "type": "preset"
+        },
+        {
+          "name": "lip_preset",
+          "type": "preset"
+        },
+        {
+          "name": "hair",
+          "items": [
+            {
+              "name": "hair_color",
+              "type": "color"
+            },
+            {
+              "name": "top",
+              "type": "preset"
+            }
+          ]
+        },
+        {
+          "name": "beard",
+          "items": [
+            {
+              "name": "beard_color",
+              "type": "color"
+            },
+            {
+              "name": "beard_style",
+              "type": "preset"
+            }
+          ]
+        },
+        {
+          "name": "Body",
+          "items": [
+            {
+              "name": "Body",
+              "items": [
+                {
+                  "name": "body_shape",
+                  "type": "float"
+                }
+              ]
+            },
+            {
+              "name": "body_scar",
+              "type": "preset"
+            }
+          ]
+        },
+        {
+          "name": "tattoo",
+          "items": [
+            {
+              "name": "face_tattoo",
+              "type": "preset"
+            },
+			{
+			  "name": "face_scar",
+              "type": "preset"
+			},
+            {
+              "name": "body_tattoo1",
+              "type": "preset"
+            },
+            {
+              "name": "body_tattoo2",
+              "type": "preset"
+            },
+            {
+              "name": "body_tattoo3",
+              "type": "preset"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "apparel",
+      "items": [
+        {
+          "name": "facedeck",
+          "type": "preset"
+        },
+        {
+          "name": "coat",
+          "type": "preset"
+        },
+        {
+          "name": "pants",
+          "type": "preset"
+        },
+        {
+          "name": "body_socks",
+          "type": "preset"
+        },
+        {
+          "name": "foot",
+          "type": "preset"
+        },
+        {
+          "name": "suit",
+          "type": "preset"
+        },
+        {
+          "name": "back",
+          "type": "preset"
+        }
+      ]
+    },
+    {
+      "name": "makeup",
+      "items": [
+        {
+          "name": "blush",
+          "type": "preset"
+        },
+        {
+          "name": "eyeshadow",
+          "type": "preset"
+        },
+        {
+          "name": "lipstick",
+          "type": "preset"
+        },
+        {
+          "name": "nail",
+          "type": "preset"
+        }
+      ]
+    }
+  ]
+}

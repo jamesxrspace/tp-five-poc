@@ -1,0 +1,17 @@
+{
+    "name": "io.xrspace.tpfive.game.record.scene",
+    "version": "0.1.0",
+    "displayName": "TPFive 33 Game Record Scene",
+    "description": "TPFive Game Record Scene",
+    "unity": "2022.3",
+    "dependencies": {},
+    "keywords": [
+        "record",
+        "reels",
+        "scene"
+    ],
+    "author": {
+        "name": "James Chang",
+        "email": "james.chang@xrspace.io"
+    }
+}

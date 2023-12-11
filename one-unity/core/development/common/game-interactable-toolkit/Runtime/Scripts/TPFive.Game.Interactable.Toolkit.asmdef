@@ -1,0 +1,26 @@
+{
+    "name": "TPFive.Game.Interactable.Toolkit",
+    "rootNamespace": "TPFive.Game.Interactable",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging",
+        "DOTweenPro.Scripts"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

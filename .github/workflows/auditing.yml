@@ -1,0 +1,93 @@
+name: Auditing
+
+on: pull_request
+
+jobs:
+  audting:
+    name: Protect and Discover Secrets
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+            # fetch all history for all branches and tags.
+            fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+
+  linter:
+    name: Identifying Simple Issues to Code Review
+    runs-on: ubuntu-latest
+
+    steps:
+      # Ensure the commits within the PR can be loaded.
+      # NOTE - expect the PR no more than 64 commits
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+      - uses: actions/checkout@v3
+        with:
+            fetch-depth: 64
+
+      # Setup the necessary programming language
+      - uses: actions/setup-python@v3
+      - uses: hashicorp/setup-terraform@v2
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '^1.21'
+      - uses: mfinelli/setup-shfmt@v2
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: 3.1.5
+      - uses: flutter-actions/setup-flutter@v2
+        with:
+          channel: stable
+          version: 3.13.9
+      - run: |
+          pushd one-mobile/flutter_project/ || exit 1
+          flutter pub get
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.17.1
+      - uses: pnpm/action-setup@v2
+        with:
+          run_install: false
+          version: 8.6.12
+          package_json_file: one-cms/package.json
+      - name: Get pnpm store directory
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
+
+      # Install necessary packages
+      - name: Install NPM for one-backend/e2e/k6-ts-test/
+        run: |
+          pushd one-backend/e2e/k6-ts-test/ || exit 1
+          npm i
+      - uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: |
+          cd one-cms || exit 1
+          pnpm install
+
+      - name: Install pre-commit
+        run: |
+           python -m pip install pre-commit
+
+      # Execute the pre-commit hooks
+      - name: Run all pre-commit hooks
+        env:
+          # golangci-lint has the timeout issue
+          SKIP: golangci-lint
+        run: >
+          pre-commit run \
+            --show-diff-on-failure \
+            --color=always \
+            --from-ref "origin/${{ github.event.pull_request.base.ref }}" \
+            --to-ref   "${{ github.event.pull_request.head.sha }}"

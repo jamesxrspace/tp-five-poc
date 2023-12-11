@@ -1,0 +1,24 @@
+{
+    "name": "TPFive56.Creator.MotionConvertTool",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:ebcad7e3972724c43aa595f17cf4d103",
+        "GUID:f06555f75b070af458a003d92f9efb00",
+        "GUID:fcbf548d78f7a204982eba7544648e87",
+        "GUID:198bd72cb6ccdcf419c7915dfd2a41e5",
+        "GUID:e39bfe2882be351499ebca5b5b403ecb",
+        "GUID:0742d5f28b45629418b0e136a4a21bd3",
+        "GUID:205d20742f8830046b81fb69e64f3f2c",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

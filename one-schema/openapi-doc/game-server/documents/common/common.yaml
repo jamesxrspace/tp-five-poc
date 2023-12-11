@@ -1,0 +1,44 @@
+components:
+  schemas:
+    BaseResponse:
+      type: object
+      x-parent: true
+      x-response: true
+      properties:
+        err_code:
+          type: integer
+          description: error code from server
+        message:
+          type: string
+          description: error message from server
+
+    PaginationRequest:
+      Offset:
+        name: offset
+        in: query
+        description: offset of items
+        schema:
+          minimum: 0
+          type: integer
+      Size:
+        name: size
+        in: query
+        description: size of queries times
+        required: true
+        schema:
+          maximum: 50
+          minimum: 1
+          type: integer
+
+    PaginationBase:
+      x-parent: true
+      type: object
+      properties:
+        total:
+          type: integer
+          description: total count
+
+    CategoriesEnum:
+      type: string
+      enum: [friends, music, dance, talk_show, culture]
+      description: categories of feed and reel

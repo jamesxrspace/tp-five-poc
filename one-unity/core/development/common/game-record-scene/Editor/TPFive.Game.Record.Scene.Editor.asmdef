@@ -1,0 +1,21 @@
+{
+    "name": "TPFive.Game.Record.Scene.Editor",
+    "rootNamespace": "TPFive.Game.Record.Scene",
+    "references": [
+        "VContainer",
+        "TPFive.Game.Editor",
+        "TPFive.Game.Record.Scene",
+        "TPFive.Game"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

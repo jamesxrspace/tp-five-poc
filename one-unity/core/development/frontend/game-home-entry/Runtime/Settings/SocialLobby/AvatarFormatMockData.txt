@@ -1,0 +1,1652 @@
+[{
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_001", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_002", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_003", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_004", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_005", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_006", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_007", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_008", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_009", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_010", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_025_bs_011", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_001", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_002", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_003", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_004", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_005", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_006", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_007", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_008", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_009", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_010", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "f_presetavatar_xspo_07",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_female",
+        "gender": 12,
+        "skin_parts": {
+            "parts": ["hum_f01_head_000_bs_001", "hum_f01_coat_026_bs_011", "None", "hum_f01_pants_009_bs_004", "hum_f01_shoe_013_bs_006", "hum_f01_hat_001_bs_005", "hum_f01_nail_001_bs_006", "None", "None"]
+        },
+        "attachments": {
+            "parts": ["None"]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": ["hum_f01_head_000_eb_001", null, null, null, "hum_f01_head_000_bl_002", "hum_f01_head_000_li_005", "None", null, null, "None", "None", "None", "None", "None"],
+            "partColors": ["FFCFB1FF", null, null, "FFCFB1FF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFCFB1FF"
+        },
+        "body": {
+            "Height": 1.05,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_001", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_002", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_003", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_004", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_005", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_001", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_002", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_003", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_004", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_005", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_006", "None", "hum_m01_pants_006_bs_001", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_001", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_002", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_003", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_004", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_005", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_001", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_002", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_003", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_004", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_005", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_006", "None", "hum_m01_pants_006_bs_002", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_001", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_002", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_003", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_004", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_005", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_001", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_002", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_003", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_004", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_005", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_006", "None", "hum_m01_pants_006_bs_003", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_001", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_002", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_003", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_004", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_007_bs_005", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_001", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_002", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_003", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_004", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_005", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }, {
+        "avatarid": "m_presetavatar_xspo_02",
+        "accountid": null,
+        "skeleton": "avatar2_skeleton_male",
+        "gender": 11,
+        "skin_parts": {
+            "parts": ["hum_m01_head_000_bs_001", "hum_m01_coat_010_bs_006", "None", "hum_m01_pants_006_bs_004", "hum_m01_shoe_007_bs_001", "hum_m01_hat_004_bs_001", "hum_m01_nail_001_bs_012", "None", "None"]
+        },
+        "attachments": {
+            "parts": [null]
+        },
+        "morpher": {},
+        "face_textures": {
+            "parts": [null, null, null, null, null, null, null, null, "hum_f01_eye_000_bs_001", null, null, null, null, null],
+            "partColors": ["3A3A3AFF", "3A3A3AFF", null, "3A3A3AFF", null, null, null, null, null, null, null, null, null, null]
+        },
+        "colors": {
+            "SkinColor": "FFFFFFFF",
+            "HairColor": "FFAC31FF"
+        },
+        "body": {
+            "Height": 1.0,
+            "Shape": 0
+        },
+        "extra_info": null
+    }
+]

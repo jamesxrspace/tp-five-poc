@@ -1,0 +1,20 @@
+{
+    "name": "TPFive.Game.Record.Scene",
+    "rootNamespace": "TPFive.Game.Record.Scene",
+    "references": [
+        "TPFive.Extended.Animancer",
+        "TPFive.Game.Config",
+        "TPFive.Game",
+        "UniRx",
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

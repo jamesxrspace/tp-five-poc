@@ -1,0 +1,53 @@
+name: Build Backend
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      TARGET_BRANCH:
+        description: "The target branch"
+        default: ""
+        type: string
+
+jobs:
+  build:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.TARGET_BRANCH || '' }}
+
+      # Setup
+      # ==================================================
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2.2.0
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-1
+      - uses: ./one-utility/actions/ecr_image_tag
+        id: ecr_image_tag
+        with:
+          ecr_repository: tp-five/one-backend/server
+
+      - name: Build image
+        if: ${{ steps.ecr_image_tag.outputs.already_exists == 'false' }}
+        env:
+          IMAGE_TAG: ${{ steps.ecr_image_tag.outputs.image_tag }}
+          ECR_REGISTRY: ${{ steps.ecr_image_tag.outputs.ecr_registry }}
+          ECR_REPOSITORY: tp-five/one-backend/server
+        run: |
+          pushd one-backend/server || exit 1
+
+          docker build -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" -f deployment/Dockerfile .
+
+          popd
+      - name: Push backend image to Amazon ECR
+        if: ${{ steps.ecr_image_tag.outputs.already_exists == 'false' }}
+        env:
+          IMAGE_TAG: ${{ steps.ecr_image_tag.outputs.image_tag }}
+          ECR_REGISTRY:  ${{ steps.ecr_image_tag.outputs.ecr_registry }}
+          ECR_REPOSITORY: tp-five/one-backend/server
+        run: |
+          docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"

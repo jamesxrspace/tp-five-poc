@@ -1,0 +1,116 @@
+@host=http://localhost:8090
+@access_token=
+### get xr local provider token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&email=xrspacetest1000@xrspace.io&password=1qazXSW@
+
+### Login
+POST {{host}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+### create space group
+POST {{host}}/_cms/v1/space/group
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "name": "space_group",
+    "start_at": "2006-01-02T15:04:05Z",
+    "end_at": "2006-01-02T15:04:05Z",
+    "description": "space_group_description",
+    "thumbnail": "https://test.com/test.png",
+    "space_ids": []
+}
+
+### update space group
+
+@space_group_id=
+PUT {{host}}/_cms/v1/space/group/{{space_group_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "name": "space_group",
+    "status": "enabled",
+    "start_at": "2006-01-02T15:04:05Z",
+    "end_at": "2006-01-02T15:04:05Z",
+    "description": "update_space_group_description",
+    "thumbnail": "https://test.com/test.png",
+    "space_ids": []
+}
+
+
+### create space
+@space_group_id=
+POST {{host}}/_cms/v1/space
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "space_group_id": "9ec34017-4bca-4201-85b3-659b96005fd7",
+    "name": "123",
+    "description": "space_description",
+    "thumbnail": "https://test.com/test.png",
+    "addressable": "addressable_key",
+    "start_at": "2006-01-02T15:04:05Z",
+    "end_at": "2006-01-02T15:04:05Z"
+}
+
+### create space with invalid space_group_id
+POST {{host}}/_cms/v1/space
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "space_group_id": "space_group_not_exist",
+    "name": "123",
+    "start_at": "2006-01-02T15:04:05Z",
+    "end_at": "2006-01-02T15:04:05Z"
+}
+
+### update space
+@space_id=
+@space_group_id=
+PUT {{host}}/_cms/v1/space/{{space_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+    "space_group_id": {{space_group_id}},
+    "description": "update_space_description",
+    "addressable": "addressable_key",
+    "name": "123456789",
+    "start_at": "2006-02-03T15:04:05Z",
+    "end_at": "2006-03-04T15:04:05Z"
+}
+
+### delete space
+@space_id=
+DELETE  {{host}}/_cms/v1/space/{{space_id}}
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{}
+
+### get space list
+GET {{host}}/_cms/v1/space/list?offset=2&size=10
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+
+### get space group list
+GET {{host}}/_cms/v1/space/group/list?offset=0&size=10
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}

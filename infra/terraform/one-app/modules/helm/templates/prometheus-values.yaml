@@ -1,0 +1,442 @@
+alertmanager:
+  enabled: true
+  config:
+    global:
+      resolve_timeout: 2m
+      slack_api_url: "${SLACK_API_URL}"
+    inhibit_rules: []
+    route:
+      group_by: [prometheus, alertname]
+      group_wait: 30s
+      group_interval: 5m
+      repeat_interval: 4h
+      receiver: "null"
+      routes:
+        - receiver: "null"
+          match:
+            alertname: Watchdog
+        - receiver: "critical-receiver"
+          repeat_interval: 1h
+          match:
+            severity: critical
+        - receiver: "warning-receiver"
+          repeat_interval: 6h
+          match:
+            severity: warning
+        - receiver: "info-receiver"
+          repeat_interval: 12h
+          match:
+            severity: info
+    receivers:
+      - name: "null"
+      - name: "critical-receiver"
+        slack_configs:
+          - channel: "${CRITICAL_CHANNEL}"
+            color: '{{ template "slack.color" . }}'
+            username: "Alertmanager"
+            icon_emoji: ":alertmanager:"
+            title: '{{ template "slack.title" . }}'
+            text: '{{ template "slack.text" . }}'
+            send_resolved: true
+      - name: "warning-receiver"
+        slack_configs:
+          - channel: "${WARNING_CHANNEL}"
+            color: '{{ template "slack.color" . }}'
+            username: "Alertmanager"
+            icon_emoji: ":alertmanager:"
+            title: '{{ template "slack.title" . }}'
+            text: '{{ template "slack.text" . }}'
+            send_resolved: true
+      - name: "info-receiver"
+        slack_configs:
+          - channel: "${INFO_CHANNEL}"
+            color: '{{ template "slack.color" . }}'
+            username: "Alertmanager"
+            icon_emoji: ":alertmanager:"
+            title: '{{ template "slack.title" . }}'
+            text: '{{ template "slack.text" . }}'
+            send_resolved: true
+  templateFiles:
+    notifications.tmpl: |-
+      {{/* Alertmanager Silence link */}}
+      {{ define "__alert_silence_link" -}}
+          {{ .ExternalURL }}/#/silences/new?filter=%7B
+          {{- range .CommonLabels.SortedPairs -}}
+              {{- if ne .Name "alertname" -}}
+                  {{- .Name }}%3D"{{- .Value -}}"%2C%20
+              {{- end -}}
+          {{- end -}}
+          alertname%3D"{{- .CommonLabels.alertname -}}"%7D
+      {{- end }}
+
+      {{/* Severity of the alert */}}
+      {{ define "__alert_severity" -}}
+          {{- if eq .CommonLabels.severity "critical" -}}
+          *Severity:* `Critical`
+          {{- else if eq .CommonLabels.severity "warning" -}}
+          *Severity:* `Warning`
+          {{- else if eq .CommonLabels.severity "info" -}}
+          *Severity:* `Info`
+          {{- else if eq .CommonLabels.severity "data" -}}
+          *Severity:* `Data`
+          {{- else -}}
+          *Severity:* :question: {{ .CommonLabels.severity }}
+          {{- end }}
+      {{- end }}
+
+      {{/* Title of the Slack alert */}}
+      {{ define "slack.title" -}}
+        [{{ .Status | toUpper -}}
+        {{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{- end -}}
+        {{ if eq .Status "resolved" }}:{{ .Alerts.Resolved | len }}{{- end -}}
+        ] {{ .CommonLabels.alertname }}
+      {{- end }}
+
+
+      {{/* Color of Slack attachment (appears as line next to alert )*/}}
+      {{ define "slack.color" -}}
+          {{ if eq .Status "firing" -}}
+              {{ if eq .CommonLabels.severity "warning" -}}
+                  warning
+              {{- else if eq .CommonLabels.severity "critical" -}}
+                  danger
+              {{- else -}}
+                  #439FE0
+              {{- end -}}
+          {{ else -}}
+          good
+          {{- end }}
+      {{- end }}
+
+      {{/* The text to display in the alert */}}
+      {{ define "slack.text" -}}
+
+          {{ template "__alert_severity" . }}
+          {{- if eq .Status "firing" -}}
+              {{- if (index .Alerts.Firing 0).Annotations.summary }}
+              {{- "\n" -}}
+              *Summary:* {{ (index .Alerts.Firing 0).Annotations.summary }}
+                  {{ range .Alerts.Firing }}
+
+                      {{- if .Annotations.description }}
+                      {{- "\n" -}}
+                      {{ .Annotations.description }}
+                      {{- "\n" -}}
+                      {{- end }}
+
+                  {{- end }}
+              {{- end }}
+          {{- else -}}
+              {{- if (index .Alerts.Resolved 0).Annotations.summary }}
+              {{- "\n" -}}
+              *Summary:* {{ (index .Alerts.Resolved 0).Annotations.summary }}
+                  {{ range .Alerts.Resolved }}
+
+                      {{- if .Annotations.description }}
+                      {{- "\n" -}}
+                      {{ .Annotations.description }}
+                      {{- "\n" -}}
+                      {{- end }}
+
+                  {{- end }}
+              {{- end }}
+          {{- end -}}
+
+      {{- end }}
+
+  ## Settings affecting alertmanagerSpec
+  ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#alertmanagerspec
+  ##
+  alertmanagerSpec:
+    replicas: 3
+    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: efs-sc
+          accessModes: ["ReadWriteMany"]
+          resources:
+            requests:
+              storage: 50Gi
+    nodeSelector:
+      Service: monitor
+    resources:
+      limits:
+        memory: 1Gi
+      requests:
+        memory: 400Mi
+    podAntiAffinity: "hard"
+    podAntiAffinityTopologyKey: kubernetes.io/hostname
+    securityContext:
+      runAsGroup: 65534
+      runAsNonRoot: true
+      runAsUser: 65534
+      fsGroup: 65534
+      seccompProfile:
+        type: RuntimeDefault
+
+additionalPrometheusRulesMap:
+  rule-name:
+    groups:
+      - name: coredns
+        rules:
+          - alert: CoreDNSDown
+            expr: absent(up{job="coredns"} == 1)
+            for: 15m
+            labels:
+              severity: critical
+            annotations:
+              summary: CoreDNS down.
+              description: CoreDNS has disappeared from Prometheus target discovery.
+          - alert: CorednsPanicCount
+            expr: increase(coredns_panics_total[1m]) > 0
+            for: 0m
+            labels:
+              severity: critical
+            annotations:
+              summary: CoreDNS Panic Count (instance {{ $labels.instance }})
+              description: Number of CoreDNS panics encountered.
+
+grafana:
+  enabled: false
+
+kubeApiServer:
+  enabled: true
+  serviceMonitor:
+    metricRelabelings:
+      - action: keep
+        regex: "(apiserver_request_duration_seconds_bucket|apiserver_request_total)"
+        sourceLabels:
+          - __name__
+
+kubelet:
+  enabled: true
+  namespace: monitoring
+
+  serviceMonitor:
+    ## Enable scraping /metrics/cadvisor from kubelet's service
+    ##
+    cAdvisor: false
+
+kubeControllerManager:
+  enabled: false
+
+coreDns:
+  enabled: true
+
+kubeDns:
+  enabled: false
+
+kubeEtcd:
+  enabled: false
+
+kubeScheduler:
+  enabled: false
+
+kubeProxy:
+  enabled: false
+## Component scraping kube state metrics
+##
+kubeStateMetrics:
+  enabled: true
+
+## Configuration for kube-state-metrics subchart
+##
+kube-state-metrics:
+  nodeSelector:
+    Service: monitor
+  namespaceOverride: ""
+  rbac:
+    create: true
+  releaseLabel: true
+  prometheus:
+    monitor:
+      enabled: true
+
+## Deploy node exporter as a daemonset to all nodes
+##
+nodeExporter:
+  enabled: true
+
+## Configuration for prometheus-node-exporter subchart
+##
+prometheus-node-exporter:
+  prometheus:
+    monitor:
+      enabled: false
+
+## Manages Prometheus and Alertmanager components
+##
+prometheusOperator:
+  enabled: true
+  ## Resource limits & requests
+  ##
+  resources:
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 100m
+      memory: 100Mi
+
+  ## Define which Nodes the Pods are scheduled on.
+  ## ref: https://kubernetes.io/docs/user-guide/node-selection/
+  ##
+  nodeSelector:
+    Service: monitor
+  kubeletService:
+    enabled: true
+    namespace: monitoring
+## Deploy a Prometheus instance
+##
+prometheus:
+  enabled: true
+
+  ## Service account for Prometheuses to use.
+  ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+  ##
+  serviceAccount:
+    create: false
+    name: ${PROMETHEUS_SERVICE_ACCOUNT_NAME}
+    annotations: {}
+  ## Settings affecting prometheusSpec
+  ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#prometheusspec
+  ##
+  prometheusSpec:
+    ## External labels to add to any time series or alerts when communicating with external systems
+    ##
+    externalLabels:
+      cluster: ${PROMETHEUS_CLUSTER_NAME}
+
+    ## Name of the external label used to denote replica name
+    ##
+    replicaExternalLabelName: __replica__
+
+    ## Define which Nodes the Pods are scheduled on.
+    ## ref: https://kubernetes.io/docs/user-guide/node-selection/
+    ##
+    nodeSelector:
+      Service: monitor
+
+    ## If true, a nil or {} value for prometheus.prometheusSpec.ruleSelector will cause the
+    ## prometheus resource to be created with selectors based on values in the helm deployment,
+    ## which will also match the PrometheusRule resources created
+    ##
+    ruleSelectorNilUsesHelmValues: false
+
+    ## If true, a nil or {} value for prometheus.prometheusSpec.serviceMonitorSelector will cause the
+    ## prometheus resource to be created with selectors based on values in the helm deployment,
+    ## which will also match the servicemonitors created
+    ##
+    serviceMonitorSelectorNilUsesHelmValues: false
+
+    ## If true, a nil or {} value for prometheus.prometheusSpec.podMonitorSelector will cause the
+    ## prometheus resource to be created with selectors based on values in the helm deployment,
+    ## which will also match the podmonitors created
+    ##
+    podMonitorSelectorNilUsesHelmValues: false
+
+    ## How long to retain metrics
+    ##
+    retention: 2h
+
+    ## Maximum size of metrics
+    ##
+    retentionSize: ${MAX_METRICS_STORAGE}
+
+    ## Number of replicas of each shard to deploy for a Prometheus deployment.
+    ## Number of replicas multiplied by shards is the total number of Pods created.
+    ##
+    replicas: 2
+
+    ## Pod anti-affinity can prevent the scheduler from placing Prometheus replicas on the same node.
+    ## The default value "soft" means that the scheduler should *prefer* to not schedule two replica pods onto the same node but no guarantee is provided.
+    ## The value "hard" means that the scheduler is *required* to not schedule two replica pods onto the same node.
+    ## The value "" will disable pod anti-affinity so that no anti-affinity rules will be configured.
+    podAntiAffinity: "hard"
+
+    ## If anti-affinity is enabled sets the topologyKey to use for anti-affinity.
+    ## This can be changed to, for example, failure-domain.beta.kubernetes.io/zone
+    ##
+    podAntiAffinityTopologyKey: kubernetes.io/hostname
+
+    ## EXPERIMENTAL: Number of shards to distribute targets onto.
+    ## Number of replicas multiplied by shards is the total number of Pods created.
+    ## Note that scaling down shards will not reshard data onto remaining instances, it must be manually moved.
+    ## Increasing shards will not reshard data either but it will continue to be available from the same instances.
+    ## To query globally use Thanos sidecar and Thanos querier or remote write data to a central location.
+    ## Sharding is done on the content of the `__address__` target meta-label.
+    ##
+    shards: 1
+
+    ## The remote_write spec configuration for Prometheus.
+    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/api.md#remotewritespec
+    remoteWrite:
+      - url: ${PROMETHEUS_ENDPOINT}
+        queueConfig:
+          maxSamplesPerSend: 1000
+          maxShards: 200
+          capacity: 2500
+        sigv4:
+          region: ${PROMETHEUS_REGION}
+
+    ## Resource limits & requests
+    ##
+    resources:
+      limits:
+        cpu: 1000m
+        memory: ${MEMORY_LIMIT}
+      requests:
+        cpu: 200m
+        memory: ${MEMORY_REQUEST}
+
+    ## Prometheus StorageSpec for persistent data
+    ## ref: https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/storage.md
+    ##
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: ebs-sc
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 50Gi
+
+    ## AdditionalScrapeConfigs allows specifying additional Prometheus scrape configurations. Scrape configurations
+    ## are appended to the configurations generated by the Prometheus Operator. Job configurations must have the form
+    ## as specified in the official Prometheus documentation:
+    ## https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config. As scrape configs are
+    ## appended, the user is responsible to make sure it is valid. Note that using this feature may expose the possibility
+    ## to break upgrades of Prometheus. It is advised to review Prometheus release notes to ensure that no incompatible
+    ## scrape configs are going to break Prometheus after the upgrade.
+    ##
+    ## The scrape configuration example below will find master nodes, provided they have the name .*mst.*, relabel the
+    ## port to 2379 and allow etcd scraping provided it is running on all Kubernetes master nodes
+    ##
+    additionalScrapeConfigs:
+      - job_name: kubernetes-nodes-kubelet
+        scrape_interval: 5s
+        kubernetes_sd_configs:
+          - role: node
+        scheme: https
+        tls_config:
+          ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+          insecure_skip_verify: true
+        bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
+        relabel_configs:
+          - action: labelmap
+            regex: __meta_kubernetes_node_label_(.+)
+          - source_labels: [__meta_kubernetes_node_name]
+            regex: (.+)
+            target_label: __metrics_path__
+            replacement: metrics/cadvisor
+      - job_name: "prometheus-node-exporter"
+        kubernetes_sd_configs:
+          - role: node
+        relabel_configs:
+          - action: labelmap
+            regex: __meta_kubernetes_node_label_(.+)
+          - action: replace
+            source_labels: [__address__]
+            regex: "(.*):10250"
+            replacement: "$1:9100"
+            target_label: __address__

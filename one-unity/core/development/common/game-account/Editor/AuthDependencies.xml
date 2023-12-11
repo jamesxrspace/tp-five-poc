@@ -1,0 +1,8 @@
+﻿<dependencies>
+    <androidPackages>
+        <repositories>
+            <repository>Library/XRAuth/m2repository</repository>
+        </repositories>
+        <androidPackage spec="com.xrspace.xrauth:porting:0.1.2" />
+    </androidPackages>
+</dependencies>

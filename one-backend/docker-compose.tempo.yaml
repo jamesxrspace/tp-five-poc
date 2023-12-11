@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+  # And put them in an OTEL collector pipeline...
+  otel-collector:
+    image: otel/opentelemetry-collector:0.61.0
+    command: [ "--config=/etc/otel-collector.yaml" ]
+    volumes:
+      - ${PWD}/config/otel-collector.yaml:/etc/otel-collector.yaml:ro
+    ports:
+      - 4317:4317
+
+  # To eventually offload to Tempo...
+  tempo:
+    image: grafana/tempo:latest
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ${PWD}/config/tempo.yaml:/etc/tempo.yaml:ro
+    ports:
+      - "14268" # jaeger ingest
+      - "3200"  # tempo
+      - "4317"  # otlp grpc
+      - "4318"  # otlp http
+      - "9411"  # zipkin
+
+  grafana:
+    image: grafana/grafana:9.4.3
+    volumes:
+      - ${PWD}/config/grafana-datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml:ro
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+      - GF_FEATURE_TOGGLES_ENABLE=traceqlEditor
+    ports:
+      - "3000:3000"
+
+networks:
+  default:
+    name: tp-five
+    driver: bridge

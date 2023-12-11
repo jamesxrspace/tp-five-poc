@@ -1,0 +1,243 @@
+openapi: 3.0.3
+info:
+  title: Server API - Asset
+  description: The Restful APIs of Asset.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/asset/{type}/list:
+    get:
+      summary: Get asset items by type
+      description: Get asset items by type. This API endpoint allows you to retrieve a list of asset items based on their type. The response includes pagination information and a list of asset items.
+      operationId: GetAssetItems
+      tags: [Asset]
+      security:
+        - BearerAuth: [ ]
+      parameters:
+        - $ref: '../common/common.yaml#/components/schemas/PaginationRequest/Offset'
+        - $ref: '../common/common.yaml#/components/schemas/PaginationRequest/Size'
+        - name: type
+          in: path
+          description: asset type
+          required: true
+          schema:
+            type: string
+            enum: ["decoration"]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssetListResponse'
+
+  /api/v1/asset/upload:
+    post:
+      summary: Create upload request
+      description: Create upload request.
+      operationId: CreateUploadRequest
+      tags: [Asset]
+      security: [BearerAuth: []]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUploadRequest'
+            example:
+              tags: ["tag1", "tag2"]
+              type: "reel"
+              categories: ["music", "culture"]
+              files:
+                - file_id: "a head.png"
+                  content_type: "image/png"
+                  content_length: 273630
+                  checksum: "h/bi8ZoCPiOpDX7yAtKEwgsV3pTRaQk74L9l6Gdw5kY="
+                - file_id: "mov+test.MOV"
+                  content_type: "video/quicktime"
+                  content_length: 3002169
+                  checksum: "mL3pJis3L2Pu2eSGdgScUDcWrgl1Mfs2SNzLyK51iJw="
+
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateUploadRequestResponse'
+  /api/v1/asset/uploaded/{request_id}:
+    post:
+      summary: Confirm files uploaded to s3
+      description: Confirm files uploaded to s3.
+      operationId: ConfirmUploaded
+      tags: [Asset]
+      security: [BearerAuth: []]
+      parameters:
+        - name: request_id
+          in: path
+          description: request id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfirmUploadedResponse'
+
+components:
+  schemas:
+    # Model
+    Asset:
+      type: object
+      properties: 
+        id:
+          type: string
+          description: asset id
+        tags:
+          type: array
+          items:
+            type: string
+          description: asset tags
+        type:
+          type: string
+          description: asset type
+          enum: ["decoration"]
+        categories:
+          type: array
+          items:
+            $ref: '../common/common.yaml#/components/schemas/CategoriesEnum'
+          description: asset category
+        files:
+          type: array
+          items:
+            $ref: '#/components/schemas/UploadFile'
+          description: asset files information
+        created_at:
+          type: string
+          format: date-time
+          description: asset created time
+          x-42c-format: o:date-time
+          example: '2021-08-30T23:01:14.274085491+08:00'
+        updated_at:
+          type: string
+          format: date-time
+          description: asset updated time
+          example: '2021-08-30T23:01:14.274085491+08:00'
+          x-42c-format: o:date-time
+    CreateUploadRequest:
+      type: object
+      properties:
+        tags:
+          type: array
+          items:
+            type: string
+          description: upload asset tags
+        type:
+          type: string
+          description: upload asset type
+        categories:
+          type: array
+          items:
+            $ref: '../common/common.yaml#/components/schemas/CategoriesEnum'
+          description: upload asset categories
+        files:
+          type: array
+          items:
+            $ref: '#/components/schemas/UploadFile'
+          description: upload files information
+      required:
+        - files
+    UploadFile:
+      type: object
+      properties:
+        file_id:
+          type: string
+          description: unique file id(file name)
+        content_type:
+          type: string
+          description: file content type
+        content_length:
+          type: integer
+          description: file content length(bytes)
+        checksum:
+          type: string
+          description: file checksum(sha256 base64 encoded)
+      required:
+        - file_id
+        - content_type
+        - content_length
+        - checksum
+    S3Object:
+      type: object
+      properties:
+        url:
+          type: string
+        path:
+          type: string
+    
+    # Response Data
+    CreateUploadRequestResponseData:
+      type: object
+      properties:
+        request_id:
+          type: string
+          description: upload request id
+        presigned_urls:
+          type: object
+          additionalProperties: 
+            type: string
+          description: s3 presigned urls for uploading files
+    ConfirmUploadedResponseData:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/S3Object'
+
+    # Response
+    CreateUploadRequestResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/CreateUploadRequestResponseData'
+    ConfirmUploadedResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/ConfirmUploadedResponseData'
+
+    AssetPage:
+      allOf:
+        - $ref: "../common/common.yaml#/components/schemas/PaginationBase"
+        - type: object
+          properties:
+            items:
+              type: array
+              items:
+                $ref: "#/components/schemas/Asset"
+
+    AssetListResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: "#/components/schemas/AssetPage"
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

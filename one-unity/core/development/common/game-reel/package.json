@@ -1,0 +1,17 @@
+{
+    "name": "io.xrspace.tpfive.game.reel",
+    "version": "0.1.0",
+    "displayName": "TPFive 33 Game Reel",
+    "description": "TPFive Game Reel",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "author": {
+        "name": "Kohsin Cheng",
+        "email": "kohsin.cheng@xrspace.io",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

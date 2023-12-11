@@ -1,0 +1,30 @@
+# <type>(<scope>): <subject>
+# e.g: feat(unity): update asset.
+
+
+[reason]
+
+# [ticket-no]: <ticket-no>
+# e.g: [ticket-no]: TBF-49
+[ticket-no]:
+
+# <type>
+#
+# feat: implement a new feature
+# fix: bug fixing
+# docs: documentation
+# refactor: make code better
+# perf: a code change that improves performance
+# test: when adding missing tests
+# chore: updating grunt tasks etc; no production code change
+# style: changes format (no affect running code e.g. white-space, formatting, missing semi colons)
+# revert: undo previous commit
+#
+# <scope>
+#
+# backend
+# unity
+# git
+# infra
+# mobile
+# frontend

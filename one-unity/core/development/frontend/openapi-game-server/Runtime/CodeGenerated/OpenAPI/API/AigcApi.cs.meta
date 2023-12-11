@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:one-unity/core/development/frontend/openapi-game-server/Runtime/CodeGenerated/OpenAPI/API/AigcApi.cs.meta
+guid: eb214cbd9ff554c20bc052ddfe93c2f2
+========
+guid: e351cdcab4d32414680b312b003b7b11
+>>>>>>>> 3c8d6ce16 (chore(unity): update openapi source code):one-unity/core/development/frontend/openapi-game-server/Runtime/CodeGenerated/OpenAPI/Model/AssetPage.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

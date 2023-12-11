@@ -1,0 +1,18 @@
+controller:
+  nodeSelector:
+    Service: core-component
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  serviceAccount:
+    create: false # A service account will be created for you if set to true. Set to false if you want to use your own.
+    name: ${SERVICEACCOUNT_NAME} # Name of the service-account to be used/created.
+
+node:
+  serviceAccount:
+    create: false
+    name: ${SERVICEACCOUNT_NAME}

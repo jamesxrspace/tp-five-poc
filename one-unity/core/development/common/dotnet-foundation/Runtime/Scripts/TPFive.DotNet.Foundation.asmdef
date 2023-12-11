@@ -1,0 +1,15 @@
+{
+    "name": "TPFive.DotNet.Foundation",
+    "rootNamespace": "TPFive.DotNet.Foundation",
+    "references": [
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

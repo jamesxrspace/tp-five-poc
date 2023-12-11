@@ -1,0 +1,20 @@
+{
+    "name": "TPFive.Extended.ScreenPointer",
+    "rootNamespace": "",
+    "references": [
+        "GUID:23556f69a07ac9548b5ed47e7aecade6",
+        "GUID:8356b4894c5f6d444bf562506cf93bdf",
+        "GUID:56255bd5d851a6243b63cb370cfc40b1",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:fe685ec1767f73d42b749ea8045bfe43"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

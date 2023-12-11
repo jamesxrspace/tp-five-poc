@@ -1,0 +1,23 @@
+{
+    "name": "TPFive.Extended.Camera",
+    "rootNamespace": "TPFive.Extended.Camera",
+    "references": [
+        "Cinemachine",
+        "TPFive.Extended.InputSystem",
+        "TPFive.Game.Camera",
+        "TPFive.Game.Input",
+        "TPFive.Game",
+        "UniRx",
+        "Unity.InputSystem",
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

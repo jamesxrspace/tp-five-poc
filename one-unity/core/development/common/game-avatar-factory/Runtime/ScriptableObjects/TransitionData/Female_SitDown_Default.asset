@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19eff30f406245e6ab0b8d57464619e, type: 3}
+  m_Name: Female_SitDown_Default
+  m_EditorClassIdentifier: 
+  mask: {fileID: 0}
+  offsetPosition:
+    hasValue: 1
+    value: {x: 0, y: -0.41, z: 0.43}
+  offsetRotation:
+    hasValue: 0
+    value: {x: 0, y: 0, z: 0}
+  layerFadeDuration: 0.25
+  onStartClip:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: 5bd840366c7821e4689af24963d067ca, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  onEndClip:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: bddb405ab7a87cb46a89ea26c75f4f6b, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN
+  onPerformClip:
+    _FadeDuration: 0.25
+    _Events:
+      _NormalizedTimes: []
+      _Callbacks: []
+      _Names: []
+    _Clip: {fileID: 7400000, guid: 24a5107a7d87ac94babe5c53eb85862d, type: 2}
+    _Speed: 1
+    _NormalizedStartTime: NaN

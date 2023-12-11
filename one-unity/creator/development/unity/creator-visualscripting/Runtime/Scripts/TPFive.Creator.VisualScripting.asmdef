@@ -1,0 +1,33 @@
+{
+    "name": "TPFive.Creator.VisualScripting",
+    "rootNamespace": "TPFive.Creator.VisualScripting",
+    "references": [
+        "Unity.VisualScripting.Core",
+        "Unity.VisualScripting.Flow",
+        "Unity.VisualScripting.State",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "TPFive.Cross",
+        "TPFive.Game",
+        "TPFive.Creator",
+        "DoozyRuntime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "io.xrspace.TPFive.extended.doozy",
+            "expression": "0.1.0",
+            "define": "HAS_XSPO_EXTENDED_DOOZY"
+        }
+    ],
+    "noEngineReferences": false
+}

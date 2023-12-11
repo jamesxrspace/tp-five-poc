@@ -1,0 +1,53 @@
+name: Acquire License
+
+inputs:
+  LAMBDA_FUNCNAME:
+    description: The AWS lambda function name
+    required: true
+    default: license-server
+
+outputs:
+  uuid:
+    description: The license UUID
+    value: ${{ steps.acquire_license.outputs.uuid }}
+  email:
+    description: The license email address
+    value: ${{ steps.acquire_license.outputs.email }}
+  password:
+    description: The license password
+    value: ${{ steps.acquire_license.outputs.password }}
+  serial:
+    description: The license serial
+    value: ${{ steps.acquire_license.outputs.serial }}
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: acquire license
+      id: acquire_license
+      shell: bash
+      run: |
+        aws lambda invoke \
+          --function-name ${{ inputs.LAMBDA_FUNCNAME }} \
+          --cli-binary-format raw-in-base64-out \
+          --payload '{"action":"acquire"}' output.txt
+
+        if [ "$(jq .errorMessage -r < output.txt)" != "null" ]; then
+          echo "acquire license got error: $(jq .errorMessage -r < output.txt)"
+          exit 1
+        fi
+
+        # mark the sensitive data
+        echo "::add-mask::$(jq .email -r < output.txt)"
+        echo "::add-mask::$(jq .password -r < output.txt)"
+        echo "::add-mask::$(jq .serial -r < output.txt)"
+
+        {
+          echo "uuid=$(jq .id -r < output.txt)"
+          echo "email=$(jq .email -r < output.txt)"
+          echo "password=$(jq .password -r < output.txt)"
+          echo "serial=$(jq .serial -r < output.txt)"
+        } >> "$GITHUB_OUTPUT"
+
+        rm output.txt

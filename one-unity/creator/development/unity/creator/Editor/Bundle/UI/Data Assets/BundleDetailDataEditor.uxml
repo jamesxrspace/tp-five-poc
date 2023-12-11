@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+
+    <uie:PropertyField binding-path="title" />
+    <uie:PropertyField binding-path="description" />
+    <uie:PropertyField binding-path="titleTermId" />
+    <uie:PropertyField binding-path="descriptionTermId" />
+    <uie:PropertyField binding-path="spaceKind" />
+    <uie:PropertyField binding-path="id" name="id"/>
+    <uie:PropertyField binding-path="ugcId" name="ugcId"/>
+    <uie:PropertyField binding-path="thumbnail" />
+    <uie:PropertyField binding-path="storageKind" />
+    <uie:PropertyField binding-path="bundleKind" />
+    <uie:PropertyField binding-path="outcomeFormat" />
+    <uie:PropertyField binding-path="thumbnails" />
+    <uie:PropertyField binding-path="scenes" />
+    <uie:PropertyField binding-path="prefabs" />
+    <uie:PropertyField binding-path="scriptableObjects" />
+    <uie:PropertyField binding-path="textures" />
+
+</ui:UXML>

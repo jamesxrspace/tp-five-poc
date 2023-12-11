@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-svc
+  labels:
+    {{- include "backend.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.configmap.app.port | trimPrefix ":" }}
+      targetPort: {{ .Values.configmap.app.port | trimPrefix ":" }}
+      protocol: TCP
+      name: backend
+  selector:
+    {{- include "backend.selectorLabels" . | nindent 4 }}

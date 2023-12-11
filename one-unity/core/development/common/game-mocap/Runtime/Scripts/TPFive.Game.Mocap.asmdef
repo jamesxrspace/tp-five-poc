@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Game.Mocap",
+    "rootNamespace": "TPFive.Game.Mocap",
+    "references": [
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
+        "GUID:4f682e06dbb3e624faedad9cc27106cc",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:92971db799d184644a45bb2328cb20be",
+        "GUID:8356b4894c5f6d444bf562506cf93bdf",
+        "GUID:21c63e6f378a2af4e9167c1255650af9",
+        "GUID:205d20742f8830046b81fb69e64f3f2c",
+        "GUID:04c4d86a70aa56c55a78c61f1ab1a56d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

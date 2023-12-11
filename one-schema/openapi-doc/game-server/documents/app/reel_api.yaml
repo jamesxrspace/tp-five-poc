@@ -1,0 +1,249 @@
+openapi: 3.0.3
+info:
+  title: Server API - Reel
+  description: The Restful APIs of Reel.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/reel/create:
+    post:
+      summary: Create reel
+      description: Create reel.
+      operationId: CreateReel
+      tags: [Reel]
+      security: [BearerAuth: []]
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateReelRequest'
+            example:
+              description: "reel_example"
+              thumbnail: "thumbnail_url"
+              video: "video_url"
+              xrs: "xrs_url"
+              parent_reel_id: "parent_reel_id"
+              categories: ["music", "culture"]
+              join_mode: "all"
+              music_to_motion_url: "music_url"
+    
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateReelResponse'
+  /api/v1/reel/publish/{reel_id}:
+    post:
+      summary: Publish reel
+      description: Publish reel.
+      operationId: PublishReel
+      tags: [Reel]
+      security: [BearerAuth: []]
+      parameters:
+        - name: reel_id
+          in: path
+          description: reel_id to publish
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+  /api/v1/reel/delete/{reel_id}:
+    delete:
+      summary: Delete one reel
+      description: Delete one Reel.
+      operationId: deleteReel
+      tags: [Reel]
+      security: [BearerAuth: []]
+      parameters:
+        - name: reel_id
+          in: path
+          description: reel id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+  /api/v1/reel/list:
+    get:
+      summary: List reels
+      description: List reels.
+      operationId: listReels
+      tags: [Reel]
+      security: [BearerAuth: []]
+      parameters:
+        - name: offset
+          in: query
+          description: offset of items
+          schema:
+            minimum: 0
+            type: integer
+        - name: size
+          in: query
+          description: size of queries times
+          required: true
+          schema:
+            maximum: 50
+            minimum: 1
+            type: integer
+        - name: xrid
+          in: query
+          description: xrid
+          schema:
+            type: string
+        - name: reel_id
+          in: query
+          description: reel_id
+          schema:
+            type: string
+        - name: status
+          in: query
+          description: status
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListReelResponse'
+
+components:
+  schemas:
+    # Model
+    CreateReelRequest:
+      type: object
+      properties:
+        description:
+          type: string
+          description: reel description
+        thumbnail:
+          type: string
+          description: reel thumbnail url
+        video:
+          type: string
+          description: video url
+        music_to_motion_url:
+          type: string
+          description: music to motion url
+        xrs:
+          type: string
+          description: xrs url
+        parent_reel_id:
+          type: string
+          description: parent reel id
+        categories:
+          type: array
+          items:
+            $ref: '../common/common.yaml#/components/schemas/CategoriesEnum'
+          description: categories of reel belonging feed
+        join_mode:
+          $ref: '#/components/schemas/JoinModeEnum'
+      required:
+        - thumbnail
+        - video
+        - xrs
+        - categories
+        - join_mode
+    Reel:
+      type: object
+      properties:
+        id:
+          type: string
+          description: reel id
+        xrid:
+          type: string
+          description: xrid
+        description:
+          type: string
+          description: reel description
+        thumbnail:
+          type: string
+          description: reel thumbnail url
+        video:
+          type: string
+          description: video url
+        xrs:
+          type: string
+          description: xrs url
+        music_to_motion_url:
+          type: string
+          description: music to motion url
+        status:
+          type: string
+          description: reel status
+          enum: [published, draft, deleted]
+        join_mode:
+          $ref: '#/components/schemas/JoinModeEnum'
+        parent_reel_ids:
+          type: array
+          items:
+            type: string
+          description: parent reel ids
+        root_reel_id:
+          type: string
+          description: root reel id
+        created_at:
+          type: string
+          description: reel created time
+        updated_at:
+          type: string
+          description: reel updated time
+    JoinModeEnum:
+      type: string
+      enum: [off, all, friends_followers, me]
+      description: join modes of reel
+    CreateReelResponseData:
+      type: object
+      description: Create reel response data
+      properties:
+        reel:
+          $ref: '#/components/schemas/Reel'
+    # Response
+    CreateReelResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              $ref: '#/components/schemas/CreateReelResponseData'
+    ListReelResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                items:
+                  description: reel entities
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Reel'
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

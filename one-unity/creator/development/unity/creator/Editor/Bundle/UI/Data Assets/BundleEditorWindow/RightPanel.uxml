@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="Overview" display-tooltip-when-elided="true" />
+    <uie:PropertyField binding-path="title" name="title" />
+    <uie:PropertyField binding-path="description" name="description" style="height: auto;" />
+    <uie:PropertyField binding-path="bundleUsage" name="bundleUsage" />
+    <uie:PropertyField binding-path="id" name="id" />
+    <uie:PropertyField binding-path="bundleKind" name="bundleKind" />
+    <ui:Label tabindex="-1" text="Actions" display-tooltip-when-elided="true" />
+    <ui:Button text="Switch to Level" display-tooltip-when-elided="true" name="switchToLevel" />
+    <ui:Button text="Setup Addressable" display-tooltip-when-elided="true" name="setupAddressable" />
+    <ui:Button text="Build Addressable" display-tooltip-when-elided="true" name="buildAddressable" />
+    <ui:Button text="Upload Addressable" display-tooltip-when-elided="true" name="uploadAddressable" />
+    <ui:Button text="Upload Unitypackage" display-tooltip-when-elided="true" name="uploadUnitypackage" />
+    <ui:Button text="Upload Ugc" display-tooltip-when-elided="true" name="uploadUgc" />
+    <ui:Button text="Upload Unigypackage and Ugc" display-tooltip-when-elided="true" name="uploadUnitypackageAndUgc" />
+</ui:UXML>

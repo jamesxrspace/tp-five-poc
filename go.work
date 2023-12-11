@@ -1,0 +1,7 @@
+go 1.21.0
+
+use (
+	./one-backend/auth_platform
+	./one-backend/server
+	./one-utility/license-server/server
+)

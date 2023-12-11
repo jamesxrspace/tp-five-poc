@@ -1,0 +1,121 @@
+openapi: 3.0.3
+info:
+  title: Server API - Feed
+  description: The Restful APIs of Feed.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/feed/lobby:
+    get:
+      summary: Get news feed in lobby
+      operationId: GetNewsFeed
+      security:
+        - BearerAuth: []
+      tags: [feed]
+      parameters:
+        - name: offset
+          in: query
+          description: offset of items
+          schema:
+            minimum: 0
+            type: integer
+        - name: size
+          in: query
+          description: size of queries times
+          required: true
+          schema:
+            maximum: 50
+            minimum: 1
+            type: integer
+        - name: categories
+          in: query
+          description: categories of feed
+          schema:
+            type: array
+            items:
+              $ref: '../common/common.yaml#/components/schemas/CategoriesEnum'
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetFeedListResponse'
+
+components:
+  schemas:
+    Feed:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          enum: [avatar_reel, space, avatar_text, avatar_img, avatar]
+        owner_xrid:
+          type: string
+        owner_nickname:
+          type: string
+        categories:
+          type: array
+          items:
+            $ref: '../common/common.yaml#/components/schemas/CategoriesEnum'
+        updated_at:
+          type: string
+          format: date-time
+        content:
+          type: object
+          properties:
+            ref_id: 
+              type: string
+              description: id of reel content or id of space
+            thumbnail_url:
+              type: string
+    
+    GetFeedListResponse:
+      allOf:
+        - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                total:
+                  type: integer
+                items:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Feed'
+              example:
+                total: 4
+                items:
+                  - id: UUID_1
+                    type: avatar_reel
+                    owner_xrid: xrid_1
+                    owner_nickname: Chris
+                    updated_at: 2021-01-01T00:00:00.000Z
+                    content:
+                      ref_id: <reel_id>
+                      thumbnail_url: <thumbnail_url>
+                  - id: UUID_2
+                    type: space
+                    owner_xrid: xrid_2
+                    owner_nickname: Bob
+                    updated_at: 2020-01-01T00:00:00.000Z
+                    content:
+                      ref_id: <space_id>
+                      thumbnail_url: <thumbnail_url>
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

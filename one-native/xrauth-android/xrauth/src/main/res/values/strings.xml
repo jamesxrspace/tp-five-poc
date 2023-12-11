@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="redirect_scheme">xrspace</string>
+    <string name="redirect_domain">xrspace.auth.com</string>
+    <string name="redirect_path_prefix">/authing/api/callback</string>
+    <string name="broadcast_action">com.xrspace.xrauth.action.REDIRECT_RESULT</string>
+</resources>

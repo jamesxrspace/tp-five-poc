@@ -1,0 +1,119 @@
+name: Build Unity Artifact
+
+on:
+  workflow_dispatch:
+    inputs:
+      BUILD_ENV:
+        description: 'The target build environment'
+        required: true
+        type: choice
+        default: dev
+        options:
+          - dev
+          - qa
+          - prod
+  workflow_call:
+    inputs:
+      TARGET_BRANCH:
+        description: "The target branch"
+        default: ""
+        type: string
+
+
+env:
+  BUILD_ENV: ${{ inputs.BUILD_ENV || 'dev' }}
+  UNITY_ROOT: one-unity/unity-project/development/complete-unity
+  S3_CACHE_BUCKET: xrspace-ci-runner-cache
+  S3_ARTIFACT_BUCKET: one-app-develop-s3-cms
+  LICENSE_LAMBDA_FUNCNAME: license-server
+  EXPOSED_FLUTTER_UNITY_WIDGET: exposed_flutter_unity_widget
+
+jobs:
+  UnityBuildAndroid:
+    uses: ./.github/workflows/build_unity_android.yml
+    # pass all the calling workflow's secrets to the called workflow
+    # ref: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit
+    with:
+      TARGET_BRANCH: ${{ inputs.TARGET_BRANCH || '' }}
+
+  UnityBuildIOS:
+    uses: ./.github/workflows/build_unity_ios.yml
+    # pass all the calling workflow's secrets to the called workflow
+    # ref: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit
+    with:
+      TARGET_BRANCH: ${{ inputs.TARGET_BRANCH || '' }}
+
+  UnityBuildAndroidVR:
+    uses: ./.github/workflows/build_unity_android_vr.yml
+    # pass all the calling workflow's secrets to the called workflow
+    # ref: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecretsinherit
+    secrets: inherit
+    with:
+      TARGET_BRANCH: ${{ inputs.TARGET_BRANCH || '' }}
+
+  BumpVersion:
+    name: Bump Version and cherry-pick to main branch
+
+    runs-on: ubuntu-latest
+    needs:
+      - UnityBuildAndroid
+      - UnityBuildAndroidVR
+      - UnityBuildIOS
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.TARGET_BRANCH || '' }}
+          ssh-key: ${{ secrets.INTERNAL_GITHUB_SSH_PRIVATE_KEY }}
+      - name: Git Prologue
+        run: |
+          git config --global user.email "runner@xrspace.io"
+          git config --global user.name  "Github Runner"
+
+      # Setup - install fastlane
+      # ==================================================
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Install fastlane
+        run: |
+          pushd "one-mobile/flutter_project/ios" || exit 1
+
+          gem install fastlane
+          bundle update
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.13.9'
+      - uses: maxim-lobanov/setup-cocoapods@v1
+        with:
+          version: latest
+
+      - name: Bump Version
+        env:
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          APP_STORE_CONNECT_API_KEY_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY_KEY }}
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+          IS_CI: true
+        run: |
+          pushd "one-mobile/flutter_project/ios" || exit 1
+
+          flutter precache --ios
+          bundle exec fastlane bump
+
+      # Teardown and add commit to main branch
+      # ==================================================
+      - name: Get the latest commit
+        id: bump_version_commit
+        run: |
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+          ssh-key: ${{ secrets.INTERNAL_GITHUB_SSH_PRIVATE_KEY }}
+      - name: Cherry-pick to main branch
+        run: |
+          git cherry-pick "${{ steps.bump_version_commit.outputs.commit }}"
+          git push

@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  mockauthservice:
+    container_name: xrspace-auth-platform
+    image: ${IMAGE_PREFIX}/auth_platform:${IMAGE_VERSION}
+    build:
+      context: ${PWD}/auth_platform
+      dockerfile: './deployment/Dockerfile'
+    environment:
+      - AZP
+      - POOL_ID
+      - SECRET
+    ports:
+      - "9453:9453"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "${AUTH_SERVICE_URL}/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 2s
+    volumes:
+      - ${PWD}/auth_platform/.data:/app/.data
+      - ${PWD}/auth_platform/pub:/app/pub

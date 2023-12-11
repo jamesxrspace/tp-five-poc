@@ -1,0 +1,43 @@
+name: Test AI Image
+
+on:
+  pull_request:
+    paths:
+      - 'one-ai/**'
+
+env:
+  ECR_REPOSITORY: tp-five/one-ai/edge-server
+  ENDPOINT_CONFIG: one-app-develop-edge-server-endpoint-config
+  ENDPOINT: edge-server-endpoint-v0-1
+
+jobs:
+  build_docker_image:
+    name: Build AI Docker Image
+    runs-on: ["self-hosted", "g4dn-xlarge"]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Setup
+      # ==================================================
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2.2.0
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-southeast-1
+      - uses: ./one-utility/actions/ecr_image_tag
+        id: ecr_image_tag
+        with:
+          ecr_repository: ${{ env.ECR_REPOSITORY }}
+      - name: Build image
+        if: ${{ steps.ecr_image_tag.outputs.already_exists == 'false' }}
+        env:
+          IMAGE_TAG: ${{ steps.ecr_image_tag.outputs.image_tag }}
+          ECR_REGISTRY: ${{ steps.ecr_image_tag.outputs.ecr_registry }}
+        run: |
+          pushd one-ai/edge_server || exit 1
+
+          DOCKER_BUILDKIT=1 docker build -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" .
+
+          popd

@@ -1,0 +1,65 @@
+pilot:
+  autoscaleEnabled: true
+  autoscaleMin: 2
+  autoscaleMax: 50
+  autoscaleBehavior: {}
+  replicaCount: 2
+  rollingMaxSurge: 100%
+  rollingMaxUnavailable: 25%
+
+  nodeSelector:
+    Service: core-component
+global:
+  priorityClassName: "system-node-critical"
+
+meshConfig:
+  accessLogFile: /dev/stdout
+  enableTracing: true
+  accessLogEncoding: JSON
+  accessLogFormat: |
+    {
+      "protocol": "%PROTOCOL%",
+      "upstream_service_time": "%REQ(X-ENVOY-UPSTREAM-SERVICE-TIME)%",
+      "upstream_local_address": "%UPSTREAM_LOCAL_ADDRESS%",
+      "duration": "%DURATION%",
+      "upstream_transport_failure_reason": "%UPSTREAM_TRANSPORT_FAILURE_REASON%",
+      "connection_termination_details": "%CONNECTION_TERMINATION_DETAILS%",
+      "route_name": "%ROUTE_NAME%",
+      "downstream_local_address": "%DOWNSTREAM_LOCAL_ADDRESS%",
+      "user_agent": "%REQ(USER-AGENT)%",
+      "response_code": "%RESPONSE_CODE%",
+      "response_flags": "%RESPONSE_FLAGS%",
+      "start_time": "%START_TIME%",
+      "method": "%REQ(:METHOD)%",
+      "request_id": "%REQ(X-REQUEST-ID)%",
+      "upstream_host": "%UPSTREAM_HOST%",
+      "x_forwarded_for": "%REQ(X-FORWARDED-FOR)%",
+      "client_ip": "%REQ(True-Client-Ip)%",
+      "requested_server_name": "%REQUESTED_SERVER_NAME%",
+      "bytes_received": "%BYTES_RECEIVED%",
+      "bytes_sent": "%BYTES_SENT%",
+      "upstream_cluster": "%UPSTREAM_CLUSTER%",
+      "downstream_remote_address": "%DOWNSTREAM_REMOTE_ADDRESS%",
+      "authority": "%REQ(:AUTHORITY)%",
+      "trace_id": "%REQ(x-b3-traceid)%",
+      "path": "%REQ(X-ENVOY-ORIGINAL-PATH?:PATH)%",
+      "response_code_details": "%RESPONSE_CODE_DETAILS%"
+    }
+  defaultConfig:
+    tracing: {}
+  extensionProviders:
+    # add zipkin provider
+    - name: zipkin
+      zipkin:
+        service: opentelemetry-collector.monitoring.svc.cluster.local
+        port: 9411
+    - name: "oauth2-proxy"
+      envoyExtAuthzHttp:
+        service: "oauth2-proxy.dagster.svc.cluster.local"
+        port: 80
+        # headers sent to the oauth2-proxy in the check request.
+        includeHeadersInCheck: ["authorization", "cookie"]
+        # headers sent to backend application when request is allowed.
+        headersToUpstreamOnAllow: ["authorization", "path", "x-auth-request-user", "x-auth-request-email", "x-auth-request-access-token"]
+        # headers sent back to the client when request is denied.
+        headersToDownstreamOnDeny: ["content-type", "set-cookie"]

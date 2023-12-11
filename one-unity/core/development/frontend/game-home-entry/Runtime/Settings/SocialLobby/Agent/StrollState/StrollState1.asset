@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f076d886ee514ae09b68b4551cdf190a, type: 3}
+  m_Name: StrollState1
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 8eb5ed4cc6a74b249b774adc520cfad1, type: 2}
+  stateTransition:
+    decision: {fileID: 11400000, guid: b7f7d391535cd144792758ac2e43e697, type: 2}
+    trueState: {fileID: 11400000, guid: 931d2754ca769f64d80e33ff3b994d7d, type: 2}
+    falseState: {fileID: 0}

@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Game.Reel",
+    "rootNamespace": "",
+    "references": [
+        "VContainer",
+        "VContainer.EnableCodeGen",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "UniTask",
+        "TPFive.OpenApi.GameServer",
+        "TPFive.Game.Logging",
+        "com.xrspace.openapi",
+        "BestHTTP",
+        "TPFive.Game.FlutterUnityWidget"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

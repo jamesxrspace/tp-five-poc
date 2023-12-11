@@ -1,0 +1,44 @@
+mode: "deployment"
+
+nodeSelector:
+  Service: monitor
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: app.kubernetes.io/instance
+              operator: In
+              values:
+                - opentelemetry-collector
+        topologyKey: kubernetes.io/hostname
+
+priorityClassName: system-node-critical
+
+replicaCount: 2
+
+config:
+  exporters:
+    otlphttp:
+      endpoint: http://tempo-distributed-gateway.monitoring/otlp
+      tls:
+        insecure: true
+  receivers:
+    jaeger: null
+    prometheus: null
+    zipkin:
+      endpoint: 0.0.0.0:9411
+    otlp:
+      protocols:
+        http:
+          endpoint: 0.0.0.0:4318
+  service:
+    pipelines:
+      metrics: null
+      logs: null
+      traces:
+        exporters:
+          - otlphttp
+        receivers:
+          - zipkin
+          - otlp

@@ -1,0 +1,33 @@
+{
+    "name": "TPFive.Extended.Doozy",
+    "rootNamespace": "TPFive.Extended.Doozy",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "DoozyRuntime",
+        "TPFive.Game",
+        "TPFive.Game.Config",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "TPFive.Game.Hud"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "DoozyRuntime",
+            "expression": "",
+            "define": "HAS_XSPO_EXTENDED_DOOZY"
+        }
+    ],
+    "noEngineReferences": false
+}

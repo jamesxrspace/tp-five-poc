@@ -1,0 +1,31 @@
+{
+    "name": "TPFive.Extended.InputSystem.Tests",
+    "rootNamespace": "TPFive.Extended.InputSystem",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework",
+        "TPFive.Extended.InputSystem",
+        "Unity.XR.Hands"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.hands",
+            "expression": "1.1.0",
+            "define": "XR_HANDS"
+        }
+    ],
+    "noEngineReferences": false
+}

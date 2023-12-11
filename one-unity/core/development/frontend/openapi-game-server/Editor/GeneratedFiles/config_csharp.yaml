@@ -1,0 +1,7 @@
+apiName: GameServer
+disallowAdditionalPropertiesIfNotPresent: false
+optionalAssemblyInfo: false
+optionalProjectFile: false
+targetFramework: netstandard2.1
+packageName: TPFive.OpenApi.GameServer
+validatable: false

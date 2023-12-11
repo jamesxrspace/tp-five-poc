@@ -1,0 +1,56 @@
+serviceAccount:
+  create: false
+  name: ${SERVICEACCOUNT_NAME}
+
+# Configuration for the ingester
+ingester:
+  priorityClassName: system-node-critical
+  resources: {}
+  nodeSelector:
+    Service: monitor
+
+
+# Configuration for the distributor
+distributor:
+  priorityClassName: system-node-critical
+  resources: {}
+  config:
+    log_received_spans:
+      enabled: true
+  nodeSelector:
+    Service: monitor
+
+# Configuration for the compactor
+compactor:
+  priorityClassName: system-node-critical
+  resources: {}
+  nodeSelector:
+    Service: monitor
+
+# Configuration for the querier
+querier:
+  priorityClassName: system-node-critical
+  resources: {}
+  nodeSelector:
+    Service: monitor
+
+traces:
+  otlp:
+    http:
+      enabled: true
+    grpc:
+      enabled: true
+
+storage:
+  trace:
+    backend: s3
+    s3:
+      bucket: ${S3_BUCKET_NAME}
+      region: ${AWS_REGION}
+      endpoint: s3.${AWS_REGION}.amazonaws.com
+
+gateway:
+  enabled: true
+  resources: {}
+  nodeSelector:
+    Service: monitor

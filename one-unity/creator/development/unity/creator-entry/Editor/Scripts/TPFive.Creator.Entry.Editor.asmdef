@@ -1,0 +1,36 @@
+{
+    "name": "TPFive.Creator.Entry.Editor",
+    "rootNamespace": "TPFive.Creator.Entry.Editor",
+    "references": [
+        "Unity.VisualScripting.Core",
+        "Unity.VisualScripting.Flow",
+        "Unity.VisualScripting.State",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "HellTap.PoolKit",
+        "TPFive.Cross",
+        "TPFive.Cross.Editor",
+        "TPFive.Game",
+        "TPFive.Game.Editor",
+        "TPFive.Creator",
+        "TPFive.Creator.Editor",
+        "TPFive.Creator.VisualScripting",
+        "TPFive.Creator.Entry"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+    ],
+    "noEngineReferences": false
+}

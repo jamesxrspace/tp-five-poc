@@ -1,0 +1,29 @@
+{
+    "name": "TPFive.Game.User.Entry",
+    "rootNamespace": "TPFive.Game.User.Entry",
+    "references": [
+        "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
+        "GUID:4f682e06dbb3e624faedad9cc27106cc",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:92971db799d184644a45bb2328cb20be",
+        "GUID:055410535a3447b4482ccd382ad55409",
+        "GUID:7e52c901794090c4ca5daa98aedcb7e3",
+        "GUID:8356b4894c5f6d444bf562506cf93bdf",
+        "GUID:3a0eec3c3cbf1854bb4d47e978263576",
+        "GUID:5eb48111a56b4284ca3a8c37ccc3727d",
+        "GUID:4f3a232e95fa47240959d61d39d94132",
+        "GUID:b73b95263c55bf6439c815f1d82ca9f8",
+        "TPFive.Game.FlutterUnityWidget"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

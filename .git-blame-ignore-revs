@@ -1,0 +1,18 @@
+# The following commit hash will not be shown on git blame
+#
+# You can run it temporary by command `git blame --ignore-revs-file .git-blame-ignore-revs`,
+# or add it on global with command `git config blame.ignoreRevsFile .git-blame-ignore-revs`
+
+# the following is related on refactor
+44d013a510b35dca7b82612e409d4f53fbeea694
+02e61233b8360cea570ff853e992d8cc6efec317
+72967cf277a31484302c4160aff8ebbfb2e83387
+2fdfbfb609b9fd3027723d01e84a479804bd5261
+dd0ee403951ce27a19dc086b03f4994c2d8c3b38
+8f95784d4e0e37cd91e0da088e56fd7111ff5799
+bc6259f6fa5ea8a55d79116b3ffdd098c4062d14
+c6c5cc5df15ce0928de77648e8b7c1ba3086c4e5
+1de4aa4a11671e5754a4fa39a480d747ca145be6
+9a945c2015c7523eabd0d6023969b8e3c73edc73
+82b29be6251175da0b6b49628b18701863a48e06
+3fa1e5258e65a6f28fde0322e54f94fdd2a73984

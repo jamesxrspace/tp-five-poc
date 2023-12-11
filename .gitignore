@@ -1,0 +1,18 @@
+### macOS ###
+# General
+.cache/
+.DS_Store
+.AppleDouble
+.LSOverride
+**/Assets/Plugins/ParrelSync/*
+**/Assets/Plugins/ParrelSync.*
+.vsconfig
+**/.vscode
+.idea
+.terraform
+terraform.tfstate*
+!.terraform.version
+/Assets/StreamingAssets/.env
+one-unity/unity-project/development/complete-unity/.env
+**/Assets/Resources/env.*
+go.work.sum

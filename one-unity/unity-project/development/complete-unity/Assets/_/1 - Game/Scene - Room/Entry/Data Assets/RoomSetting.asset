@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45257ec14bdb6ad4b876af5e8883c23b, type: 3}
+  m_Name: RoomSetting
+  m_EditorClassIdentifier: 
+  serverTargetFrameRate: 60
+  netSceneCtrlPrefab:
+    RawGuidValue: dc46bb517067ae34fab952b5a55e4c29
+  fusionTelemeterPrefab:
+    RawGuidValue: 067a11fec3dbf4c31abb23d0b90aad09
+  customAuthentication: 0
+  playerDataBrokerPrefab:
+    RawGuidValue: 0b67068b2070f43e09533ec30992c5be
+  playerPrefab:
+    RawGuidValue: 917a63ced463cfe49a04d10e91886868
+  retryStartGameInterval: 5

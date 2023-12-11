@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReelDecoration",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "thumbnail": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "itemType": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

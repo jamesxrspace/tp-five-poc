@@ -1,0 +1,75 @@
+{
+  "spaceList": {
+    "title": "空間列表",
+    "field": {
+      "name": "空間名稱",
+      "spaceGroupId": "空間群組",
+      "description": "空間說明",
+      "addressable": "空間 Addressable",
+      "thumbnail": "封面圖片",
+      "startAt": "開始時間",
+      "endAt": "結束時間"
+    },
+    "searchPlaceholder": "搜尋",
+    "action": {
+      "edit": "編輯空間",
+      "delete": "刪除空間"
+    },
+    "addSpace": {
+      "title": "新增空間",
+      "add": "新增",
+      "cancel": "取消",
+      "successMessage": "新增空間成功",
+      "errorMessage": "新增空間失敗"
+    },
+    "editSpace": {
+      "title": "編輯空間",
+      "save": "儲存",
+      "cancel": "取消",
+      "successMessage": "編輯空間成功",
+      "errorMessage": "編輯空間失敗"
+    },
+    "deleteSpace": {
+      "successMessage": "刪除空間成功",
+      "errorMessage": "刪除空間失敗"
+    }
+  },
+  "spaceGroupList": {
+    "title": "空間群組列表",
+    "field": {
+      "name": "群組名稱",
+      "description": "群組說明",
+      "thumbnail": "縮圖",
+      "status": "狀態",
+      "statusEnabled": "啟用",
+      "statusDisabled": "停用",
+      "startAt": "開始時間",
+      "endAt": "結束時間",
+      "thumbnail": "封面圖片",
+      "spaceIds": "空間"
+    },
+    "searchPlaceholder": "請輸入空間群組名稱",
+    "action": {
+      "edit": "編輯",
+      "delete": "刪除"
+    },
+    "addGroup": {
+      "title": "新增群組",
+      "add": "新增",
+      "cancel": "取消",
+      "successMessage": "新增群組成功",
+      "errorMessage": "新增群組失敗"
+    },
+    "editGroup": {
+      "title": "編輯空間群組",
+      "update": "更新",
+      "cancel": "取消",
+      "successMessage": "新增群組成功",
+      "errorMessage": "新增群組失敗"
+    },
+    "deleteGroup": {
+      "successMessage": "刪除群組成功",
+      "errorMessage": "刪除群組失敗"
+    }
+  }
+}

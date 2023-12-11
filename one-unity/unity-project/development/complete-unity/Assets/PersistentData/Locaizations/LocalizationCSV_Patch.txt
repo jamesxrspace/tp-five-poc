@@ -1,0 +1,2 @@
+﻿Key,Type,Desc,English,Chinese (Traditional)
+ApplicationName,Text,The application name,TPFive,

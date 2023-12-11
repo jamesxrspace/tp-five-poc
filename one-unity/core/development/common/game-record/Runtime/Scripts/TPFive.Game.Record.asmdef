@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Game.Record",
+    "rootNamespace": "TPFive.Game.Record",
+    "references": [
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "UniTask",
+        "UniRx",
+        "TPFive.Game",
+        "TPFive.Game.Logging",
+        "TPFive.Game.Resource",
+        "VContainer",
+        "NatSuite.Recorders",
+        "TPFive.OpenApi.GameServer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

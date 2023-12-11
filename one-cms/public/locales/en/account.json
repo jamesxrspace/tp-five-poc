@@ -1,0 +1,17 @@
+{
+  "userManagement": {
+    "title": "UserManagement",
+    "username": "User Name",
+    "nickname": "Nickname",
+    "email": "Email",
+    "roles": "Roles",
+    "verifiedEmail": "Verified Email",
+    "editUser": "Edit User",
+    "actions": "Actions",
+    "keywords": "Keywords",
+    "edit": "Edit",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "search": "Search"
+  }
+}

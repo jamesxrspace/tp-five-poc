@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (7.2.2)" variant="all" version="7.2.2">
+
+    <issue
+        id="MissingClass"
+        message="Class referenced in the manifest, `com.xrspace.xrauth.porting.appauth.AuthActivity`, was not found in the project or the libraries"
+        errorLine1="            android:name=&quot;.appauth.AuthActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="8"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="MissingClass"
+        message="Class referenced in the manifest, `com.xrspace.xrauth.porting.appauth.RedirectUriActivity`, was not found in the project or the libraries"
+        errorLine1="            android:name=&quot;.appauth.RedirectUriActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="18"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="MissingClass"
+        message="Class referenced in the manifest, `com.xrspace.xrauth.porting.appauth.LogoutCallbackActivity`, was not found in the project or the libraries"
+        errorLine1="            android:name=&quot;.appauth.LogoutCallbackActivity&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="36"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="MissingClass"
+        message="Class referenced in the manifest, `com.xrspace.xrauth.porting.appauth.AuthCodeReceiver`, was not found in the project or the libraries"
+        errorLine1="            android:name=&quot;.appauth.AuthCodeReceiver&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="52"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="InlinedApi"
+        message="Field requires API level 31 (current min is 24): `android.app.PendingIntent#FLAG_MUTABLE`"
+        errorLine1="            resultIntent.hashCode(), resultIntent, PendingIntent.FLAG_MUTABLE"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/xrspace/xrauth/appauth/AuthActivity.kt"
+            line="196"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.redirect_path_prefix` appears to be unused"
+        errorLine1="    &lt;string name=&quot;redirect_path_prefix&quot;>/authing/api/callback&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+</issues>

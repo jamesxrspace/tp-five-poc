@@ -1,0 +1,8 @@
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
+
+app_identifier(ENV["BUNDLE_ID"] || "com.xrspace.tpfive.dev") # The bundle identifier of your app
+apple_id("github.build@xrspace.io") # Your Apple Developer Portal username
+
+itc_team_id("120569527") # App Store Connect Team ID
+team_id("P9S7GYJ89L") # Developer Portal Team ID

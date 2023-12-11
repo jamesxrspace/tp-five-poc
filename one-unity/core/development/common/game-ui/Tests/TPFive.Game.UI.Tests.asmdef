@@ -1,0 +1,22 @@
+{
+    "name": "TPFive.Game.UI.Tests",
+    "rootNamespace": "TPFive.Game.UI",
+    "references": [
+        "GUID:f984afdd5566d404280324f93a7acbd3"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,17 @@
+{
+    "name": "TPFive.Game.Creator.Asset",
+    "rootNamespace": "",
+    "references": [
+        "GUID:205d20742f8830046b81fb69e64f3f2c",
+        "GUID:a5b8fce3128e68f4c84d69a4e76122fb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

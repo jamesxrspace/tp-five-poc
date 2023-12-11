@@ -1,0 +1,19 @@
+{
+    "name": "io.xrspace.tpfive.game.playerprefs",
+    "displayName": "TPFive 35 Game PlayerPrefs",
+    "description": "TPFive Game PlayerPrefs",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

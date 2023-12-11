@@ -1,0 +1,16 @@
+{
+  "name": "io.xrspace.tpfive.game.device-permission",
+  "displayName": "TPFive 26 Game Device Permission",
+  "description": "TPFive Game Device Permission",
+  "version": "0.1.0",
+  "unity": "2023.1",
+  "keywords": [
+    "Unity",
+    "TPFive",
+    "OneApp"
+  ],
+  "author": {
+    "email": "fengheng.hsu@xrspace.io",
+    "name": "fengheng.hsu"
+  }
+}

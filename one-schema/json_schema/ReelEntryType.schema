@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "ReelEntryType",
+  "type": "string",
+  "description": "type of entry reel scope",
+  "x-enumNames": [
+    "Browse",
+    "Create"
+  ],
+  "enum": [
+    "BROWSE",
+    "CREATE"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "name": "io.xrspace.tpfive.creator.motion-convert-tool",
+    "displayName": "TPFive 56 Creator Motion Convert Tool",
+    "description": "TPFive Creator Motion Convert Tool",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {
+        "com.unity.timeline": "1.7.5",
+        "io.xrspace.tpfive.game.avatar-attachment" : "0.1.0",
+        "io.xrspace.tpfive.game.avatar-timeline" : "0.1.0"
+    },
+    "contributors": [
+        {
+            "email": "jason.chen@xrspace.io",
+            "name": "Jason Chen"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

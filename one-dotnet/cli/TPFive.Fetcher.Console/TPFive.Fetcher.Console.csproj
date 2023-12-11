@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PublishSingleFile>true</PublishSingleFile>
+        <SelfContained>true</SelfContained>
+        <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
+        <PublishTrimmed>true</PublishTrimmed>
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <RootNamespace>Yokan.Fetcher.Console</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+        <DefineConstants>$(DefineConstants);WINOS</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AWSSDK.Core" Version="3.7.107.10" />
+        <PackageReference Include="AWSSDK.S3" Version="3.7.107.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Serilog" Version="3.0.0-dev-02022" />
+        <PackageReference Include="Serilog.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+        <PackageReference Include="Spectre.Console" Version="0.47.0" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.507">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+
+        <None Update="appsettings.runtime.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <Target Name="FolderToCopy" AfterTargets="Build">
+        <ItemGroup>
+            <WinSourceFiles Include="$(ProjectDir)\bin\Debug\net7.0\win-x64\**\*.*" />
+            <MacSourceFiles Include="$(ProjectDir)\bin\Debug\net7.0\osx-x64\**\*.*" />
+        </ItemGroup>
+
+        <Copy SourceFiles="@(WinSourceFiles)" DestinationFolder="$(ProjectDir)..\..\..\one-unity\core\development\common\addressable\Tools~\$(ProjectName)\win-x64\%(RecursiveDir)" />
+        <Copy SourceFiles="@(MacSourceFiles)" DestinationFolder="$(ProjectDir)..\..\..\one-unity\core\development\common\addressable\Tools~\$(ProjectName)\osx-x64\%(RecursiveDir)" />
+    </Target>
+</Project>

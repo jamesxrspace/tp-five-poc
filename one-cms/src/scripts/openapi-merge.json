@@ -1,0 +1,20 @@
+{
+  "inputs": [
+    {
+      "inputFile": "./doc/documents/app/login_api.yaml"
+    },
+    {
+      "inputFile": "./doc/documents/app/asset_api.yaml"
+    },
+    {
+      "inputFile": "./doc/documents/cms/space_api.yaml"
+    },
+    {
+      "inputFile": "./doc/documents/cms/daily_build_api.yaml"
+    },
+    {
+      "inputFile": "./doc/documents/cms/room_api.yaml"
+    }
+  ],
+  "output": "./doc/documents/_merge_api.yaml"
+}

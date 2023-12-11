@@ -1,0 +1,43 @@
+<dependencies>
+  <packages>
+    <package>co.touchlab:stately-common:1.1.4</package>
+    <package>co.touchlab:stately-isolate:1.1.4-a1</package>
+    <package>com.benasher44:uuid:0.3.1</package>
+    <package>com.google.android.gms:play-services-base:18.2.0</package>
+    <package>com.google.firebase:firebase-analytics:21.3.0</package>
+    <package>com.google.firebase:firebase-analytics-unity:11.3.0</package>
+    <package>com.google.firebase:firebase-app-unity:11.3.0</package>
+    <package>com.google.firebase:firebase-common:20.3.3</package>
+    <package>com.squareup.okhttp3:okhttp:4.9.0</package>
+    <package>com.xrspace.xrauth:porting:0.1.2</package>
+    <package>org.jetbrains.kotlin:kotlin-reflect:1.5.31</package>
+    <package>org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.4</package>
+    <package>org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1</package>
+    <package>org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0</package>
+    <package>org.tensorflow:tensorflow-lite:2.6.0</package>
+    <package>org.tensorflow:tensorflow-lite-gpu:2.6.0</package>
+  </packages>
+  <files>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/11.3.0/firebase-analytics-unity-11.3.0.aar</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-analytics-unity/11.3.0/firebase-analytics-unity-11.3.0.pom</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/11.3.0/firebase-app-unity-11.3.0.aar</file>
+    <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/11.3.0/firebase-app-unity-11.3.0.pom</file>
+  </files>
+  <settings>
+    <setting name="androidAbis" value="arm64-v8a" />
+    <setting name="bundleId" value="com.xrspace.tpfive" />
+    <setting name="explodeAars" value="True" />
+    <setting name="gradleBuildEnabled" value="True" />
+    <setting name="gradlePropertiesTemplateEnabled" value="True" />
+    <setting name="gradleTemplateEnabled" value="True" />
+    <setting name="installAndroidPackages" value="True" />
+    <setting name="localMavenRepoDir" value="Assets/GeneratedLocalRepo" />
+    <setting name="packageDir" value="Assets/Plugins/Android" />
+    <setting name="patchAndroidManifest" value="True" />
+    <setting name="patchMainTemplateGradle" value="True" />
+    <setting name="projectExportEnabled" value="False" />
+    <setting name="useFullCustomMavenRepoPathWhenExport" value="True" />
+    <setting name="useFullCustomMavenRepoPathWhenNotExport" value="False" />
+    <setting name="useJetifier" value="True" />
+  </settings>
+</dependencies>

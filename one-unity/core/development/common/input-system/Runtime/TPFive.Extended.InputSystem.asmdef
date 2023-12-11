@@ -1,0 +1,30 @@
+{
+    "name": "TPFive.Extended.InputSystem",
+    "rootNamespace": "TPFive.Extended.InputSystem",
+    "references": [
+        "Unity.InputSystem",
+        "MessagePipe",
+        "MessagePipe.VContainer",
+        "Serilog.Sinks.Unity3D",
+        "UniRx",
+        "UniTask",
+        "VContainer",
+        "TPFive.Game",
+        "TPFive.Game.Input"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.5.0",
+            "define": "HAS_XSPO_EXTENDED_INPUT_SYSTEM"
+        }
+    ],
+    "noEngineReferences": false
+}

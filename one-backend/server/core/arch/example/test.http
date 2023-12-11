@@ -1,0 +1,16 @@
+### GET request with a header
+
+GET http://localhost:8080/join?xrid=user1&roomid=room2
+
+###
+GET http://localhost:8080/join?xrid=user2&roomid=room2
+
+###
+GET http://localhost:8080/join?xrid=user3&roomid=room2
+
+###
+GET http://localhost:8080/leave?xrid=user1&roomid=room2
+
+###
+# should have stack trace in the log
+GET http://localhost:8080/error

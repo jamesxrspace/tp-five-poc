@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "TrackingFlag",
+  "type": "string",
+  "description": "",
+  "x-enumNames": [
+    "Face",
+    "UpperBody",
+    "FullBody",
+  ],
+  "enum": [
+    "FACE",
+    "UPPER_BODY",
+    "FULL_BODY",
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "name": "FlutterUnityWidget.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Addressables.Editor",
+        "Unity.XR.Management",
+        "Unity.XR.Management.Editor",
+        "Unity.ScriptableBuildPipeline.Editor",
+        "TPFive.BuildSupport.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.management",
+            "expression": "0",
+            "define": "USING_XR_MANAGEMENT"
+        }
+    ],
+    "noEngineReferences": false
+}

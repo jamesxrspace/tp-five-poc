@@ -1,0 +1,27 @@
+{
+    "name": "io.xrspace.tpfive.game.avatar-timeline",
+    "displayName": "TPFive 56 Game Avatar Timeline",
+    "description": "TPFive Game Avatar Timeline",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {
+        "io.xrspace.tpfive.game.avatar-attachment" : "0.1.0",
+        "com.unity.timeline": "1.7.5"
+    },
+    "contributors": [
+        {
+            "email": "jason.chen@xrspace.io",
+            "name": "Jason Chen"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

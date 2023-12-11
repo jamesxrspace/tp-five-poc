@@ -1,0 +1,24 @@
+{
+    "name": "io.xrspace.tpfive.extended.camera",
+    "displayName": "TPFive 52 Extended Camera",
+    "description": "TPFive Extended Camera",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "extended",
+        "camera",
+        "cinemachine"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "james.chang@xrspace.io",
+            "name": "James Chang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:XRSPACE-Inc/tp-five.git"
+    }
+}

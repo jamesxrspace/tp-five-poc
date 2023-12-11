@@ -1,0 +1,29 @@
+{
+  "name": "io.xrspace.tpfive.extended.screen-pointer",
+  "displayName": "TPFive 52 Extended Screen Pointer",
+  "description": "TPFive Extended ScreenPointer",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "keywords": [
+    "Unity",
+    "TPFive",
+    "OneApp",
+    "Hand"
+  ],
+  "category": "",
+  "dependencies": {
+    "org.mixedrealitytoolkit.core": "3.0.0",
+    "com.unity.inputsystem": "1.6.1",
+    "com.unity.xr.interaction.toolkit": "2.4.0"
+  },
+  "contributors": [
+    {
+      "email": "hugo.kuo@xrspace.io",
+      "name": "Hugo Kuo"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+  }
+}

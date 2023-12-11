@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1563E7A9011DC57A2FA04A05 /* Pods_XrAuthIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55847668A89C9C6F193C57A2 /* Pods_XrAuthIOS.framework */; };
+		A010E7792A735A63005332DE /* RestfulAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A010E7782A735A63005332DE /* RestfulAPI.swift */; };
+		A010E77D2A73BB79005332DE /* AuthIDP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A010E77C2A73BB79005332DE /* AuthIDP.swift */; };
+		A0C317E52A7214EB003F863F /* XrAuthIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C317D92A7214EB003F863F /* XrAuthIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0C317F32A7218C2003F863F /* UnityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C317F22A7218C2003F863F /* UnityBridge.swift */; };
+		A0C317F72A721EE5003F863F /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C317F62A721EE5003F863F /* AuthError.swift */; };
+		A0C317F92A721F17003F863F /* ResultCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C317F82A721F17003F863F /* ResultCallback.swift */; };
+		A0C317FB2A7244FC003F863F /* XrAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C317FA2A7244FC003F863F /* XrAuth.swift */; };
+		A0C317FD2A725101003F863F /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C317FC2A725101003F863F /* RequestType.swift */; };
+		A0C317FF2A7262F5003F863F /* XrStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C317FE2A7262F5003F863F /* XrStorage.swift */; };
+		A0C318012A726C66003F863F /* WebAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C318002A726C66003F863F /* WebAuth.swift */; };
+		A0C318032A726F2B003F863F /* Callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C318022A726F2B003F863F /* Callback.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B50BEAD1A039A938D0353C1 /* Pods-XrAuthIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XrAuthIOS.release.xcconfig"; path = "Target Support Files/Pods-XrAuthIOS/Pods-XrAuthIOS.release.xcconfig"; sourceTree = "<group>"; };
+		55847668A89C9C6F193C57A2 /* Pods_XrAuthIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XrAuthIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A010E7782A735A63005332DE /* RestfulAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestfulAPI.swift; sourceTree = "<group>"; };
+		A010E77C2A73BB79005332DE /* AuthIDP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthIDP.swift; sourceTree = "<group>"; };
+		A0C317D62A7214EB003F863F /* XrAuthIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XrAuthIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C317D92A7214EB003F863F /* XrAuthIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XrAuthIOS.h; sourceTree = "<group>"; };
+		A0C317F22A7218C2003F863F /* UnityBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityBridge.swift; sourceTree = "<group>"; };
+		A0C317F62A721EE5003F863F /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		A0C317F82A721F17003F863F /* ResultCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCallback.swift; sourceTree = "<group>"; };
+		A0C317FA2A7244FC003F863F /* XrAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XrAuth.swift; sourceTree = "<group>"; };
+		A0C317FC2A725101003F863F /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		A0C317FE2A7262F5003F863F /* XrStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XrStorage.swift; sourceTree = "<group>"; };
+		A0C318002A726C66003F863F /* WebAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAuth.swift; sourceTree = "<group>"; };
+		A0C318022A726F2B003F863F /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
+		C18933716EFD021DE303CC91 /* Pods-XrAuthIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XrAuthIOS.debug.xcconfig"; path = "Target Support Files/Pods-XrAuthIOS/Pods-XrAuthIOS.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A0C317D32A7214EB003F863F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1563E7A9011DC57A2FA04A05 /* Pods_XrAuthIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A0C317CC2A7214EB003F863F = {
+			isa = PBXGroup;
+			children = (
+				A0C317D82A7214EB003F863F /* XrAuthIOS */,
+				A0C317D72A7214EB003F863F /* Products */,
+				F7C440BB8FE3FAC03B7B7377 /* Pods */,
+				B2D20A48C81CBDBF29250444 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A0C317D72A7214EB003F863F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0C317D62A7214EB003F863F /* XrAuthIOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0C317D82A7214EB003F863F /* XrAuthIOS */ = {
+			isa = PBXGroup;
+			children = (
+				A0C317F12A721831003F863F /* Source */,
+				A0C317D92A7214EB003F863F /* XrAuthIOS.h */,
+			);
+			path = XrAuthIOS;
+			sourceTree = "<group>";
+		};
+		A0C317F02A72181E003F863F /* gateway */ = {
+			isa = PBXGroup;
+			children = (
+				A0C318002A726C66003F863F /* WebAuth.swift */,
+				A0C317F22A7218C2003F863F /* UnityBridge.swift */,
+			);
+			path = gateway;
+			sourceTree = "<group>";
+		};
+		A0C317F12A721831003F863F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A0C317F52A721ED2003F863F /* util */,
+				A0C317F42A721EA0003F863F /* callback */,
+				A0C317F02A72181E003F863F /* gateway */,
+				A0C317FA2A7244FC003F863F /* XrAuth.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A0C317F42A721EA0003F863F /* callback */ = {
+			isa = PBXGroup;
+			children = (
+				A0C317F62A721EE5003F863F /* AuthError.swift */,
+				A0C318022A726F2B003F863F /* Callback.swift */,
+				A0C317F82A721F17003F863F /* ResultCallback.swift */,
+			);
+			path = callback;
+			sourceTree = "<group>";
+		};
+		A0C317F52A721ED2003F863F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A010E77C2A73BB79005332DE /* AuthIDP.swift */,
+				A0C317FC2A725101003F863F /* RequestType.swift */,
+				A010E7782A735A63005332DE /* RestfulAPI.swift */,
+				A0C317FE2A7262F5003F863F /* XrStorage.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		B2D20A48C81CBDBF29250444 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55847668A89C9C6F193C57A2 /* Pods_XrAuthIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7C440BB8FE3FAC03B7B7377 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C18933716EFD021DE303CC91 /* Pods-XrAuthIOS.debug.xcconfig */,
+				2B50BEAD1A039A938D0353C1 /* Pods-XrAuthIOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A0C317D12A7214EB003F863F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C317E52A7214EB003F863F /* XrAuthIOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A0C317D52A7214EB003F863F /* XrAuthIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0C317E82A7214EB003F863F /* Build configuration list for PBXNativeTarget "XrAuthIOS" */;
+			buildPhases = (
+				7F1F5139FEF253578C2962BC /* [CP] Check Pods Manifest.lock */,
+				A0C317D12A7214EB003F863F /* Headers */,
+				A0C317D22A7214EB003F863F /* Sources */,
+				A0C317D32A7214EB003F863F /* Frameworks */,
+				A0C317D42A7214EB003F863F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XrAuthIOS;
+			productName = XrAuthIOS;
+			productReference = A0C317D62A7214EB003F863F /* XrAuthIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0C317CD2A7214EB003F863F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A0C317D52A7214EB003F863F = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+					};
+				};
+			};
+			buildConfigurationList = A0C317D02A7214EB003F863F /* Build configuration list for PBXProject "XrAuthIOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A0C317CC2A7214EB003F863F;
+			productRefGroup = A0C317D72A7214EB003F863F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A0C317D52A7214EB003F863F /* XrAuthIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A0C317D42A7214EB003F863F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F1F5139FEF253578C2962BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XrAuthIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A0C317D22A7214EB003F863F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0C317F72A721EE5003F863F /* AuthError.swift in Sources */,
+				A0C317F32A7218C2003F863F /* UnityBridge.swift in Sources */,
+				A0C317F92A721F17003F863F /* ResultCallback.swift in Sources */,
+				A010E7792A735A63005332DE /* RestfulAPI.swift in Sources */,
+				A0C318032A726F2B003F863F /* Callback.swift in Sources */,
+				A0C317FB2A7244FC003F863F /* XrAuth.swift in Sources */,
+				A0C317FD2A725101003F863F /* RequestType.swift in Sources */,
+				A010E77D2A73BB79005332DE /* AuthIDP.swift in Sources */,
+				A0C317FF2A7262F5003F863F /* XrStorage.swift in Sources */,
+				A0C318012A726C66003F863F /* WebAuth.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A0C317E62A7214EB003F863F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A0C317E72A7214EB003F863F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A0C317E92A7214EB003F863F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C18933716EFD021DE303CC91 /* Pods-XrAuthIOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P9S7GYJ89L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xrspace.XrAuthIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0C317EA2A7214EB003F863F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B50BEAD1A039A938D0353C1 /* Pods-XrAuthIOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P9S7GYJ89L;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xrspace.XrAuthIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A0C317D02A7214EB003F863F /* Build configuration list for PBXProject "XrAuthIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C317E62A7214EB003F863F /* Debug */,
+				A0C317E72A7214EB003F863F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0C317E82A7214EB003F863F /* Build configuration list for PBXNativeTarget "XrAuthIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C317E92A7214EB003F863F /* Debug */,
+				A0C317EA2A7214EB003F863F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0C317CD2A7214EB003F863F /* Project object */;
+}

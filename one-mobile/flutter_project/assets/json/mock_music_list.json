@@ -1,0 +1,82 @@
+[
+  {
+    "songName": "Cruel Summer",
+    "singerName": "Taylor Swift",
+    "thumbnailPath": "assets/image/reel_music_badge_1.png",
+    "songPath": "Demo/Cruel Summer",
+    "tag": "slow",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Cruel Summer.wav"
+  },
+  {
+    "songName": "Fukumean",
+    "singerName": "Gunna",
+    "thumbnailPath": "assets/image/reel_music_badge_2.png",
+    "songPath": "Demo/Fukumean",
+    "tag": "fast",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Fukumean.wav"
+  },
+  {
+    "songName": "Paint The Town Red",
+    "singerName": "Doja Cat",
+    "thumbnailPath": "assets/image/reel_music_badge_3.png",
+    "songPath": "Demo/Paint The Town Red",
+    "tag": "fast",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/PainttheTownRed.wav"
+  },
+  {
+    "songName": "Shake It Off",
+    "singerName": "Taylor Swift",
+    "thumbnailPath": "assets/image/reel_music_badge_4.png",
+    "songPath": "Demo/Shake It Off",
+    "tag": "fast",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Shake It Off.wav"
+  },
+  {
+    "songName": "Dynamite",
+    "singerName": "BTS",
+    "thumbnailPath": "assets/image/reel_music_badge_5.png",
+    "songPath": "Demo/BTS-Dynamite",
+    "tag": "fast",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/BTS-Dynamite.wav"
+  },
+  {
+    "songName": "Fly out",
+    "singerName": "G.U.T.S.",
+    "thumbnailPath": "assets/image/reel_music_badge_5.png",
+    "songPath": "Demo/Fly out",
+    "tag": "fast",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Fly out.wav"
+  },
+  {
+    "songName": "離開地球表面",
+    "singerName": "五月天",
+    "thumbnailPath": "assets/image/reel_music_badge_5.png",
+    "songPath": "Demo/Jump! The World",
+    "tag": "fast",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Jump! The World.wav"
+  },
+  {
+    "songName": "飛鳥和蟬",
+    "singerName": "任然",
+    "thumbnailPath": "assets/image/reel_music_badge_5.png",
+    "songPath": "Demo/Bird and Cicadas",
+    "tag": "slow",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Bird and Cicadas.wav"
+  },
+  {
+    "songName": "如果可以",
+    "singerName": "韋禮安",
+    "thumbnailPath": "assets/image/reel_music_badge_5.png",
+    "songPath": "Demo/Red Scarf",
+    "tag": "slow",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Red Scarf.wav"
+  },
+  {
+    "songName": "日不落",
+    "singerName": "蔡依琳",
+    "thumbnailPath": "assets/image/reel_music_badge_5.png",
+    "songPath": "Demo/Sun Will Never Set",
+    "tag": "fast",
+    "aigcPath" : "s3://one-app-develop-s3/music_to_motion/input/Sun Will Never Set.wav"
+  }
+]

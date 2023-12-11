@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".test.TestActivity">
+
+    <TextView
+        android:id="@+id/tvRegion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/REGION"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvBuildEnv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBuildEnv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/BUILD_ENV"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRegion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvRegion"
+        app:layout_constraintTop_toTopOf="@+id/tvRegion" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:onClick="testLogin"
+        android:text="@string/login"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegion" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="testLogout"
+        android:text="@string/logout"
+        app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnLogin"
+        app:layout_constraintTop_toTopOf="@id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnWriteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:onClick="testSaveInfo"
+        android:text="@string/save"
+        app:layout_constraintEnd_toStartOf="@id/btnReadInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnReadInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:onClick="testReadInfo"
+        android:text="@string/read"
+        app:layout_constraintBottom_toBottomOf="@id/btnWriteInfo"
+        app:layout_constraintEnd_toStartOf="@id/btnDeleteInfo"
+        app:layout_constraintStart_toEndOf="@id/btnWriteInfo"
+        app:layout_constraintTop_toTopOf="@id/btnWriteInfo" />
+
+    <Button
+        android:id="@+id/btnDeleteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="testDeleteInfo"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toBottomOf="@id/btnWriteInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnReadInfo"
+        app:layout_constraintTop_toBottomOf="@id/btnWriteInfo"
+        app:layout_constraintTop_toTopOf="@id/btnWriteInfo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

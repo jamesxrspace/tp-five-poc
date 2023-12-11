@@ -1,0 +1,84 @@
+openapi: 3.0.3
+info:
+  title: Server API - Agora
+  description: The Restful APIs of Agora.
+  version: 1.0.0
+servers:
+    - url: http://localhost:8090
+      description: Local server
+    - url: https://backend.dev.xrspace.io
+      description: Development server
+    - url: https://backend.qa.xrspace.io
+      description: QA server
+    - url: https://backend.xrspace.io
+      description: Production server
+
+paths:
+  /api/v1/streaming/token:
+    post:
+      summary: Get a token of Agora's streaming service
+      operationId: GetAgoraStreamingToken
+      tags: [Agora]
+      security: [BearerAuth: []]
+      requestBody:
+        description: structure
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AgoraStreamingTokenPayload'
+            example:
+              expires_in: 3600
+              channel_id: "yuan_shen_qi_dong"
+              role: "publisher"
+
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAgoraStreamingTokenResponse'
+              example:
+                code: 200
+                data:
+                  token: "0062bb46629cc6649b284becb5fIADWAlTddlVA1AqXwiD76LhshK736nFvYpDLZ+uoj36a2su55IgBXf/ICmOjBZAQAopcBkAgAopcBkAwAopBAAopcBk"
+
+components:
+  schemas:
+    GetAgoraStreamingTokenResponse:
+      allOf:
+      - $ref: '../common/common.yaml#/components/schemas/BaseResponse'
+      - type: object
+        properties:
+          data:
+            $ref: '#/components/schemas/AgoraStreamingTokenData'
+    AgoraStreamingTokenData:
+      type: object
+      properties:
+        token:
+          description: agora streaming token
+          type: string
+    AgoraStreamingTokenPayload:
+      type: object
+      properties:
+        expires_in:
+          type: integer
+          description: expire time for token, default is 600 seconds
+        channel_id:
+          type: string
+          description: name of the streaming channel
+        role:
+          type: string
+          description: role of streaming
+          enum:
+            - publisher
+            - subscriber
+      required:
+        - channel_id
+        - role
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer

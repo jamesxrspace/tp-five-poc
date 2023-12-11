@@ -1,0 +1,24 @@
+{
+    "name": "io.xrspace.tpfive.game.realtime-chat",
+    "displayName": "TPFive 33 Game Realtime Chat",
+    "description": "TPFive Game Realtime Chat",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "william.ke@xrspace.io",
+            "name": "William Ke"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

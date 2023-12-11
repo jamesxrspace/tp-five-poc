@@ -1,0 +1,17 @@
+{
+    "name": "TPFive.Game.ApplicationConfiguration",
+    "rootNamespace": "TPFive.Game.ApplicationConfiguration",
+    "references": [
+        "TPFive.Game",
+        "CandyCoded.env"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

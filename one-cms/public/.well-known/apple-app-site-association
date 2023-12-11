@@ -1,0 +1,13 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "P9S7GYJ89L.com.xrspace.appAuthTest",
+                "paths": [
+                    "*"
+                ]
+            }
+        ]
+    }
+}

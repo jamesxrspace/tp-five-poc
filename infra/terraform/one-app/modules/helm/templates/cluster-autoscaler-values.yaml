@@ -1,0 +1,43 @@
+cloudProvider: aws
+awsRegion: ${AWS_REGION}
+
+autoDiscovery:
+  clusterName: ${CLUSTER_NAME}
+
+rbac:
+  serviceAccount:
+    create: false
+    name: ${SERVICEACCOUNT_NAME}
+
+replicaCount: 2
+
+affinity:
+  podAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: app.kubernetes.io/instance
+              operator: In
+              values:
+                - cluster-autoscaler
+        topologyKey: "kubernetes.io/hostname"
+
+nodeSelector:
+  Service: core-component
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 300Mi
+  requests:
+    cpu: 100m
+    memory: 300Mi
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1001
+  runAsGroup: 1001
+
+# https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-are-expanders
+extraArgs:
+  expander: "least-waste"

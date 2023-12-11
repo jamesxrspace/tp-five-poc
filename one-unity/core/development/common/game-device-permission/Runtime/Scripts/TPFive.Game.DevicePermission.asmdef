@@ -1,0 +1,22 @@
+{
+    "name": "TPFive.Game.DevicePermission",
+    "rootNamespace": "TPFive.Game.DevicePermission",
+    "references": [
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:92971db799d184644a45bb2328cb20be",
+        "GUID:6e5063adab271564ba0098a06a8cebda",
+        "GUID:8356b4894c5f6d444bf562506cf93bdf",
+        "GUID:08b38f39e2d9e594389b7a4cf4c2c338"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

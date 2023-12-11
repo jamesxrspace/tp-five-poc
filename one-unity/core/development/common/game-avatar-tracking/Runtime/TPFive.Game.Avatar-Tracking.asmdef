@@ -1,0 +1,21 @@
+{
+    "name": "TPFive.Game.Avatar-Tracking",
+    "rootNamespace": "",
+    "references": [
+        "Animancer",
+        "TPFive.Game.Avatar",
+        "TPFive.Game.Mocap",
+        "UniRx",
+        "UniTask",
+        "com.xrspace.bodytrackingsdk"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

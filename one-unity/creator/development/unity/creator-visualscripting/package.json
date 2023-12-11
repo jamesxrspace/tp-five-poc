@@ -1,0 +1,24 @@
+{
+    "name": "io.xrspace.tpfive.creator.visualscripting",
+    "displayName": "TPFive 63 Creator Visual Scripting",
+    "description": "TPFive Creator Visual Scripting",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "keywords": [
+        "Unity",
+        "TPFive",
+        "OneApp"
+    ],
+    "category": "",
+    "dependencies": {},
+    "contributors": [
+        {
+            "email": "ray.wang@xrspace.io",
+            "name": "Ray Wang"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.xrspace.io:one-app/tp-five.git"
+    }
+}

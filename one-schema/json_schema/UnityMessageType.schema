@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "UnityMessageType",
+  "type": "string",
+  "description": "",
+  "x-enumNames": [
+    "Unity",
+    "ToAvatarEdit",
+    "SwitchedToSocialLobby",
+    "SwitchedToReelPage",
+    "SwitchedToCocreatePage",
+    "SwitchedToSpace",
+    "LoginOnShow",
+    "RecordState",
+    "GeneratedAIGC",
+    "GeneralStatus",
+    "ShowLoading",
+    "HideLoading",
+    "RequestAccessToken",
+    "ShowToast",
+    "TrackingState"
+  ],
+  "enum": [
+    "UNITY",
+    "TO_AVATAR_EDIT",
+    "SWITCHED_TO_SOCIAL_LOBBY_PAGE",
+    "SWITCHED_TO_REEL_PAGE",
+    "SWITCHED_TO_COCREATE_PAGE",
+    "SWITCHED_TO_SPACE",
+    "LOGIN_ONSHOW",
+    "RECORD_STATE",
+    "GENERATED_AIGC",
+    "GENERAL_STATUS",
+    "SHOW_LOADING",
+    "HIDE_LOADING",
+    "REQUEST_ACCESS_TOKEN",
+    "SHOW_TOAST",
+    "TRACKING_STATE"
+  ]
+}

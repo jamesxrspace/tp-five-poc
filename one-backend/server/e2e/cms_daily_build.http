@@ -1,0 +1,31 @@
+@host=http://localhost:8090
+@access_token=
+### get xr local provider token
+POST http://localhost:9453/oidc/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&email=xrspacetest1000@xrspace.io&password=1qazXSW@
+
+### Login
+POST {{host}}/api/v1/account/login
+accept: application/json
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+
+### list daily build
+### should first create this two file in local minIO in bucket one-app-develop-s3-cms
+### VRAPK artifact/2023/10/01/8d0dab80c9d394ed3f2f35437549a709db6620ec/vr-apk/dev/app-dev-release-2023_10_01-8d0dab8.apk
+### APK artifact/2023/10/01/8d0dab80c9d394ed3f2f35437549a709db6620ec/apk/dev/app-dev-release-2023_10_01-8d0dab8.apk
+GET {{host}}/_cms/v1/daily_build/list?size=10&offset=0
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+### delete daily build
+### should first create this file in local minIO in bucket one-app-develop-s3-cms
+### VRAPK artifact/2023/10/01/8d0dab80c9d394ed3f2f35437549a709db6620ec/vr-apk/dev/app-dev-release-2023_10_01-8d0dab8.apk
+DELETE  {{host}}/_cms/v1/daily_build/delete?file_path=artifact/2023/10/01/8d0dab80c9d394ed3f2f35437549a709db6620ec/vr-apk/dev/app-dev-release-2023_10_01-8d0dab8.apk
+accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access_token}}

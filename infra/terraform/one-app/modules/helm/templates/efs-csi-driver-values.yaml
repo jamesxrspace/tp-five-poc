@@ -1,0 +1,31 @@
+controller:
+  resources:
+    limits:
+      cpu: 50m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 128Mi
+  nodeSelector:
+    Service: core-component
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - efs-csi-controller
+          topologyKey: "kubernetes.io/hostname"
+  # Specifies whether a service account should be created
+  serviceAccount:
+    create: false
+    name: ${SERVICEACCOUNT_NAME}
+## Node daemonset variables
+
+node:
+  serviceAccount:
+    create: false
+    name: ${SERVICEACCOUNT_NAME}
+  resources: {}

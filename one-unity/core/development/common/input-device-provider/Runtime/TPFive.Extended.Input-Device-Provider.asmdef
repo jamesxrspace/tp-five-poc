@@ -1,0 +1,25 @@
+{
+    "name": "TPFive.Extended.Input-Device-Provider",
+    "rootNamespace": "",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:dc960734dc080426fa6612f1c5fe95f3",
+        "GUID:ce522b6ed64c8be4c989a1d26d0e3275",
+        "GUID:fe685ec1767f73d42b749ea8045bfe43",
+        "GUID:23556f69a07ac9548b5ed47e7aecade6",
+        "GUID:1207886809ae3b147a792aad97bfc6a4",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:8356b4894c5f6d444bf562506cf93bdf",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:08b38f39e2d9e594389b7a4cf4c2c338"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

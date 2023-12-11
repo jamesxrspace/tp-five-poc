@@ -1,0 +1,27 @@
+{
+    "name": "TPFive.Creator.VisualScripting.Editor",
+    "rootNamespace": "TPFive.Creator.VisualScripting.Editor",
+    "references": [
+        "Unity.VisualScripting.Core",
+        "Unity.VisualScripting.Core.Editor",
+        "Unity.VisualScripting.Flow",
+        "Unity.VisualScripting.Flow.Editor",
+        "Unity.VisualScripting.SettingsProvider.Editor",
+        "Unity.VisualScripting.Shared.Editor",
+        "Unity.VisualScripting.State",
+        "Unity.VisualScripting.State.Editor",
+        "TPFive.Creator",
+        "TPFive.Creator.VisualScripting"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

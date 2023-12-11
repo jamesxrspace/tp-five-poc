@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "backend.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "backend.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") $ | sha256sum }}
+      labels:
+        {{- include "backend.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: backend
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}/tp-five/one-backend/server:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: GIN_MODE
+              value: release
+          ports:
+            - containerPort: {{ .Values.configmap.app.port | trimPrefix ":" }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: config-yaml
+              mountPath: /home/xrspace/config.yaml
+              subPath: config.yaml
+          livenessProbe:
+            httpGet:
+              path: /livez
+              port: {{ .Values.configmap.app.port | trimPrefix ":" }}
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: {{ .Values.configmap.app.port | trimPrefix ":" }}
+      volumes:
+        - name: config-yaml
+          configMap:
+            name: {{ .Release.Name }}-config
+            items:
+              - key: config.yaml
+                path: config.yaml
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
