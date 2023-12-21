@@ -1,4 +1,5 @@
 name: Acquire License
+description: test
 
 inputs:
   LAMBDA_FUNCNAME:

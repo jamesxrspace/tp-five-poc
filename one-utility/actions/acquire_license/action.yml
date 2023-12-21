@@ -1,23 +1,24 @@
 name: Acquire License
+description: "testing"
 
 inputs:
   LAMBDA_FUNCNAME:
-    description: The AWS lambda function name
+    description: "The AWS lambda function name"
     required: true
     default: license-server
 
 outputs:
   uuid:
-    description: The license UUID
+    description: "The license UUID"
     value: ${{ steps.acquire_license.outputs.uuid }}
   email:
-    description: The license email address
+    description: "The license email address"
     value: ${{ steps.acquire_license.outputs.email }}
   password:
-    description: The license password
+    description: "The license password"
     value: ${{ steps.acquire_license.outputs.password }}
   serial:
-    description: The license serial
+    description: "The license serial"
     value: ${{ steps.acquire_license.outputs.serial }}
 
 runs:
